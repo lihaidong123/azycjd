@@ -1,0 +1,46 @@
+//弹出框
+function alertWuyuehu(info){
+	if(isMonie){
+		info="<div style='padding:10px;'>"+info+"</div>";
+		$.jBox(info,{
+			title:'五月虎财务管理系统友情提示',
+			height:150,
+			closed:function(){
+				$("#mainBody").css("padding","0px").css("margin","0px").css("background-color","#fcdacd");
+			}
+		});
+	}else{
+		alert(info);
+	}
+}
+
+
+//从底部弹出，隔一定时间自动消失
+function showLoginInfo(uname){
+	$.jBox.messager("欢迎您："+uname,"登录提示",4000,{height:100});
+}
+
+
+//显示html、网站
+function showAdv(url){
+	$.jBox("iframe:"+path+"/"+url, {
+		title: "公告显示",
+		width: 960,
+		height: 450,
+		top:50,
+		buttons: { '关闭': true },
+		closed:function(){
+			$("#mainBody").css("padding","0px").css("margin","0px").css("background-color","#fcdacd");
+		}
+	});	
+}
+
+
+
+
+<!--jbox-->
+    <link id="skin" rel="stylesheet" href="<%=path %>/js/jBox/Skins/Red/jbox.css" />
+    <script type="text/javascript" src="<%=path %>/js/jBox/jquery.jBox-2.3.min.js"></script>
+    <script type="text/javascript" src="<%=path %>/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="<%=path %>/js/jbox-demo-depends/highlight/styles/magula.css" />

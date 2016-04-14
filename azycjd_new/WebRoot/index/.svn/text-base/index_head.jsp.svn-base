@@ -1,0 +1,218 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+if(session.getAttribute("loginUsers")==null){
+	%>
+	<script type="text/javascript">
+		window.location.href="<%=request.getContextPath() %>/index.html";
+	</script>
+	<%
+	return;
+}
+int lineNumber=0;
+if(request.getParameter("linenumber")!=null){
+	try{
+		lineNumber=Integer.parseInt(request.getParameter("linenumber").toString());
+	}catch(Exception w){
+	}
+}else{
+	if(session.getAttribute("linenumber")!=null){
+		try{
+			lineNumber=Integer.parseInt(session.getAttribute("linenumber").toString());
+		}catch(Exception w){
+		}
+	}
+}
+
+session.setAttribute("contextPath", path);
+%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml,http://open.weibo.com/wb">
+  <head>
+    <base href="<%=basePath%>"/>
+    
+    <title>安之原创|安之原创基地</title>
+    
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="expires" content="0"/>    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3"/>
+	<meta http-equiv="description" content="This is my page"/>
+	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/index/css/index.css"/>
+	<meta property="qc:admins" content="2315067207612132463757" />
+	<meta property="wb:webmaster" content="3a36f523124c3619" />
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2050043132" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101296266" data-redirecturi="http://www.azycjd.com/qq_back.jsp" charset="utf-8"></script>
+	<script language="javascript">var path='<%=request.getContextPath()%>';</script>
+	<script language="javascript">var lineNumber='<%=lineNumber%>';</script>
+	<script language="javascript">var barIndex='${param.index}';</script>
+	<script language="javascript">var chooseIndex='${param.chooseIndex}';</script>
+	<script language="javascript">var noReadMessageInfo='${noReadMessageInfo}';</script>
+	<script language="javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
+	<script language="javascript" src="<%=path %>/js/azycjd.js"></script>
+	<script language="javascript" src="<%=request.getContextPath()%>/index/js/validateData.js"></script>
+	<script language="javascript" src="<%=request.getContextPath()%>/index/js/selectData.js"></script>
+	<script language="javascript" src="<%=request.getContextPath()%>/index/js/validate.js"></script>
+	<script language="javascript" src="<%=path %>/index/js/My97DatePicker/WdatePicker.js"></script>
+	
+	<!--jbox-->
+	<link id="skin" rel="stylesheet" href="<%=path %>/js/jBox/Skins/Blue/jbox.css" />
+	<script type="text/javascript" src="<%=path %>/js/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="<%=path %>/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+	
+	<%-- <link rel="stylesheet" type="text/css" href="<%=path %>/js/jbox-demo-depends/highlight/styles/magula.css" /> --%>
+	<script type="text/javascript">
+		$(function(){
+			$(".index_bg_color div").click(function(){
+				$("#body_index").css("background","url("+path+"/index/images/bg.png) repeat-x #"+$(this)[0].id);
+				$.post(path+"/index/setBgColor.jsp",{indexBgColor:$(this)[0].id},function(){});
+			});
+			loadindex_bg_colorImg();
+			showNoRead();
+		});
+		
+		function loadindex_bg_colorImg(){
+			var novel_bg_color_ims='${indexBgColor}';
+			if(novel_bg_color_ims==''){
+				novel_bg_color_ims='f0f0f0';
+			}
+			$("#body_index").css("background","url("+path+"/index/images/bg.png) repeat-x #"+novel_bg_color_ims);
+		}
+		
+		function showNoRead(){
+			if(noReadMessageInfo!=""){
+				$.jBox("<div class='youqintisi_css'>"+noReadMessageInfo+"<span style='padding-left:20px;cursor:pointer;color:red;' onclick=\"top.window.getJspDataByUrl('anzhimessage/findAnzhiMessageAll.do#pageName=index/my_news_receive#linenumber=5#index=4#chooseIndex=1')\">[阅读]</span></div>",{
+					title: "<div style='font-size:14px;'>友情提示</div>",
+					width: 350,
+					height: 170,
+					top:240,
+					persistent: false,
+					buttons: { '关闭': true },
+					closed:function(){
+						$("#body_index").css("background","url("+path+"/index/images/bg.png) repeat-x #f0f0f0").css("padding","0px").css("margin","0px");
+					}
+				});
+			}
+		}
+	</script>
+	<c:remove var="noReadMessageInfo" />
+	<jsp:include page="../htmlEdit.jsp" flush="false" />
+  </head>
+  
+  <body id="body_index" style="background:url(<%=request.getContextPath()%>/index/images/bg.png) repeat-x #f0f0f0; padding:0px; margin:0px;">
+   	<div style="width:1000px; margin:0 auto;">
+		<div class="index_head">
+			<table width="100%" border="0">
+			  <tr>
+				<td>
+					<div style=" padding-left:20px;" onclick="getJspDataByUrl('anzhimember/findAnzhiMemberExperience.do#linenumber=1#index=0#chooseIndex=0')">欢迎您：${loginUsers.memberNick }</div>
+				</td>
+				<td>
+					<div style=" background:url(<%=request.getContextPath()%>/index/images/Free_Gear.png) 3px 5px no-repeat;"  onclick="window.location.href='<%=request.getContextPath()%>/index.html'">返回首页</div>
+				</td>
+				<td>
+					<div style=" background:url(<%=request.getContextPath()%>/index/images/Free_Home.png) 3px 5px no-repeat;"  onclick="javascript:outAnZhiSystem()">退出系统</div>
+				</td>
+			  </tr>
+			  <tr>
+				<td colspan="3">
+					<div class="index_bg_color">
+						<div id="f0f0f0" style="background-color:#f0f0f0;"></div>
+						<div id="c9dde6" style="background-color:#c9dde6;"></div>
+						<div id="d3e8ad" style="background-color:#d3e8ad;"></div>
+						<div id="d8b6c7" style="background-color:#d8b6c7;"></div>
+						<div id="eedfc2" style="background-color:#eedfc2;"></div>
+					</div>
+				</td>
+			  </tr>
+			</table>
+
+			
+			
+		</div>
+		<!--[if lte IE 7]>
+			<div id="browseTips" style="width:830px;background-color:#FFFFFF; margin:0 auto; margin-top:40px;margin-bottom:20px;line-height:23px;">
+				我们发现您使用的IE浏览器版本距离现在已经很遥远了。为了更好的体验本系统，我们建议您升级浏览器。您可以选择：<br />
+	 			<a target="_blank" href="http://rj.baidu.com/soft/detail/14917.html?ald">IE10</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/11843.html?ald">火狐浏览器</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/14744.html?ald">谷歌浏览器</a>|<a href="javascript:closeBrowseTip()">关闭</a>
+			</div>
+	 		
+		<![endif]-->
+		<div style="margin-top: 15px;">
+			<table width="100%" border="0">
+			  <tr>
+				<td width="22%" style="background-color:#e3e3e3;height:2100px; padding-top:25px;" valign="top">
+					<div class="right_menu">
+						<div style="background-color:#d8bd73;  border-radius:6px; color:#FFFFFF; height:30px; line-height:30px; vertical-align:middle; width:100px;">
+							<c:if test="${loginUsers.memberType==0}">
+								读者
+							</c:if>
+							<c:if test="${loginUsers.memberType!=0}">
+								作者
+							</c:if>
+						</div>
+						<div style="width:120px; height:120px;">
+							<img src="${loginUsers.memberHeadImg }" width="120" height="120" />
+						</div>
+						<div style="font-size:16px;">${loginUsers.memberNick }</div>
+						<div style="cursor:pointer; font-size:14px; color:#0099CC;" onClick="window.location.href='<%=request.getContextPath()%>/author_apply.jsp'">
+							<c:if test="${loginUsers.memberType==0}">
+								[我要成为作者]
+							</c:if>
+						</div>
+						<%-- <div style="font-size:24px; font-weight:bold;">${loginUsers.memberMoney }</div> --%>
+						<div style="text-align: center;">现余安之币<strong>：</strong>${loginUsers.memberMoney }</div>
+						<div style="text-align: center;">现余阅读币<strong>：</strong>${loginUsers.readMoney }</div>
+						<div style="margin-top:2px;"></div>
+					</div>
+					<div class="right_menu_div">
+						<div class="right_menu_one" <c:if test="${indexMenu eq 'zuozhe'}">style="display: none;"</c:if>>
+							<div class="right_menu_two">读者专区</div>
+							<hr class="xiahuxai" />
+							<ul>
+								<li id="anzhitrend/findAnzhiTrendMySelf.do#linenumber=0#index=2#chooseIndex=0">个人主页</li>
+								<li id="anzhimember/findAnzhiMemberExperience.do#linenumber=1#index=0#chooseIndex=0">个人中心</li>
+								<li id="index/information_account_finance.jsp#linenumber=2#index=1#chooseIndex=0">财务中心</li>
+								<li id="anzhinovelmultifunction/findAnzhiNovelMultifunctionMyShoucang.do#linenumber=3#index=6#chooseIndex=0">我的书架</li>
+								<li id="anzhicomment/findMyAnzhiCommentAll.do#linenumber=4#index=3#chooseIndex=0">我的评论</li>
+								<li id="anzhinews/findAnzhiNewsAll.do#pageName=index/my_news_system#linenumber=5#newsType=1#index=4#chooseIndex=0">我的消息<c:if test="${not empty duZheNum }"><span style='padding-left: ${duZheNum>10?4:7}px;' class='need_do_nums_class'>${duZheNum }</span></c:if></li>
+								<li id="anzhimember/findAnzhiMemberExperience.do#linenumber=6#pageName=index/every_day_task">每日任务</li>
+								<li style="display: none"></li>
+							</ul>
+							<c:if test="${loginUsers.memberType==0}">
+								<div class="index_member_types_div" onclick="window.location.href='<%=request.getContextPath()%>/author_apply.jsp'">
+									作者专区
+								</div>
+							</c:if>
+							<c:if test="${loginUsers.memberType!=0}">
+								<div class="index_member_types_div" onclick="getJspDataByUrl('indexMenu.jsp#indexMenuType=zuozhe')">
+									作者专区
+								</div>
+							</c:if>
+						</div>
+
+						<div class="right_menu_one" <c:if test="${indexMenu eq 'duzhe' || empty indexMenu}">style="display: none;"</c:if>>
+							<div class="right_menu_two">作者专区</div>
+							<hr class="xiahuxai" />
+							<ul style="display: block;">
+								<li id="index/writer_info_basic.jsp#linenumber=8#index=5#chooseIndex=0">个人信息</li>
+								<li id="anzhinews/findAnzhiNewsAll.do#pageName=index/system_public#linenumber=9#newsType=2">系统公告</li>
+								<li id="anzhinovel/lineNewproject.do#linenumber=10">新建作品</li>
+								<li id="anzhinovel/findAnzhiNovelManage.do#linenumber=11">管理作品</li>
+								<li id="anzhimessage/findAnzhiMessageAll.do#pageName=index/author_mail_receive#linenumber=12#index=9#chooseIndex=0">站内消息<c:if test="${not empty zuoJiaNum }"><span style='padding-left: ${zuoJiaNum>10?4:7}px;' class='need_do_nums_class'>${zuoJiaNum }</span></c:if></li>
+								<li id="anzhiauthor/fuliShenQin.do#linenumber=13">申请福利</li>
+								<li id="anzhiconsume/findAnzhiConsumeMyCome.do#linenumber=14#index=7#chooseIndex=0">我的收入</li>
+								<li id="anzhicash/findAnzhiCashMySelf.do#linenumber=15#chooseIndex=0">提现管理</li>
+							</ul>
+							<div class="index_member_types_div" onclick="getJspDataByUrl('indexMenu.jsp?indexMenuType=duzhe')">
+								读者专区
+							</div>
+						</div>
+
+					</div>
+				</td>
+				<td width="78%" valign="top" style="background-color:#FFFFFF;">
+					<jsp:include page="bar.jsp" flush="false" />

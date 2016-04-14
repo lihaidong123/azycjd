@@ -1,0 +1,3246 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml,http://open.weibo.com/wb" >
+  <head>
+    <base href="http://localhost:8080/azycjd_new/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>安之原创|安之原创基地</title>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="expires" content="0"/>    
+	<meta name="keywords" content="安之原创基地、安之原创、小说、小说排行榜、言情小说、玄幻都市、免费小说" />
+	<meta name="description" content="安之原创|安之原创基地|小说|小说排行榜|言情小说|玄幻都市|免费小说" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<meta property="qc:admins" content="2315067207612132463757" />
+	<meta property="wb:webmaster" content="3a36f523124c3619" />
+	<link rel="stylesheet" type="text/css" href="css/azycjs.css"/>
+	<script language="javascript">var path='/azycjd_new';</script>
+	<script language="javascript">var loginSession='41342';</script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2050043132" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101296266" data-redirecturi="http://www.azycjd.com/qq_back.jsp" charset="utf-8"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.min.js"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.color.js"></script>
+	<script language="javascript" src="/azycjd_new/js/azycjd.js"></script>
+	
+	<!--jbox-->
+	<link id="skin" rel="stylesheet" href="/azycjd_new/js/jBox/Skins/Blue/jbox.css" />
+	<script type="text/javascript" src="/azycjd_new/js/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="/azycjd_new/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+	<script language="javascript">
+		$(function(){
+			$("#searchText").focus(function(){
+				if($(this).val()=="请输入搜素内容"){
+					$(this).val("");
+				}
+			});
+			$("#searchText").blur(function(){
+				if($(this).val()==""){
+					$(this).val("请输入搜素内容");
+				}
+			});
+		});
+	</script>
+	<!--[if lte IE 7]>
+		<div id="browseTips" style="width:830px;background-color:#FFFFFF; margin:0 auto; margin-top:40px;margin-bottom:20px;line-height:23px;">
+			我们发现您使用的IE浏览器版本距离现在已经很遥远了。为了更好的体验本系统，我们建议您升级浏览器。您可以选择：<br />
+ 			<a target="_blank" href="http://rj.baidu.com/soft/detail/14917.html?ald">IE10</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/11843.html?ald">火狐浏览器</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/14744.html?ald">谷歌浏览器</a>|<a href="javascript:closeBrowseTip()">关闭</a>
+		</div>
+ 		
+	<![endif]-->
+  </head>
+  
+  <body id="top_banner" style="padding:0px; margin:0px; background:url(/attached/image/20160325/20160325102821_878.png)  center 0px no-repeat #f0f0f0;">
+  	<div style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; left:50px; top:45%; z-index: 100;" onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div id="abousus_div" style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; right:50px; top:45%;z-index: 100;"  onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div class="login_div_css" id="login_div_css">
+		<div class="top_1">
+			<!-- <div title="首页" style="background:url(images/home.png) 1px 3px no-repeat;width:40px;" onclick="window.location.href='index.html'">首页</div> -->
+			
+			
+				<div style="background:url(images/star.png) 1px 3px no-repeat;width:150px;"><a href="javascript:;" onclick="window.location.href='/azycjd_new/indexMenu.jsp?indexMenuType=duzhe'">admin</a><span class="outSystemcss"><a href="javascript:outAnZhiSystem()">[退出]</a></span></div>
+			
+			<div>
+				<a class="search_a_css" href="/azycjd_new/search.jsp">搜索书籍</a>
+			</div>
+		</div>
+		<div class="login_css" id="login_css">
+			<div class="login_close_css" title="关闭" onclick="$('#login_css').css('position','static').css('display','none')">X</div>
+			<div style="height:1px;"></div>
+			<table width="100%" border="0">
+			   <tr>
+				<td colspan="2" style="font-weight: bold; text-align: center; font-size: 16px;">用户登录</td>
+			  </tr>
+			  <tr>
+				<td width="29%"><div align="right" style="padding-right: 10px;">用户名</div></td>
+				<td width="71%"><input type="text" id="uname" name="uname" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td><div align="right" style="padding-right: 10px;">密&nbsp;&nbsp;&nbsp;码</div></td>
+				<td><input type="password" id="upass" name="upass" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="top_2">
+						<div class="login_btn" onclick="memberLogin(this)">登录</div>
+						<div><a href="register.jsp">注册</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/azycjd_new/findPassword.jsp">忘记密码?</a></div>
+					</div>				
+				</td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="other_css">
+						
+<table>
+  <tr>
+    <td><span id="qqLoginBtn"></span></td>
+    <td style="padding-left: 20px;"><span id="wb_connect_btn"></span></td>
+  </tr>
+</table>
+<script type="text/javascript">
+    QC.Login({
+       btnId:"qqLoginBtn"    //插入按钮的节点id
+});
+</script>
+
+<script type="text/javascript">
+	WB2.anyWhere(function (W) {
+	    W.widget.connectButton({
+	        id: "wb_connect_btn",
+	        type: '3,2',
+	        callback: {
+	            login: function (o) { //登录后的回调函数
+	                weiboLogin(o);
+	            },
+	            logout: function () { //退出后的回调函数
+	                
+	            }
+	        }
+	    });
+	});
+</script>
+
+					</div>				
+				</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+    <div class="top">
+		<div class="menu_css" id="menu0">
+			<div class="menu_pic"><img src="images/xuanhuan.png" /></div>
+			<div>玄幻·奇幻</div>
+		</div>
+		<div class="menu_css" id="menu1">
+			<div class="menu_pic"><img src="images/wuxia1.png" /></div>
+			<div>武侠·仙侠</div>
+		</div>
+		<div class="menu_css" id="menu2">
+			<div class="menu_pic"><img src="images/dushih.png" /></div>
+			<div>都市·异能</div>
+		</div>
+		<div class="menu_css" id="menu3">
+			<div class="menu_pic"><img src="images/junshi.png" /></div>
+			<div>历史·军事</div>
+		</div>
+		<div class="menu_css" id="menu4">
+			<div class="menu_pic"><img src="images/youxi.png" /></div>
+			<div>游戏·竞技</div>
+		</div>
+		<div class="menu_css" id="menu5">
+			<div class="menu_pic"><img src="images/kehuan.png" /></div>
+			<div>科幻·灵异</div>
+		</div>
+		<div class="menu_css" id="menu6">
+			<div class="menu_pic"><img src="images/xiandaiyanqing.png" /></div>
+			<div>现代言情</div>
+		</div>
+		<div class="menu_css" id="menu7">
+			<div class="menu_pic"><img src="images/gudaiyanqing.png" /></div>
+			<div>古代言情</div>
+		</div>
+	</div>
+	
+	<div class="main_css">
+		<div style="background:url(images/title.png) bottom no-repeat; font-weight:bold; text-align:center;height:45px; margin-bottom: 70px;">
+			<ul class="menuPage">
+				<li id="/azycjd_new/index.html">首页</li>
+				<li id="/azycjd_new/all_type_list.jsp">书库</li>
+				<li id="/azycjd_new/paihangbang.html">排行榜</li>
+				<li id="/azycjd_new/yhsf.html">优惠书坊</li>
+				<li id="/azycjd_new/zuojiafuli.jsp">作家福利</li>
+				<li id="/azycjd_new/anzhinews/news.do">安之公告</li>
+				<li id="/azycjd_new/chongzhi.jsp">充值</li>
+				<li id="/azycjd_new/index.html" style="border: none;">论坛</li>
+			</ul>
+		</div>
+		
+	<script language="javascript">var novelTypeName='都市异能';</script>
+	<script language="javascript">var loadMoreData='yes';</script>
+	<script language="javascript">var loadMoreData='yes';</script>
+	<script language="javascript">var pptHuanYiPiType='2';
+		$(function(){
+			totalDataPageNum=12.0;
+			totalDataPageNum=(totalDataPageNum%1==0)?totalDataPageNum:parseInt(totalDataPageNum)+1;
+			searchPageNum=10.0;
+			searchPageNum=(searchPageNum%1==0)?searchPageNum:parseInt(searchPageNum)+1;
+			$("#loadingData").slideUp();//隐藏加载中	
+			$("#loadMoreData").slideUp();//显示加载更多
+			if(totalDataPageNum>searchPageNum){
+				$("#loadMoreData").slideDown();//显示加载更多
+			}
+			loadLoginInfo();
+			getHtmlContent("html_novel_vote",95);
+			pptHuanYipiTimer=setTimeout("pptHuanYiPi()",pptHuanYipiDelay);
+		});
+		var searchPageNum=1;//默认查询第1页
+		var totalDataPageNum=0;
+		function searchNovel(){
+			searchPageNum=1;
+			loadNovelData(false);
+		}
+		
+		function getSearchParam(){
+			var param={};
+			param.bigType=novelTypeName;
+			param.pageNum=searchPageNum;
+			param.timenow=new Date().getTime();
+			return param;
+		}
+		
+		//Ajax的加载数据 appendBoolean--true：追加数据 false：覆盖数据
+		function loadNovelData(appendBoolean){
+			var params=getSearchParam();
+			$("#loadMoreData").slideUp();//隐藏加载更多
+			$("#loadingData").slideDown();//显示加载中
+			$.post(path+"/anzhinovel/shuku.do",params,function(res){
+				if(appendBoolean){
+					$(res).appendTo($("#novel_main_div"));
+				}else{
+					$("#novel_main_div").html(res);
+					searchPageNum=1;
+					$("#loadMoreData").html("点击加载更多数据");
+				}
+				totalDataPageNum=parseInt($("#"+params.timenow).val());//设定页码总数
+				$("#loadMoreData").slideDown();//显示加载更多
+				$("#loadingData").slideUp();//隐藏加载中
+			});
+		}
+		
+		//点击加载更多，异步加载数据
+		function loadMoreDataFn(){
+			searchPageNum++;
+			if(searchPageNum>totalDataPageNum){
+				$("#loadMoreData").html("没有更多数据了->>");
+				return;
+			}else{
+				loadNovelData(true);
+			}
+		}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="/azycjd_new/plugings/adv/css/adv.css"/>
+	<script language="javascript" src="/azycjd_new/plugings/adv/js/adv.js"></script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='极品实习生';
+			novalTitleAuthor[novalTitleAuthor.length]='秦小鹏';
+			novalTitleInfo[novalTitleInfo.length]='  活着不只是简单的活着，活着就要活出意义！即使是实习生也是要做到极品，这样的青春才是真正的青春，看秦小鹏怎样玩转实习生活！看秦小鹏怎样领悟博大精深的中医！我就是悬壶济世，救死扶伤，新一代的..';
+			novalId[novalId.length]='17285';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='终极医道';
+			novalTitleAuthor[novalTitleAuthor.length]='秦小鹏';
+			novalTitleInfo[novalTitleInfo.length]='    五年前的他因为与病号发生矛盾，捅了对方一刀，慌忙逃窜，一下子神秘消失五年，五年后，他再次归来，一切需要从头开始。他为人仗义，有勇有谋，一身好武艺，不向世俗屈服。他敢打敢拼，成为道上的..';
+			novalId[novalId.length]='17284';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='御气之神';
+			novalTitleAuthor[novalTitleAuthor.length]='司马云';
+			novalTitleInfo[novalTitleInfo.length]='      Z国秦州市，排名亚洲第一的地下赌场的16号专业赌房里，精彩的赌局现在才刚刚结束。　　“不可能！不可能！绝对不可能的……”道上人称悍豹的中年男子嘶声自语，鼓大的豹眼死死盯住赌桌上的..';
+			novalId[novalId.length]='17804';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='终极保镖之纵横四海';
+			novalTitleAuthor[novalTitleAuthor.length]='狼王子';
+			novalTitleInfo[novalTitleInfo.length]='  好不容易可以出院的他，却接到了组织的退役通知；本以为这辈子就要平淡一生的，却接到了组织的甲级密令；本以为可以大战一场的，组织却只是叫他去给一个小丫头当保镖；本以为可以随随便便当个保镖，却..';
+			novalId[novalId.length]='16908';
+		</script>
+	
+	<div id="recommad_one" style="position:absolute; top:710px; width:375px; height:500px; background-image:url(/images/default_img.jpg); margin-left:690px;">
+		<script language="javascript">
+			new moveAdv({delaysN:500,widN:375,heiN:500}).init();
+		</script>
+	</div>
+	<div style="position:absolute; top:1130px; margin-left:110px;">
+		<img src="/images/default_img.jpg" width="318" height="458"  onclick="window.location.href='/azycjd_new/novel/17902.jsp'"/>
+	</div>
+	<div class="main_2_div">
+		<div class="title_div_css">
+			小说&nbsp;>&nbsp;都市异能
+		</div>
+		<div style="margin-top:30px;line-height: 40px; vertical-align: middle; padding-left: 20px;">
+			精彩推荐&nbsp;&nbsp;&nbsp;<font style="color:#cbcbcb;">DAILY RECOMMAND</font>
+		</div>
+		<div style="background-color:#e5e5e5; height: 468px;">
+			<table width="100%" border="0">
+			  <tr>
+				<td width="350" valign="top">
+					<div class="recommand_1_css">
+						<div class="en_title" style="font-size:20px;" id="novalTitleEnDiv"></div>
+						<div class="title_self_css" id="novalTitleZhDiv">极品实习生</div>
+						<div>——</div>
+						<div id="novalTitleAutorDiv">
+							秦小鹏&nbsp;著
+						</div> 
+						<div>
+							<div class="self_btn" id="novelHref" style="margin-right:0px;"  onclick="window.location.href='/azycjd_new/novel/17285.jsp'">立刻阅读</div>
+						</div>
+					</div>
+				</td>
+				<td valign="top">
+					<div id="novalTitleInfoDiv" class="html_novel_vote" style="width:220px; padding:30px; line-height:26px; font-size:12px; padding-top:60px;">
+						  活着不只是简单的活着，活着就要活出意义！即使是实习生也是要做到极品，这样的青春才是真正的青春，看秦小鹏怎样玩转实习生活！看秦小鹏怎样领悟博大精深的中医！我就是悬壶济世，救死扶伤，新一代的.. 
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div style="height:350px; margin-top: 28px;">
+			<table width="100%" border="0">
+			  <tr>
+				<td width="430">&nbsp;</td>
+				<td width="200" valign="top">
+					<div class="recommand_1_css" id="recommand_div_1_css">
+						<div class="en_title" style="font-size:20px;"></div>
+						<div class="title_self_css">东皇</div>
+						<div>——</div>
+						<div>
+							刹那间的永恒&nbsp;著
+						</div> 
+						<div>
+							<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/17902.jsp'">立刻阅读</div>
+						</div>
+					</div>
+				</td>
+				<td valign="top">
+					<div class="html_novel_vote" style="padding:10px; line-height:26px; font-size:12px; padding-top:60px;">
+						一个普普通通的失恋少年，被从天而降的闪电而劈中，得到了来自异界的力量。千古迷局，因为他而开启；龙困于潭，因为他而翱翔九天！来自东方的皇者，杀！ 
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+	
+		<div style="background-color:#e5e5e5; height: 345px; width:100%;">
+			<div style="width:96px; height:66px; position:absolute; margin-top:-5px; margin-left:-5px; background-image:url(images/huanyipi.png); cursor:pointer;" onclick="getMoreHuanYiPi('23')">
+				
+			</div>
+			<div style="clear: both;" id="huanyipiDIv">
+				
+
+
+
+	<div class="huanyipi">
+		<table width="100%" border="0">
+		  <tr>
+			<td>
+				<div class="recommand_3_css">
+					<div class="title_self_css">烛月之朔</div>
+					<div>——</div>
+					<div>
+						铁壳花生 著
+					</div> 
+					<div class="book_info">
+						 人生在世，就是一场修行。每一个生灵，皆是修行者。天道，虚无缥缈的东西，有时只是你还没有触碰到罢了。其实，当一项本领到达一定的高度时，便会被天道赐予一种特殊的能力，“念刃”。念刃就是俗称的超..
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;"  onclick="window.location.href='/azycjd_new/novel/16988.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="205">
+				<img src="/UploadImages/NovelWorks/Big/2014-05-08/fb1a795807e343bfbf38ad2843dd4d45.jpg" width="205" height="290" onclick="window.location.href='/azycjd_new/novel/16988.jsp'"/>
+			</td>
+		  </tr>
+		</table>
+	</div>
+
+	<div class="huanyipi">
+		<table width="100%" border="0">
+		  <tr>
+			<td>
+				<div class="recommand_3_css">
+					<div class="title_self_css">旖荒八奇</div>
+					<div>——</div>
+					<div>
+						旖荒八奇 著
+					</div> 
+					<div class="book_info">
+						 命运是个寄生种，阳光下，你向左，它便向左，人以为可以游刃有余的操控它，让它局限在自己有限的认知当中，但是后来，一切都发生了翻天覆地的变化，人发现他们的存在不过是薄弱的，薄弱到一旦陷入黑暗，..
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;"  onclick="window.location.href='/azycjd_new/novel/16964.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="205">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-20/f25e39d93d6545c286f48373580f7c55.jpg" width="205" height="290" onclick="window.location.href='/azycjd_new/novel/16964.jsp'"/>
+			</td>
+		  </tr>
+		</table>
+	</div>
+
+<script language="javascript">
+	$(function(){
+		getHtmlContent("book_info",80);
+	});
+</script>
+			</div>
+		</div>
+		
+		<div class="paixu_div" style="margin-top:40px;">
+			<table width="100%" border="0">
+			  <tr style="line-height:35px;">
+				<td width="70%" style="padding-left:10px;">
+					都市异能
+				</td>
+				<td width="12%">
+					<!-- <input type="checkbox" />只显示已完成 -->
+				</td>
+				<td width="9%">
+					<!-- <input type="checkbox" />VIP作品 -->
+				</td>
+				<td width="9%">
+					<!-- <input type="checkbox" />半价库 -->
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div id="novel_main_div">
+			
+
+ 
+
+
+<div style="clear:both; overflow:auto;overflow-x: hidden;" id="articePageMainDivend9250695973756224leixing">
+	
+		<div class="article_items" id="article_items18049" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="18049novalImg0end9250695973756224leixing18049">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="你是我不能说的秘密">
+				你是我不能说的秘密
+			</div>
+			<div class="noval_info_css">
+				网络缩短了我们的距离让我们相识相知，可六岁的差距成了...
+			</div>
+			<div class="noval_author"  title="如陌">
+				by 如陌<font class="acticle_add_time">2016/04/10 18:38</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">2</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18041" >
+			<div class="noval_img" id="18041novalImg0end9250695973756224leixing18041">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="我说兄弟你难挡">
+				我说兄弟你难挡
+			</div>
+			<div class="noval_info_css">
+				慕沐夏的人√就这么简单...
+			</div>
+			<div class="noval_author"  title="阡殇小猪">
+				by 阡殇小猪<font class="acticle_add_time">2016/04/09 19:10</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1311</td>
+					<td class="read_num_css" title="点击数">5</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18039" >
+			<div class="noval_img" id="18039novalImg0end9250695973756224leixing18039">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="演奏家">
+				演奏家
+			</div>
+			<div class="noval_info_css">
+				我记得叶修在《全职高手》里说过一句：“我有个朋友，荣...
+			</div>
+			<div class="noval_author"  title="恋空的虔诚孩子">
+				by 恋空的虔<font class="acticle_add_time">2016/04/09 10:07</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">15489</td>
+					<td class="read_num_css" title="点击数">6</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17992" >
+			<div class="noval_img" id="17992novalImg0end9250695973756224leixing17992">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="隐">
+				隐
+			</div>
+			<div class="noval_info_css">
+				  世界上不止有六界，除了人，妖，鬼，仙，神，佛。甚...
+			</div>
+			<div class="noval_author"  title="小然ing">
+				by 小然in<font class="acticle_add_time">2016/03/14 17:03</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1553</td>
+					<td class="read_num_css" title="点击数">20</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17985" >
+			<div class="noval_img" id="17985novalImg0end9250695973756224leixing17985">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="好牌继续打">
+				好牌继续打
+			</div>
+			<div class="noval_info_css">
+				                          ...
+			</div>
+			<div class="noval_author"  title="丁芳">
+				by 丁芳<font class="acticle_add_time">2016/04/11 08:40</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">70424</td>
+					<td class="read_num_css" title="点击数">172</td>
+					<td class="end_article">签约申请中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17954" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17954novalImg0end9250695973756224leixing17954">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="女郎的咒">
+				女郎的咒
+			</div>
+			<div class="noval_info_css">
+				      黄沙在翻滚，真相被淹埋......还好是...
+			</div>
+			<div class="noval_author"  title="唐歌">
+				by 唐歌<font class="acticle_add_time">2016/02/28 13:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3101</td>
+					<td class="read_num_css" title="点击数">29</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17915" >
+			<div class="noval_img" id="17915novalImg0end9250695973756224leixing17915">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="竹马情深">
+				竹马情深
+			</div>
+			<div class="noval_info_css">
+				岁月情长，竹马成双。...
+			</div>
+			<div class="noval_author"  title="silence缺失">
+				by sile<font class="acticle_add_time">2016/02/23 22:30</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5260</td>
+					<td class="read_num_css" title="点击数">57</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17902" >
+			<div class="noval_img" id="17902novalImg0end9250695973756224leixing17902">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="东皇">
+				东皇
+			</div>
+			<div class="noval_info_css">
+				一个普普通通的失恋少年，被从天而降的闪电而劈中，得到...
+			</div>
+			<div class="noval_author"  title="刹那间的永恒">
+				by 刹那间的<font class="acticle_add_time">2016/02/26 22:47</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">66970</td>
+					<td class="read_num_css" title="点击数">160</td>
+					<td class="end_article">签约申请中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17872" >
+			<div class="noval_img" id="17872novalImg0end9250695973756224leixing17872">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="世界暗面">
+				世界暗面
+			</div>
+			<div class="noval_info_css">
+				   世界就是一张纸，你只专注的看着一面，就看不见另...
+			</div>
+			<div class="noval_author"  title="西夜的猫">
+				by 西夜的猫<font class="acticle_add_time">2014/05/28 16:40</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8407</td>
+					<td class="read_num_css" title="点击数">524</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17836" >
+			<div class="noval_img" id="17836novalImg0end9250695973756224leixing17836">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="监狱">
+				监狱
+			</div>
+			<div class="noval_info_css">
+				   前言：曾有人调侃地说，如果中国大陆政府把犯人都...
+			</div>
+			<div class="noval_author"  title="小妖">
+				by 小妖<font class="acticle_add_time">2014/04/29 12:43</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">26068</td>
+					<td class="read_num_css" title="点击数">394</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17804" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17804novalImg0end9250695973756224leixing17804">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="御气之神">
+				御气之神
+			</div>
+			<div class="noval_info_css">
+				      Z国秦州市，排名亚洲第一的地下赌场的16...
+			</div>
+			<div class="noval_author"  title="司马云">
+				by 司马云<font class="acticle_add_time">2014/09/09 17:04</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1217755</td>
+					<td class="read_num_css" title="点击数">221473</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17759" >
+			<div class="noval_img" id="17759novalImg0end9250695973756224leixing17759">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="若爱不荒凉">
+				若爱不荒凉
+			</div>
+			<div class="noval_info_css">
+				她是皇宫高瓦里无忧的公主，在最为青春的年华里因病死去...
+			</div>
+			<div class="noval_author"  title="郢浅浅">
+				by 郢浅浅<font class="acticle_add_time">2015/08/11 00:30</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5638</td>
+					<td class="read_num_css" title="点击数">58</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17750" >
+			<div class="noval_img" id="17750novalImg0end9250695973756224leixing17750">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="执手天涯——闲话永燕诸人">
+				执手天涯——闲话永
+			</div>
+			<div class="noval_info_css">
+				        评论还珠诸人，没事吐槽吐槽...
+			</div>
+			<div class="noval_author"  title="鱼彤">
+				by 鱼彤<font class="acticle_add_time">2013/02/28 20:39</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">13284</td>
+					<td class="read_num_css" title="点击数">283</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17749" >
+			<div class="noval_img" id="17749novalImg0end9250695973756224leixing17749">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="少年时">
+				少年时
+			</div>
+			<div class="noval_info_css">
+				 讲述我们，你们，他们的少年故事。...
+			</div>
+			<div class="noval_author"  title="鱼彤">
+				by 鱼彤<font class="acticle_add_time">2013/02/28 20:50</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">39121</td>
+					<td class="read_num_css" title="点击数">324</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17748" >
+			<div class="noval_img" id="17748novalImg0end9250695973756224leixing17748">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="废话连篇好时光">
+				废话连篇好时光
+			</div>
+			<div class="noval_info_css">
+				             只是一些杂评和胡言，偶尔为...
+			</div>
+			<div class="noval_author"  title="鱼彤">
+				by 鱼彤<font class="acticle_add_time">2013/02/28 21:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">91811</td>
+					<td class="read_num_css" title="点击数">1414</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17740" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17740novalImg0end9250695973756224leixing17740">
+				<img src="/UploadImages/NovelWorks/Big/2013-06-29/5007daf89c3848a794c1ea1c9786054d.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="风逆尘埃">
+				风逆尘埃
+			</div>
+			<div class="noval_info_css">
+				  洛妍兮于十岁那年亲眼目睹最爱的父亲从自家阳台一跃...
+			</div>
+			<div class="noval_author"  title="徐雪之">
+				by 徐雪之<font class="acticle_add_time">2013/08/15 11:50</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">55727</td>
+					<td class="read_num_css" title="点击数">1701</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17727" >
+			<div class="noval_img" id="17727novalImg0end9250695973756224leixing17727">
+				<img src="/UploadImages/NovelWorks/Big/2015-05-14/116bd60d5b764aa99fd213c04e6bfcc4.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="红瞳守望">
+				红瞳守望
+			</div>
+			<div class="noval_info_css">
+				 国土安全局13处，一个由死宅、腐女、官僚、职业军人...
+			</div>
+			<div class="noval_author"  title="糖果盒">
+				by 糖果盒<font class="acticle_add_time">2015/05/27 09:29</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">40919</td>
+					<td class="read_num_css" title="点击数">367</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17724" >
+			<div class="noval_img" id="17724novalImg0end9250695973756224leixing17724">
+				<img src="/UploadImages/NovelWorks/Big/2014-11-12/73c5e3fdb3af4bb8973c0ee8f79bd20c.gif" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="了无痕">
+				了无痕
+			</div>
+			<div class="noval_info_css">
+				安安有个梦。每个人都有一个梦。当梦醒来，了无痕迹。
+...
+			</div>
+			<div class="noval_author"  title="叔本滑">
+				by 叔本滑<font class="acticle_add_time">2014/11/12 09:52</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">72130</td>
+					<td class="read_num_css" title="点击数">50</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17723" >
+			<div class="noval_img" id="17723novalImg0end9250695973756224leixing17723">
+				<img src="/UploadImages/NovelWorks/Big/2014-11-12/7f96e9c24d4c42c19c607ba01d3b7260.gif" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="水月山庄">
+				水月山庄
+			</div>
+			<div class="noval_info_css">
+				  有些家族仿佛被世界遗忘，又或许努力逃避整个世界。...
+			</div>
+			<div class="noval_author"  title="叔本滑">
+				by 叔本滑<font class="acticle_add_time">2014/11/12 10:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">34468</td>
+					<td class="read_num_css" title="点击数">271</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17722" >
+			<div class="noval_img" id="17722novalImg0end9250695973756224leixing17722">
+				<img src="/UploadImages/NovelWorks/Big/2014-11-12/b16f578c5840460c971b358e246f91b5.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="造神计划">
+				造神计划
+			</div>
+			<div class="noval_info_css">
+				 　　从前有座山。山上有座庙。庙里有个老和尚。老和尚...
+			</div>
+			<div class="noval_author"  title="叔本滑">
+				by 叔本滑<font class="acticle_add_time">2014/11/12 11:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">39326</td>
+					<td class="read_num_css" title="点击数">192</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17693" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17693novalImg0end9250695973756224leixing17693">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="混乱之书">
+				混乱之书
+			</div>
+			<div class="noval_info_css">
+				总之很混乱啦 ...
+			</div>
+			<div class="noval_author"  title="霸气全漏了">
+				by 霸气全漏<font class="acticle_add_time">2014/04/16 22:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3031</td>
+					<td class="read_num_css" title="点击数">43</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17688" >
+			<div class="noval_img" id="17688novalImg0end9250695973756224leixing17688">
+				<img src="/UploadImages/NovelWorks/Big/2014-01-22/0384745e283c4cfeb89d38021a348d2b.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="穿越之八号当铺">
+				穿越之八号当铺
+			</div>
+			<div class="noval_info_css">
+				  一个社会底层努力奋斗的热血小青年，他最大的愿望就...
+			</div>
+			<div class="noval_author"  title="食以安为先">
+				by 食以安为<font class="acticle_add_time">2014/01/23 16:52</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">24416</td>
+					<td class="read_num_css" title="点击数">4331</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17686" >
+			<div class="noval_img" id="17686novalImg0end9250695973756224leixing17686">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="本虚世界">
+				本虚世界
+			</div>
+			<div class="noval_info_css">
+				    男主在危险的异度空间担任所有风波的中心点，原...
+			</div>
+			<div class="noval_author"  title="阿预">
+				by 阿预<font class="acticle_add_time">2013/08/27 18:47</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">83341</td>
+					<td class="read_num_css" title="点击数">1414</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17657" >
+			<div class="noval_img" id="17657novalImg0end9250695973756224leixing17657">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="雪银">
+				雪银
+			</div>
+			<div class="noval_info_css">
+				 一朵白雪中的罂粟，夺取多少人的幸福！...
+			</div>
+			<div class="noval_author"  title="皇小妃">
+				by 皇小妃<font class="acticle_add_time">2014/10/18 23:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6830</td>
+					<td class="read_num_css" title="点击数">175</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17636" >
+			<div class="noval_img" id="17636novalImg0end9250695973756224leixing17636">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-27/84a9420ee5934592a4fa75a2f73bd681.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="血缘">
+				血缘
+			</div>
+			<div class="noval_info_css">
+				   父母早逝，造成冰颖只能单纯的生活在自己的世界里...
+			</div>
+			<div class="noval_author"  title="以墨为书">
+				by 以墨为书<font class="acticle_add_time">2014/12/31 20:29</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">72049</td>
+					<td class="read_num_css" title="点击数">410</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17621" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17621novalImg0end9250695973756224leixing17621">
+				<img src="/UploadImages/NovelWorks/Big/2015-05-16/5a9cdba9d21641488f32911b1a3233a8.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="兄悠成竹">
+				兄悠成竹
+			</div>
+			<div class="noval_info_css">
+				     爱上他，她的人生被彻底颠覆。本以为可以长相...
+			</div>
+			<div class="noval_author"  title="紫影诺汐">
+				by 紫影诺汐<font class="acticle_add_time">2014/08/09 17:44</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1838</td>
+					<td class="read_num_css" title="点击数">6</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17620" >
+			<div class="noval_img" id="17620novalImg0end9250695973756224leixing17620">
+				<img src="/UploadImages/NovelWorks/Big/2015-05-16/b6303da48d1a458c801a41ebd0baa0d6.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="痴然宇归">
+				痴然宇归
+			</div>
+			<div class="noval_info_css">
+				   “三天结婚三月离婚，三，散，我们注定要分开。若...
+			</div>
+			<div class="noval_author"  title="紫影诺汐">
+				by 紫影诺汐<font class="acticle_add_time">2014/08/10 15:54</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1849</td>
+					<td class="read_num_css" title="点击数">3</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17573" >
+			<div class="noval_img" id="17573novalImg0end9250695973756224leixing17573">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="神魔往事">
+				神魔往事
+			</div>
+			<div class="noval_info_css">
+				       一剑化星河，卷落无数，仙佛神魔。
+这一...
+			</div>
+			<div class="noval_author"  title="九支烟">
+				by 九支烟<font class="acticle_add_time">2015/12/03 20:39</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">982006</td>
+					<td class="read_num_css" title="点击数">3350</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17567" >
+			<div class="noval_img" id="17567novalImg0end9250695973756224leixing17567">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="枪穹">
+				枪穹
+			</div>
+			<div class="noval_info_css">
+				  这是一个枪者的世界，没有什么一朝领悟立地成仙，有...
+			</div>
+			<div class="noval_author"  title="安之黑手">
+				by 安之黑手<font class="acticle_add_time">2014/04/10 19:19</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3352</td>
+					<td class="read_num_css" title="点击数">58</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17562" >
+			<div class="noval_img" id="17562novalImg0end9250695973756224leixing17562">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="极上异界色契约">
+				极上异界色契约
+			</div>
+			<div class="noval_info_css">
+				   异界腹黑魔王X微傲娇美型受   强攻强受  携...
+			</div>
+			<div class="noval_author"  title="利未和">
+				by 利未和<font class="acticle_add_time">2013/08/08 14:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17561" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17561novalImg0end9250695973756224leixing17561">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="少年不轻狂">
+				少年不轻狂
+			</div>
+			<div class="noval_info_css">
+				有人的地方就有江湖，有江湖的地方就有恩怨，有恩怨的地...
+			</div>
+			<div class="noval_author"  title="地狱恋歌">
+				by 地狱恋歌<font class="acticle_add_time">2014/05/29 22:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">31989</td>
+					<td class="read_num_css" title="点击数">522</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17521" >
+			<div class="noval_img" id="17521novalImg0end9250695973756224leixing17521">
+				<img src="/UploadImages/NovelWorks/Big/2013-09-20/37fde1f957864e01ba09565e5d742694.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="地球的危机！">
+				地球的危机！
+			</div>
+			<div class="noval_info_css">
+				羽锡.木飞.幽清.濑宇，四个人要承受着被其余人说成外...
+			</div>
+			<div class="noval_author"  title="甜心天使">
+				by 甜心天使<font class="acticle_add_time">2013/09/20 19:57</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17489" >
+			<div class="noval_img" id="17489novalImg0end9250695973756224leixing17489">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="将心比心">
+				将心比心
+			</div>
+			<div class="noval_info_css">
+				   继母和妹妹的陷害，父亲的不信任，未婚夫的背叛，...
+			</div>
+			<div class="noval_author"  title="七号子">
+				by 七号子<font class="acticle_add_time">2015/05/21 16:07</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">14994</td>
+					<td class="read_num_css" title="点击数">1995</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17469" >
+			<div class="noval_img" id="17469novalImg0end9250695973756224leixing17469">
+				<img src="/UploadImages/NovelWorks/Big/2014-06-23/b3450368f29444b88ecf38df57a4eacc.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="这个学校怎么看都有问题">
+				这个学校怎么看都有
+			</div>
+			<div class="noval_info_css">
+				 你知道宣宁私立械武高中？
+嘛，如果以这个作为开头的...
+			</div>
+			<div class="noval_author"  title="不伦不类">
+				by 不伦不类<font class="acticle_add_time">2014/06/27 18:53</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">55616</td>
+					<td class="read_num_css" title="点击数">421</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17441" >
+			<div class="noval_img" id="17441novalImg0end9250695973756224leixing17441">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="地狱门">
+				地狱门
+			</div>
+			<div class="noval_info_css">
+				 黑社会是意志力坚强的人的天堂
+是讲义气够兄弟的人的...
+			</div>
+			<div class="noval_author"  title="浮生一梦醉眼看">
+				by 浮生一梦<font class="acticle_add_time">2015/09/05 09:21</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">60818</td>
+					<td class="read_num_css" title="点击数">524</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17366" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17366novalImg0end9250695973756224leixing17366">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="獒王">
+				獒王
+			</div>
+			<div class="noval_info_css">
+				   据说，它们是上天的使者，天神的坐骑……
+   ...
+			</div>
+			<div class="noval_author"  title="枫唯独爱梨">
+				by 枫唯独爱<font class="acticle_add_time">2015/05/16 21:36</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">604556</td>
+					<td class="read_num_css" title="点击数">14830</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17365" >
+			<div class="noval_img" id="17365novalImg0end9250695973756224leixing17365">
+				<img src="/UploadImages/NovelWorks/Big/2015-07-04/076657dba96847bd93a125ce0b77e312.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="獒王续之不朽獒魂">
+				獒王续之不朽獒魂
+			</div>
+			<div class="noval_info_css">
+				  据说，它们是上天的使者，天神的坐骑…… 它们来自...
+			</div>
+			<div class="noval_author"  title="枫唯独爱梨">
+				by 枫唯独爱<font class="acticle_add_time">2015/07/01 14:05</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">72422</td>
+					<td class="read_num_css" title="点击数">279</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17322" >
+			<div class="noval_img" id="17322novalImg0end9250695973756224leixing17322">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="终极二班">
+				终极二班
+			</div>
+			<div class="noval_info_css">
+				抢沙发的往前飞无法发威风威风...
+			</div>
+			<div class="noval_author"  title="樱花雨">
+				by 樱花雨<font class="acticle_add_time">2014/01/03 23:40</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">14150</td>
+					<td class="read_num_css" title="点击数">407</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17304" >
+			<div class="noval_img" id="17304novalImg0end9250695973756224leixing17304">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="危险关系：BLACK   LOVE">
+				危险关系：BLAC
+			</div>
+			<div class="noval_info_css">
+				         半夜被神秘的男人索吻，楼小檬一夜之...
+			</div>
+			<div class="noval_author"  title="暖四四">
+				by 暖四四<font class="acticle_add_time">2013/03/24 11:18</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">9920</td>
+					<td class="read_num_css" title="点击数">241</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17285" >
+			<div class="noval_img" id="17285novalImg0end9250695973756224leixing17285">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="极品实习生">
+				极品实习生
+			</div>
+			<div class="noval_info_css">
+				  活着不只是简单的活着，活着就要活出意义！即使是实...
+			</div>
+			<div class="noval_author"  title="秦小鹏">
+				by 秦小鹏<font class="acticle_add_time">2015/10/25 19:13</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">80300</td>
+					<td class="read_num_css" title="点击数">1110</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17284" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17284novalImg0end9250695973756224leixing17284">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="终极医道">
+				终极医道
+			</div>
+			<div class="noval_info_css">
+				    五年前的他因为与病号发生矛盾，捅了对方一刀，...
+			</div>
+			<div class="noval_author"  title="秦小鹏">
+				by 秦小鹏<font class="acticle_add_time">2016/03/22 21:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">508767</td>
+					<td class="read_num_css" title="点击数">1824</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17251" >
+			<div class="noval_img" id="17251novalImg0end9250695973756224leixing17251">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="深渊盖亚">
+				深渊盖亚
+			</div>
+			<div class="noval_info_css">
+				对于盖亚来说，她最喜欢的事情，就是和自家弟弟在深渊看...
+			</div>
+			<div class="noval_author"  title="阿芙">
+				by 阿芙<font class="acticle_add_time">2015/08/02 15:55</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17250" >
+			<div class="noval_img" id="17250novalImg0end9250695973756224leixing17250">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="天使与魔王的挽歌">
+				天使与魔王的挽歌
+			</div>
+			<div class="noval_info_css">
+				 神对天使说，他对你的爱而使得对我的忠诚而减弱了，你...
+			</div>
+			<div class="noval_author"  title="阿芙">
+				by 阿芙<font class="acticle_add_time">2015/08/26 21:41</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6279</td>
+					<td class="read_num_css" title="点击数">181</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17241" >
+			<div class="noval_img" id="17241novalImg0end9250695973756224leixing17241">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-10/9eea3ae689944d5aa71afe9e8f5d5c60.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="情刀浪子心">
+				情刀浪子心
+			</div>
+			<div class="noval_info_css">
+				本是美国组织圆桌骑士的首席侦探员我，被一个国际大人物...
+			</div>
+			<div class="noval_author"  title="小城微Yang">
+				by 小城微Y<font class="acticle_add_time">2014/08/11 10:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11794</td>
+					<td class="read_num_css" title="点击数">163</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17239" >
+			<div class="noval_img" id="17239novalImg0end9250695973756224leixing17239">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="异能猎夺2异灵画像">
+				异能猎夺2异灵画像
+			</div>
+			<div class="noval_info_css">
+				         在前一部中，严罗已获得分身和过目不...
+			</div>
+			<div class="noval_author"  title="几度">
+				by 几度<font class="acticle_add_time">2014/12/30 09:25</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">159533</td>
+					<td class="read_num_css" title="点击数">972</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17225" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17225novalImg0end9250695973756224leixing17225">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-25/b1f2335eaa7647b4b9a44399154e2142.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="轮回剑之剑斩奇缘">
+				轮回剑之剑斩奇缘
+			</div>
+			<div class="noval_info_css">
+				身于帝王家，却无争斗心。
+空有治国才，奈何无处施。
+...
+			</div>
+			<div class="noval_author"  title="朔古新龙">
+				by 朔古新龙<font class="acticle_add_time">2015/03/18 14:47</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">32072</td>
+					<td class="read_num_css" title="点击数">502</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17224" >
+			<div class="noval_img" id="17224novalImg0end9250695973756224leixing17224">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="恶魔天使爱">
+				恶魔天使爱
+			</div>
+			<div class="noval_info_css">
+				         天使因为上帝的一个任务来到了人间，...
+			</div>
+			<div class="noval_author"  title="愚笑">
+				by 愚笑<font class="acticle_add_time">2015/01/21 09:09</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">158204</td>
+					<td class="read_num_css" title="点击数">852</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17201" >
+			<div class="noval_img" id="17201novalImg0end9250695973756224leixing17201">
+				<img src="/UploadImages/NovelWorks/Big/2014-12-07/b36e738f1432446283a96613da0c1141.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="美女杀手">
+				美女杀手
+			</div>
+			<div class="noval_info_css">
+				   自天地开辟以来，
+万物由根而生，化尘所灭
+跨越...
+			</div>
+			<div class="noval_author"  title="雨世界">
+				by 雨世界<font class="acticle_add_time">2014/12/04 11:44</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">46525</td>
+					<td class="read_num_css" title="点击数">584</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17191" >
+			<div class="noval_img" id="17191novalImg0end9250695973756224leixing17191">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="绝地苍狼之黄河之源">
+				绝地苍狼之黄河之源
+			</div>
+			<div class="noval_info_css">
+				   野狼，鳞鼠，火蚁，巨蛇，怪兽层出不穷。 
+火蚁...
+			</div>
+			<div class="noval_author"  title="玉柒">
+				by 玉柒<font class="acticle_add_time">2013/03/19 22:33</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">187223</td>
+					<td class="read_num_css" title="点击数">191</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17190" >
+			<div class="noval_img" id="17190novalImg0end9250695973756224leixing17190">
+				<img src="/UploadImages/NovelWorks/Big/2013-03-19/9eb0222521324c339417cb92e0c59c44.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="绝地苍狼之大地之门">
+				绝地苍狼之大地之门
+			</div>
+			<div class="noval_info_css">
+				玉柒一行自星宿海野狼谷内逃出生天，却又被李光头等所擒...
+			</div>
+			<div class="noval_author"  title="玉柒">
+				by 玉柒<font class="acticle_add_time">2013/03/26 00:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">185993</td>
+					<td class="read_num_css" title="点击数">2351</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17177" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17177novalImg0end9250695973756224leixing17177">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="南城风云">
+				南城风云
+			</div>
+			<div class="noval_info_css">
+				本书讲述了六个来南城上大学的外地男生在这里发生的故事...
+			</div>
+			<div class="noval_author"  title="港警">
+				by 港警<font class="acticle_add_time">2015/10/27 09:12</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5546</td>
+					<td class="read_num_css" title="点击数">48</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17163" >
+			<div class="noval_img" id="17163novalImg0end9250695973756224leixing17163">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="轮回之泪">
+				轮回之泪
+			</div>
+			<div class="noval_info_css">
+				千年前只因仙童非烟的一个小小的恶作剧，把两个本没有任...
+			</div>
+			<div class="noval_author"  title="蝉羽">
+				by 蝉羽<font class="acticle_add_time">2014/05/25 16:48</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">12215</td>
+					<td class="read_num_css" title="点击数">183</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17157" >
+			<div class="noval_img" id="17157novalImg0end9250695973756224leixing17157">
+				<img src="/UploadImages/NovelWorks/Big/2015-07-17/d94cc0cd6bfc4daeb6669ff7a9e4641e.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="墨眠晴空">
+				墨眠晴空
+			</div>
+			<div class="noval_info_css">
+				     左眼清明，右眼杀戮，罪与罚之力囚禁之下不得...
+			</div>
+			<div class="noval_author"  title="蓝落晴">
+				by 蓝落晴<font class="acticle_add_time">2015/08/04 18:58</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">21654</td>
+					<td class="read_num_css" title="点击数">439</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17156" >
+			<div class="noval_img" id="17156novalImg0end9250695973756224leixing17156">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="浮华空梦">
+				浮华空梦
+			</div>
+			<div class="noval_info_css">
+				 散落在风中会有很多言语，想听的想说的，不忍窥见的…...
+			</div>
+			<div class="noval_author"  title="蓝落晴">
+				by 蓝落晴<font class="acticle_add_time">2015/07/28 12:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5230</td>
+					<td class="read_num_css" title="点击数">61</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17153" >
+			<div class="noval_img" id="17153novalImg0end9250695973756224leixing17153">
+				<img src="/UploadImages/NovelWorks/Big/2014-07-14/180527dbc62441958cb747aad88fe453.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="吸血鬼大人，我错了。">
+				吸血鬼大人，我错了
+			</div>
+			<div class="noval_info_css">
+				   一个被赶出古堡来到现世的吸血鬼，一只半路碰上来...
+			</div>
+			<div class="noval_author"  title="安之柳小喵">
+				by 安之柳小<font class="acticle_add_time">2014/07/14 20:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">1</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17150" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17150novalImg0end9250695973756224leixing17150">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="御幻之眼">
+				御幻之眼
+			</div>
+			<div class="noval_info_css">
+				        大学刚毕业的成峰偶然获得逆天异能，发...
+			</div>
+			<div class="noval_author"  title="于冒泡">
+				by 于冒泡<font class="acticle_add_time">2016/02/06 07:41</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">594142</td>
+					<td class="read_num_css" title="点击数">7647</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17077" >
+			<div class="noval_img" id="17077novalImg0end9250695973756224leixing17077">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="少正安上主">
+				少正安上主
+			</div>
+			<div class="noval_info_css">
+				  少正安从小就被当做男孩养，只有在床上他才把自己当...
+			</div>
+			<div class="noval_author"  title="南乡孖">
+				by 南乡孖<font class="acticle_add_time">2015/09/20 17:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">10426</td>
+					<td class="read_num_css" title="点击数">133</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17075" >
+			<div class="noval_img" id="17075novalImg0end9250695973756224leixing17075">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="最强人格">
+				最强人格
+			</div>
+			<div class="noval_info_css">
+				  一名三好学生，励志成为一名救死扶伤的律师。 可是...
+			</div>
+			<div class="noval_author"  title="最强人格">
+				by 最强人格<font class="acticle_add_time">2015/09/18 19:27</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">32272</td>
+					<td class="read_num_css" title="点击数">291</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17074" >
+			<div class="noval_img" id="17074novalImg0end9250695973756224leixing17074">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="蛋糕师米大厨的黑暗料理">
+				蛋糕师米大厨的黑暗
+			</div>
+			<div class="noval_info_css">
+				。。...
+			</div>
+			<div class="noval_author"  title="羽城晨">
+				by 羽城晨<font class="acticle_add_time">2014/04/11 21:34</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17036" >
+			<div class="noval_img" id="17036novalImg0end9250695973756224leixing17036">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="蓝诡">
+				蓝诡
+			</div>
+			<div class="noval_info_css">
+				连环杀人案，“意外”杀人案，一些微妙的线索，将案件一...
+			</div>
+			<div class="noval_author"  title="木严">
+				by 木严<font class="acticle_add_time">2015/11/19 21:05</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2193</td>
+					<td class="read_num_css" title="点击数">87</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17034" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17034novalImg0end9250695973756224leixing17034">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="高中生的把妹日常">
+				高中生的把妹日常
+			</div>
+			<div class="noval_info_css">
+				男主的把妹日常，能把多少是多少。
+...
+			</div>
+			<div class="noval_author"  title="这就是笔名">
+				by 这就是笔<font class="acticle_add_time">2013/04/30 17:00</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5528</td>
+					<td class="read_num_css" title="点击数">261</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17031" >
+			<div class="noval_img" id="17031novalImg0end9250695973756224leixing17031">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="《奇峰》">
+				《奇峰》
+			</div>
+			<div class="noval_info_css">
+				 ............................
+			</div>
+			<div class="noval_author"  title="猫大人">
+				by 猫大人<font class="acticle_add_time">2013/06/20 23:30</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17019" >
+			<div class="noval_img" id="17019novalImg0end9250695973756224leixing17019">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="你究竟在哪儿">
+				你究竟在哪儿
+			</div>
+			<div class="noval_info_css">
+				　　大学毕业的那年夏天，伊万消失的无影无踪。
+　　莞...
+			</div>
+			<div class="noval_author"  title="Vera_">
+				by Vera<font class="acticle_add_time">2013/09/09 23:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5112</td>
+					<td class="read_num_css" title="点击数">77</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17011" >
+			<div class="noval_img" id="17011novalImg0end9250695973756224leixing17011">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="池塘之蝶">
+				池塘之蝶
+			</div>
+			<div class="noval_info_css">
+				  这个池塘曾经有无数人卷在里面，同时也是一个生命之...
+			</div>
+			<div class="noval_author"  title="吉祥鸟">
+				by 吉祥鸟<font class="acticle_add_time">2015/10/16 21:06</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">7503</td>
+					<td class="read_num_css" title="点击数">39</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16989" >
+			<div class="noval_img" id="16989novalImg0end9250695973756224leixing16989">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="少年性向黑段子">
+				少年性向黑段子
+			</div>
+			<div class="noval_info_css">
+				少年向黑段子集~...
+			</div>
+			<div class="noval_author"  title="猫不更新">
+				by 猫不更新<font class="acticle_add_time">2013/11/22 15:42</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">104</td>
+					<td class="read_num_css" title="点击数">61</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16988" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16988novalImg0end9250695973756224leixing16988">
+				<img src="/UploadImages/NovelWorks/Big/2014-05-08/fb1a795807e343bfbf38ad2843dd4d45.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="烛月之朔">
+				烛月之朔
+			</div>
+			<div class="noval_info_css">
+				 人生在世，就是一场修行。每一个生灵，皆是修行者。
+...
+			</div>
+			<div class="noval_author"  title="铁壳花生">
+				by 铁壳花生<font class="acticle_add_time">2014/05/21 12:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">43256</td>
+					<td class="read_num_css" title="点击数">978</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16981" >
+			<div class="noval_img" id="16981novalImg0end9250695973756224leixing16981">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="ui">
+				ui
+			</div>
+			<div class="noval_info_css">
+				fyjjf...
+			</div>
+			<div class="noval_author"  title="大雁不归">
+				by 大雁不归<font class="acticle_add_time">2013/06/26 13:27</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16965" >
+			<div class="noval_img" id="16965novalImg0end9250695973756224leixing16965">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="《我是小兵？我是老大！》">
+				《我是小兵？我是老
+			</div>
+			<div class="noval_info_css">
+				      我只是个小兵？哈哈哈哈！我是老大！ 这是...
+			</div>
+			<div class="noval_author"  title="臭宝">
+				by 臭宝<font class="acticle_add_time">2014/09/04 20:01</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16964" >
+			<div class="noval_img" id="16964novalImg0end9250695973756224leixing16964">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-20/f25e39d93d6545c286f48373580f7c55.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="旖荒八奇">
+				旖荒八奇
+			</div>
+			<div class="noval_info_css">
+				 命运是个寄生种，阳光下，你向左，它便向左，人以为可...
+			</div>
+			<div class="noval_author"  title="旖荒八奇">
+				by 旖荒八奇<font class="acticle_add_time">2014/06/25 11:02</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">37304</td>
+					<td class="read_num_css" title="点击数">390</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16958" >
+			<div class="noval_img" id="16958novalImg0end9250695973756224leixing16958">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="谁吃了我的肉">
+				谁吃了我的肉
+			</div>
+			<div class="noval_info_css">
+				 练笔小短篇~...
+			</div>
+			<div class="noval_author"  title="戴文峰">
+				by 戴文峰<font class="acticle_add_time">2014/09/05 15:22</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6281</td>
+					<td class="read_num_css" title="点击数">27</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16952" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16952novalImg0end9250695973756224leixing16952">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="《锦瑟》">
+				《锦瑟》
+			</div>
+			<div class="noval_info_css">
+				 武战道同人文，官配cp，文风有点古韵+机甲tf...
+			</div>
+			<div class="noval_author"  title="朴子">
+				by 朴子<font class="acticle_add_time">2016/03/29 21:03</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6746</td>
+					<td class="read_num_css" title="点击数">392</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16925" >
+			<div class="noval_img" id="16925novalImg0end9250695973756224leixing16925">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="黑道">
+				黑道
+			</div>
+			<div class="noval_info_css">
+				 三个从小长大的兄弟，本身是高官的儿子，却要走上一条...
+			</div>
+			<div class="noval_author"  title="会飞的章鱼">
+				by 会飞的章<font class="acticle_add_time">2015/02/13 00:43</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">1</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16911" >
+			<div class="noval_img" id="16911novalImg0end9250695973756224leixing16911">
+				<img src="/UploadImages/NovelWorks/Big/2015-07-31/a1601b542c3040dbacf099de6ce981d2.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="罪与情">
+				罪与情
+			</div>
+			<div class="noval_info_css">
+				      某一天，一个神秘组织的人来到了某所孤儿院...
+			</div>
+			<div class="noval_author"  title="萨克斯的声">
+				by 萨克斯的<font class="acticle_add_time">2015/08/08 23:34</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">25757</td>
+					<td class="read_num_css" title="点击数">283</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16908" >
+			<div class="noval_img" id="16908novalImg0end9250695973756224leixing16908">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="终极保镖之纵横四海">
+				终极保镖之纵横四海
+			</div>
+			<div class="noval_info_css">
+				  好不容易可以出院的他，却接到了组织的退役通知；本...
+			</div>
+			<div class="noval_author"  title="狼王子">
+				by 狼王子<font class="acticle_add_time">2015/04/16 09:33</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1001388</td>
+					<td class="read_num_css" title="点击数">9390</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16885" >
+			<div class="noval_img" id="16885novalImg0end9250695973756224leixing16885">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="阴阳引路人之捞尸人">
+				阴阳引路人之捞尸人
+			</div>
+			<div class="noval_info_css">
+				 活人和死人...
+			</div>
+			<div class="noval_author"  title="森美">
+				by 森美<font class="acticle_add_time">2013/04/01 11:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">34510</td>
+					<td class="read_num_css" title="点击数">608</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16848" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16848novalImg0end9250695973756224leixing16848">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="昆明之秋">
+				昆明之秋
+			</div>
+			<div class="noval_info_css">
+				2025年秋，空客A320的白色机体掠过昆明湛蓝的晴...
+			</div>
+			<div class="noval_author"  title="既来之">
+				by 既来之<font class="acticle_add_time">2014/12/31 12:38</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16835" >
+			<div class="noval_img" id="16835novalImg0end9250695973756224leixing16835">
+				<img src="/UploadImages/NovelWorks/Big/2014-05-12/2152bc3c19d14ace8c8cf4d120f11981.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="江南魔行录">
+				江南魔行录
+			</div>
+			<div class="noval_info_css">
+				  江南陆家，富可敌国，然而这一任少主陆羽凌，自出生...
+			</div>
+			<div class="noval_author"  title="贯一郎">
+				by 贯一郎<font class="acticle_add_time">2014/05/12 09:24</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">25606</td>
+					<td class="read_num_css" title="点击数">406</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16757" >
+			<div class="noval_img" id="16757novalImg0end9250695973756224leixing16757">
+				<img src="/UploadImages/NovelWorks/Big/2014-07-30/d6c35b6bd4764f3fa795beef0603c4bd.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="熙逝在云的左端">
+				熙逝在云的左端
+			</div>
+			<div class="noval_info_css">
+				    没想到本是孤儿的她竟是云氏集团的小女儿，没想...
+			</div>
+			<div class="noval_author"  title="许浅浅">
+				by 许浅浅<font class="acticle_add_time">2014/08/12 22:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">60223</td>
+					<td class="read_num_css" title="点击数">510</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16744" >
+			<div class="noval_img" id="16744novalImg0end9250695973756224leixing16744">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="遗迹">
+				遗迹
+			</div>
+			<div class="noval_info_css">
+				作者的一个大脑洞。。。。。关于神迹的探险。...
+			</div>
+			<div class="noval_author"  title="Pirate">
+				by Pira<font class="acticle_add_time">2014/05/31 14:28</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2180</td>
+					<td class="read_num_css" title="点击数">30</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16718" >
+			<div class="noval_img" id="16718novalImg0end9250695973756224leixing16718">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-19/b7efedc7065f44f98c3da80452f99873.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="修正的人生">
+				修正的人生
+			</div>
+			<div class="noval_info_css">
+				       灵凤觉得自己真是一个失败的女人，丈夫跑...
+			</div>
+			<div class="noval_author"  title="凤三九">
+				by 凤三九<font class="acticle_add_time">2014/09/27 20:46</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">269373</td>
+					<td class="read_num_css" title="点击数">3804</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16702" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16702novalImg0end9250695973756224leixing16702">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="欲望都市：豪门无间">
+				欲望都市：豪门无间
+			</div>
+			<div class="noval_info_css">
+				命运的抉择，暗流的涌动，死亡的贴近，黑拳的霸道，豪门...
+			</div>
+			<div class="noval_author"  title="羽堂">
+				by 羽堂<font class="acticle_add_time">2015/07/04 23:10</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8839</td>
+					<td class="read_num_css" title="点击数">96</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16672" >
+			<div class="noval_img" id="16672novalImg0end9250695973756224leixing16672">
+				<img src="/UploadImages/NovelWorks/Big/2013-07-31/887f4e40b7824d57835823ca3869d646.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="混乱的打开方式【火影同人】">
+				混乱的打开方式【火
+			</div>
+			<div class="noval_info_css">
+				      大风大浪也好，山崩地裂也好
+如果能活下来...
+			</div>
+			<div class="noval_author"  title="纵笔无端">
+				by 纵笔无端<font class="acticle_add_time">2014/10/07 20:47</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">57540</td>
+					<td class="read_num_css" title="点击数">5511</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16634" >
+			<div class="noval_img" id="16634novalImg0end9250695973756224leixing16634">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="丐神">
+				丐神
+			</div>
+			<div class="noval_info_css">
+				我说的故事和洪七公毫无关系，和丐帮更无关系，只和一个...
+			</div>
+			<div class="noval_author"  title="梁晓寒">
+				by 梁晓寒<font class="acticle_add_time">2014/05/29 22:37</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">4919</td>
+					<td class="read_num_css" title="点击数">51</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16626" >
+			<div class="noval_img" id="16626novalImg0end9250695973756224leixing16626">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="猎人">
+				猎人
+			</div>
+			<div class="noval_info_css">
+				 我没有名字，没有过去，没有未来。我是“猎人”，为国...
+			</div>
+			<div class="noval_author"  title="夜巡青楼">
+				by 夜巡青楼<font class="acticle_add_time">2014/06/26 16:39</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2764</td>
+					<td class="read_num_css" title="点击数">438</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16576" >
+			<div class="noval_img" id="16576novalImg0end9250695973756224leixing16576">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-04/ba7b84ce8977406da8eb9c5c7b728f09.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="穿越之笑靥似霞">
+				穿越之笑靥似霞
+			</div>
+			<div class="noval_info_css">
+				  一人之下万人之上的俊美太子，本该继承皇位，岂料东...
+			</div>
+			<div class="noval_author"  title="君临天下">
+				by 君临天下<font class="acticle_add_time">2014/07/30 18:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">15126</td>
+					<td class="read_num_css" title="点击数">227</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16366" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16366novalImg0end9250695973756224leixing16366">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="牛到极致">
+				牛到极致
+			</div>
+			<div class="noval_info_css">
+				牛到极致的人！...
+			</div>
+			<div class="noval_author"  title="伸出左手抓住你！">
+				by 伸出左手<font class="acticle_add_time">2015/09/08 22:53</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6196</td>
+					<td class="read_num_css" title="点击数">27</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16310" >
+			<div class="noval_img" id="16310novalImg0end9250695973756224leixing16310">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="如何写好古风歌词（经验分享）">
+				如何写好古风歌词（
+			</div>
+			<div class="noval_info_css">
+				简单分享古风歌词的创作心得...
+			</div>
+			<div class="noval_author"  title="古项沈秋离">
+				by 古项沈秋<font class="acticle_add_time">2014/09/22 23:26</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2299</td>
+					<td class="read_num_css" title="点击数">96</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16285" >
+			<div class="noval_img" id="16285novalImg0end9250695973756224leixing16285">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="卧榻之侧有芳邻">
+				卧榻之侧有芳邻
+			</div>
+			<div class="noval_info_css">
+				自由撰稿人杨巨租了一个房间，然后多了几个女邻居，燕瘦...
+			</div>
+			<div class="noval_author"  title="大勃起君">
+				by 大勃起君<font class="acticle_add_time">2014/06/26 20:24</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">43467</td>
+					<td class="read_num_css" title="点击数">762</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16277" >
+			<div class="noval_img" id="16277novalImg0end9250695973756224leixing16277">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="忍者贱人">
+				忍者贱人
+			</div>
+			<div class="noval_info_css">
+				全息网游 女主贪财 简介存完字再改。...
+			</div>
+			<div class="noval_author"  title="柏娆">
+				by 柏娆<font class="acticle_add_time">2014/09/08 10:12</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2636</td>
+					<td class="read_num_css" title="点击数">3</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16275" >
+			<div class="noval_img" id="16275novalImg0end9250695973756224leixing16275">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="忽悠大师">
+				忽悠大师
+			</div>
+			<div class="noval_info_css">
+				 暂时先放属性好了——栗槿妖>跳级学霸怪少女>专注逗...
+			</div>
+			<div class="noval_author"  title="柏娆">
+				by 柏娆<font class="acticle_add_time">2014/09/08 10:08</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16272" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16272novalImg0end9250695973756224leixing16272">
+				<img src="/UploadImages/NovelWorks/Big/2014-01-29/ced0d94e6dbb4aa686a9ced13924caad.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="夏日爱恋">
+				夏日爱恋
+			</div>
+			<div class="noval_info_css">
+				   夕阳下的红尘淡淡牵起，血一般耀眼的恋情，将会持...
+			</div>
+			<div class="noval_author"  title="菲繁">
+				by 菲繁<font class="acticle_add_time">2014/02/14 22:09</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3856</td>
+					<td class="read_num_css" title="点击数">201</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16271" >
+			<div class="noval_img" id="16271novalImg0end9250695973756224leixing16271">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="银花打在岔路口">
+				银花打在岔路口
+			</div>
+			<div class="noval_info_css">
+				　等待，是一生最初的苍老。 
+　　两个彼此相爱却不相...
+			</div>
+			<div class="noval_author"  title="歲时紀">
+				by 歲时紀<font class="acticle_add_time">2015/03/13 18:55</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">22431</td>
+					<td class="read_num_css" title="点击数">282</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16270" >
+			<div class="noval_img" id="16270novalImg0end9250695973756224leixing16270">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="南方有乔木">
+				南方有乔木
+			</div>
+			<div class="noval_info_css">
+				 南方有乔木，曰斑芝，即木棉。
+它独立，顽强，从不依...
+			</div>
+			<div class="noval_author"  title="木棉心醉">
+				by 木棉心醉<font class="acticle_add_time">2015/04/02 22:25</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">90504</td>
+					<td class="read_num_css" title="点击数">2490</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16264" >
+			<div class="noval_img" id="16264novalImg0end9250695973756224leixing16264">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="静爱安然">
+				静爱安然
+			</div>
+			<div class="noval_info_css">
+				因为男友和好友的双重背叛而去世的莫安然，在异世他乡重...
+			</div>
+			<div class="noval_author"  title="亦落竺">
+				by 亦落竺<font class="acticle_add_time">2014/09/22 22:42</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">47177</td>
+					<td class="read_num_css" title="点击数">669</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16262" >
+			<div class="noval_img" id="16262novalImg0end9250695973756224leixing16262">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="都市智能系统">
+				都市智能系统
+			</div>
+			<div class="noval_info_css">
+				 本书介绍了一个穷小子叶凡意外得到了一个未来的智能系...
+			</div>
+			<div class="noval_author"  title="小皓">
+				by 小皓<font class="acticle_add_time">2014/03/25 20:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1902</td>
+					<td class="read_num_css" title="点击数">73</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16157" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="16157novalImg0end9250695973756224leixing16157">
+				<img src="/UploadImages/NovelWorks/Big/2013-04-29/1d1229d072324051a7248ee86254506b.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="学院生存法则">
+				学院生存法则
+			</div>
+			<div class="noval_info_css">
+				  呆萌属性的二货楠懿绮，毒舌天后白宁笙，冰山女王系...
+			</div>
+			<div class="noval_author"  title="木木籽">
+				by 木木籽<font class="acticle_add_time">2013/05/04 15:54</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3682</td>
+					<td class="read_num_css" title="点击数">168</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16140" >
+			<div class="noval_img" id="16140novalImg0end9250695973756224leixing16140">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="我们曾经迷茫的青春">
+				我们曾经迷茫的青春
+			</div>
+			<div class="noval_info_css">
+				 本书分为四个章节讲述一群青年关于青春的岁月故事，他...
+			</div>
+			<div class="noval_author"  title="笑看回头路">
+				by 笑看回头<font class="acticle_add_time">2014/03/29 18:37</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">12747</td>
+					<td class="read_num_css" title="点击数">217</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16135" >
+			<div class="noval_img" id="16135novalImg0end9250695973756224leixing16135">
+				<img src="/UploadImages/NovelWorks/Big/2014-09-22/3a92c362adb7448db2ee7b8561aff200.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="因为我爱你">
+				因为我爱你
+			</div>
+			<div class="noval_info_css">
+				      人这一生总需要遇到这样的三个人，第一个人...
+			</div>
+			<div class="noval_author"  title="飞扬">
+				by 飞扬<font class="acticle_add_time">2014/12/29 12:36</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">227011</td>
+					<td class="read_num_css" title="点击数">1294</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16114" >
+			<div class="noval_img" id="16114novalImg0end9250695973756224leixing16114">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="恶魔印章： 甜心少女太狠心">
+				恶魔印章： 甜心少
+			</div>
+			<div class="noval_info_css">
+				 10年前，他们被伤害，10年后，她们回来了，变得无...
+			</div>
+			<div class="noval_author"  title="蔷薇">
+				by 蔷薇<font class="acticle_add_time">2015/08/09 12:59</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11157</td>
+					<td class="read_num_css" title="点击数">117</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items16088" >
+			<div class="noval_img" id="16088novalImg0end9250695973756224leixing16088">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="财    富">
+				财    富
+			</div>
+			<div class="noval_info_css">
+				经过数小时的跋涉，王记者终于来到了盐碱渠头那片旷野的...
+			</div>
+			<div class="noval_author"  title="秦关中">
+				by 秦关中<font class="acticle_add_time">2014/10/01 00:00</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				都市异能
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">0</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+		
+</div>
+<input type="hidden" id="" value="2" />
+<script type="text/javascript">
+	$(function(){
+		$("#articePageMainDivend9250695973756224leixing .noval_img").hover(function(){
+			$("#book_info_css_div").remove();
+			clearInterval(removeBookBaiscTimer);
+			getBookBasicObject=$(this)[0];
+			if($(this).data("novelId")==null){
+				//说明没有加载
+				loadNovelPartInfo(getBookBasicObject);
+			}else{
+				novelImg=$(this).data("novelImg");
+				novelTitle=$(this).data("novelTitle");
+				authorWriter=$(this).data("authorWriter");
+				clickNum=$(this).data("clickNum");
+				readNum=$(this).data("readNum");
+				novelVote=$(this).data("novelVote");
+				novelId=$(this).data("novelId");
+				getBookBasicTimer=setTimeout("getBookBasicInfo()",400);
+			}
+		},function(){
+			clearInterval(getBookBasicTimer);
+			getBookBasicObject=null;
+			novelImg=null;
+			novelTitle=null;
+			authorWriter=null;
+			clickNum=null;
+			readNum=null;
+			novelVote=null;
+			novelId=null;
+			removeBookBaiscTimer=setTimeout("removeBookBasic()",1000);
+		});
+		$("#articePageMainDivend9250695973756224leixing .noval_img").each(function(){
+			var ids=$(this)[0].id;
+			var novleId=ids.substring(0,ids.indexOf("novalImg"));
+			$(this).children("img").click(function(){
+				window.open(path+"/novel/"+novleId+".jsp");
+			});
+		});
+	});
+</script>
+
+		</div>
+		<div id="loadMoreData" class="heng_div_css" onclick="loadMoreDataFn()">
+			点击加载更多小说...
+		</div>
+		<div id="loadingData" class="heng_div_css">
+			正在努力加载中...
+		</div>
+	</div>
+	
+
+
+
+	</div>
+	<div class="foot_css">
+		<div class="foot_1_css">
+			<div>
+				<a href="/azycjd_new/aboutus.jsp"  target="_blank">关于我们</a>|
+				<a href="/azycjd_new/yonghuzhinan.jsp" target="_blank">用户指南</a>|
+				<!-- <a href="zuozhetougao.jsp" target="_blank">作者投稿</a>| -->
+				<a href="/azycjd_new/chengpinyingcai.jsp" target="_blank">诚聘英才</a>|
+				<a href="/azycjd_new/lianxiwomen.jsp" target="_blank">联系我们</a>|
+				<a href="/azycjd_new/admin/webEditorLogin.jsp" target="_blank">网编登录</a>|
+				<a href="http://weibo.com/u/3020942093?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">微博链接</a>|
+				<a href="javascript:loadMobileJsp()" target="_blank">手机网页端</a>
+			</div>
+			<div>
+				Copyright© 2006-2015 www.azycjd.com   All Rights Reserved 版权所有 云南安柔科技有限公司
+				<script src="http://s95.cnzz.com/stat.php?id=1257561986&web_id=1257561986" language="JavaScript"></script>
+			</div>
+			<div>
+				滇ICP备12006807号-1 滇网文许字【2014】1100-002号
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

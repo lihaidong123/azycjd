@@ -1,0 +1,3255 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml,http://open.weibo.com/wb" >
+  <head>
+    <base href="http://localhost:8080/azycjd_new/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>安之原创|安之原创基地</title>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="expires" content="0"/>    
+	<meta name="keywords" content="安之原创基地、安之原创、小说、小说排行榜、言情小说、玄幻都市、免费小说" />
+	<meta name="description" content="安之原创|安之原创基地|小说|小说排行榜|言情小说|玄幻都市|免费小说" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<meta property="qc:admins" content="2315067207612132463757" />
+	<meta property="wb:webmaster" content="3a36f523124c3619" />
+	<link rel="stylesheet" type="text/css" href="css/azycjs.css"/>
+	<script language="javascript">var path='/azycjd_new';</script>
+	<script language="javascript">var loginSession='41342';</script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2050043132" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101296266" data-redirecturi="http://www.azycjd.com/qq_back.jsp" charset="utf-8"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.min.js"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.color.js"></script>
+	<script language="javascript" src="/azycjd_new/js/azycjd.js"></script>
+	
+	<!--jbox-->
+	<link id="skin" rel="stylesheet" href="/azycjd_new/js/jBox/Skins/Blue/jbox.css" />
+	<script type="text/javascript" src="/azycjd_new/js/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="/azycjd_new/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+	<script language="javascript">
+		$(function(){
+			$("#searchText").focus(function(){
+				if($(this).val()=="请输入搜素内容"){
+					$(this).val("");
+				}
+			});
+			$("#searchText").blur(function(){
+				if($(this).val()==""){
+					$(this).val("请输入搜素内容");
+				}
+			});
+		});
+	</script>
+	<!--[if lte IE 7]>
+		<div id="browseTips" style="width:830px;background-color:#FFFFFF; margin:0 auto; margin-top:40px;margin-bottom:20px;line-height:23px;">
+			我们发现您使用的IE浏览器版本距离现在已经很遥远了。为了更好的体验本系统，我们建议您升级浏览器。您可以选择：<br />
+ 			<a target="_blank" href="http://rj.baidu.com/soft/detail/14917.html?ald">IE10</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/11843.html?ald">火狐浏览器</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/14744.html?ald">谷歌浏览器</a>|<a href="javascript:closeBrowseTip()">关闭</a>
+		</div>
+ 		
+	<![endif]-->
+  </head>
+  
+  <body id="top_banner" style="padding:0px; margin:0px; background:url(/attached/image/20160325/20160325102821_878.png)  center 0px no-repeat #f0f0f0;">
+  	<div style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; left:50px; top:45%; z-index: 100;" onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div id="abousus_div" style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; right:50px; top:45%;z-index: 100;"  onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div class="login_div_css" id="login_div_css">
+		<div class="top_1">
+			<!-- <div title="首页" style="background:url(images/home.png) 1px 3px no-repeat;width:40px;" onclick="window.location.href='index.html'">首页</div> -->
+			
+			
+				<div style="background:url(images/star.png) 1px 3px no-repeat;width:150px;"><a href="javascript:;" onclick="window.location.href='/azycjd_new/indexMenu.jsp?indexMenuType=duzhe'">admin</a><span class="outSystemcss"><a href="javascript:outAnZhiSystem()">[退出]</a></span></div>
+			
+			<div>
+				<a class="search_a_css" href="/azycjd_new/search.jsp">搜索书籍</a>
+			</div>
+		</div>
+		<div class="login_css" id="login_css">
+			<div class="login_close_css" title="关闭" onclick="$('#login_css').css('position','static').css('display','none')">X</div>
+			<div style="height:1px;"></div>
+			<table width="100%" border="0">
+			   <tr>
+				<td colspan="2" style="font-weight: bold; text-align: center; font-size: 16px;">用户登录</td>
+			  </tr>
+			  <tr>
+				<td width="29%"><div align="right" style="padding-right: 10px;">用户名</div></td>
+				<td width="71%"><input type="text" id="uname" name="uname" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td><div align="right" style="padding-right: 10px;">密&nbsp;&nbsp;&nbsp;码</div></td>
+				<td><input type="password" id="upass" name="upass" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="top_2">
+						<div class="login_btn" onclick="memberLogin(this)">登录</div>
+						<div><a href="register.jsp">注册</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/azycjd_new/findPassword.jsp">忘记密码?</a></div>
+					</div>				
+				</td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="other_css">
+						
+<table>
+  <tr>
+    <td><span id="qqLoginBtn"></span></td>
+    <td style="padding-left: 20px;"><span id="wb_connect_btn"></span></td>
+  </tr>
+</table>
+<script type="text/javascript">
+    QC.Login({
+       btnId:"qqLoginBtn"    //插入按钮的节点id
+});
+</script>
+
+<script type="text/javascript">
+	WB2.anyWhere(function (W) {
+	    W.widget.connectButton({
+	        id: "wb_connect_btn",
+	        type: '3,2',
+	        callback: {
+	            login: function (o) { //登录后的回调函数
+	                weiboLogin(o);
+	            },
+	            logout: function () { //退出后的回调函数
+	                
+	            }
+	        }
+	    });
+	});
+</script>
+
+					</div>				
+				</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+    <div class="top">
+		<div class="menu_css" id="menu0">
+			<div class="menu_pic"><img src="images/xuanhuan.png" /></div>
+			<div>玄幻·奇幻</div>
+		</div>
+		<div class="menu_css" id="menu1">
+			<div class="menu_pic"><img src="images/wuxia1.png" /></div>
+			<div>武侠·仙侠</div>
+		</div>
+		<div class="menu_css" id="menu2">
+			<div class="menu_pic"><img src="images/dushih.png" /></div>
+			<div>都市·异能</div>
+		</div>
+		<div class="menu_css" id="menu3">
+			<div class="menu_pic"><img src="images/junshi.png" /></div>
+			<div>历史·军事</div>
+		</div>
+		<div class="menu_css" id="menu4">
+			<div class="menu_pic"><img src="images/youxi.png" /></div>
+			<div>游戏·竞技</div>
+		</div>
+		<div class="menu_css" id="menu5">
+			<div class="menu_pic"><img src="images/kehuan.png" /></div>
+			<div>科幻·灵异</div>
+		</div>
+		<div class="menu_css" id="menu6">
+			<div class="menu_pic"><img src="images/xiandaiyanqing.png" /></div>
+			<div>现代言情</div>
+		</div>
+		<div class="menu_css" id="menu7">
+			<div class="menu_pic"><img src="images/gudaiyanqing.png" /></div>
+			<div>古代言情</div>
+		</div>
+	</div>
+	
+	<div class="main_css">
+		<div style="background:url(images/title.png) bottom no-repeat; font-weight:bold; text-align:center;height:45px; margin-bottom: 70px;">
+			<ul class="menuPage">
+				<li id="/azycjd_new/index.html">首页</li>
+				<li id="/azycjd_new/all_type_list.jsp">书库</li>
+				<li id="/azycjd_new/paihangbang.html">排行榜</li>
+				<li id="/azycjd_new/yhsf.html">优惠书坊</li>
+				<li id="/azycjd_new/zuojiafuli.jsp">作家福利</li>
+				<li id="/azycjd_new/anzhinews/news.do">安之公告</li>
+				<li id="/azycjd_new/chongzhi.jsp">充值</li>
+				<li id="/azycjd_new/index.html" style="border: none;">论坛</li>
+			</ul>
+		</div>
+		
+	<script language="javascript">var novelTypeName='古代言情';</script>
+	<script language="javascript">var loadMoreData='yes';</script>
+	<script language="javascript">var loadMoreData='yes';</script>
+	<script language="javascript">var pptHuanYiPiType='7';
+		$(function(){
+			totalDataPageNum=70.8;
+			totalDataPageNum=(totalDataPageNum%1==0)?totalDataPageNum:parseInt(totalDataPageNum)+1;
+			searchPageNum=10.0;
+			searchPageNum=(searchPageNum%1==0)?searchPageNum:parseInt(searchPageNum)+1;
+			$("#loadingData").slideUp();//隐藏加载中	
+			$("#loadMoreData").slideUp();//显示加载更多
+			if(totalDataPageNum>searchPageNum){
+				$("#loadMoreData").slideDown();//显示加载更多
+			}
+			loadLoginInfo();
+			getHtmlContent("html_novel_vote",95);
+			pptHuanYipiTimer=setTimeout("pptHuanYiPi()",pptHuanYipiDelay);
+		});
+		var searchPageNum=1;//默认查询第1页
+		var totalDataPageNum=0;
+		function searchNovel(){
+			searchPageNum=1;
+			loadNovelData(false);
+		}
+		
+		function getSearchParam(){
+			var param={};
+			param.bigType=novelTypeName;
+			param.pageNum=searchPageNum;
+			param.timenow=new Date().getTime();
+			return param;
+		}
+		
+		//Ajax的加载数据 appendBoolean--true：追加数据 false：覆盖数据
+		function loadNovelData(appendBoolean){
+			var params=getSearchParam();
+			$("#loadMoreData").slideUp();//隐藏加载更多
+			$("#loadingData").slideDown();//显示加载中
+			$.post(path+"/anzhinovel/shuku.do",params,function(res){
+				if(appendBoolean){
+					$(res).appendTo($("#novel_main_div"));
+				}else{
+					$("#novel_main_div").html(res);
+					searchPageNum=1;
+					$("#loadMoreData").html("点击加载更多数据");
+				}
+				totalDataPageNum=parseInt($("#"+params.timenow).val());//设定页码总数
+				$("#loadMoreData").slideDown();//显示加载更多
+				$("#loadingData").slideUp();//隐藏加载中
+			});
+		}
+		
+		//点击加载更多，异步加载数据
+		function loadMoreDataFn(){
+			searchPageNum++;
+			if(searchPageNum>totalDataPageNum){
+				$("#loadMoreData").html("没有更多数据了->>");
+				return;
+			}else{
+				loadNovelData(true);
+			}
+		}
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="/azycjd_new/plugings/adv/css/adv.css"/>
+	<script language="javascript" src="/azycjd_new/plugings/adv/js/adv.js"></script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='重生帝妃攻略';
+			novalTitleAuthor[novalTitleAuthor.length]='贝阿尼';
+			novalTitleInfo[novalTitleInfo.length]='她本是江府养尊处优的嫡孙小姐,一生有享不尽的荣华富贵，地位权势无一或缺。奈何，红颜薄命，天妒佳人。祖父被奸人设计郁郁而终，名门望族家业衰败，娘亲被乱棍打死，她喝下奸人毒药而亡。这一世睁开双眼..';
+			novalId[novalId.length]='17934';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='重生之扶摇皇后';
+			novalTitleAuthor[novalTitleAuthor.length]='宇熙';
+			novalTitleInfo[novalTitleInfo.length]='一道圣旨将她从美好幻想中抽出来！他要废后？青芜浑身像被人抽干了力气一样，这些年，她为他出生入死，为了捧他登基称帝，她广泛的交际于各路臣子之间，与胡人一战，他惨败被掳，她不惜用自己抵换他回朝…..';
+			novalId[novalId.length]='17949';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='煞星王妃';
+			novalTitleAuthor[novalTitleAuthor.length]='遇见海';
+			novalTitleInfo[novalTitleInfo.length]='    她是X战队优秀特工，因意外身亡，灵魂穿越成为御史大夫家身背煞星孤命的三小姐。他是京都令人谈之色变的孤命王爷，娶了七任王妃，没有一人活过洞房花烛之夜。说我是天煞孤星，那么我偏要将这煞字..';
+			novalId[novalId.length]='17662';
+		</script>
+	
+		<script language="javascript">
+			imgArr[imgArr.length]='/images/default_img.jpg';
+			pic_ds[pic_ds.length]='/images/default_img.jpg';
+			novalTitleEn[novalTitleEn.length]='';
+			novalTitleZh[novalTitleZh.length]='重生之天之娇女';
+			novalTitleAuthor[novalTitleAuthor.length]='花开一世';
+			novalTitleInfo[novalTitleInfo.length]='   不过一句金屋藏娇，她便暗生情愫。为一个人打天下，才有了他至高无上的一切。为了保住他的皇位，她可以下跪三天三夜、滴米不进。原以为可以共享福，却不料遭遇他设计惨死。上一世的惨死，早就让阿娇..';
+			novalId[novalId.length]='16447';
+		</script>
+	
+	<div id="recommad_one" style="position:absolute; top:710px; width:375px; height:500px; background-image:url(/images/default_img.jpg); margin-left:690px;">
+		<script language="javascript">
+			new moveAdv({delaysN:500,widN:375,heiN:500}).init();
+		</script>
+	</div>
+	<div style="position:absolute; top:1130px; margin-left:110px;">
+		<img src="/images/default_img.jpg" width="318" height="458"  onclick="window.location.href='/azycjd_new/novel/15802.jsp'"/>
+	</div>
+	<div class="main_2_div">
+		<div class="title_div_css">
+			小说&nbsp;>&nbsp;古代言情
+		</div>
+		<div style="margin-top:30px;line-height: 40px; vertical-align: middle; padding-left: 20px;">
+			精彩推荐&nbsp;&nbsp;&nbsp;<font style="color:#cbcbcb;">DAILY RECOMMAND</font>
+		</div>
+		<div style="background-color:#e5e5e5; height: 468px;">
+			<table width="100%" border="0">
+			  <tr>
+				<td width="350" valign="top">
+					<div class="recommand_1_css">
+						<div class="en_title" style="font-size:20px;" id="novalTitleEnDiv"></div>
+						<div class="title_self_css" id="novalTitleZhDiv">重生帝妃攻略</div>
+						<div>——</div>
+						<div id="novalTitleAutorDiv">
+							贝阿尼&nbsp;著
+						</div> 
+						<div>
+							<div class="self_btn" id="novelHref" style="margin-right:0px;"  onclick="window.location.href='/azycjd_new/novel/17934.jsp'">立刻阅读</div>
+						</div>
+					</div>
+				</td>
+				<td valign="top">
+					<div id="novalTitleInfoDiv" class="html_novel_vote" style="width:220px; padding:30px; line-height:26px; font-size:12px; padding-top:60px;">
+						她本是江府养尊处优的嫡孙小姐,一生有享不尽的荣华富贵，地位权势无一或缺。奈何，红颜薄命，天妒佳人。祖父被奸人设计郁郁而终，名门望族家业衰败，娘亲被乱棍打死，她喝下奸人毒药而亡。这一世睁开双眼.. 
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div style="height:350px; margin-top: 28px;">
+			<table width="100%" border="0">
+			  <tr>
+				<td width="430">&nbsp;</td>
+				<td width="200" valign="top">
+					<div class="recommand_1_css" id="recommand_div_1_css">
+						<div class="en_title" style="font-size:20px;"></div>
+						<div class="title_self_css">王妃是神棍</div>
+						<div>——</div>
+						<div>
+							路听音&nbsp;著
+						</div> 
+						<div>
+							<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/15802.jsp'">立刻阅读</div>
+						</div>
+					</div>
+				</td>
+				<td valign="top">
+					<div class="html_novel_vote" style="padding:10px; line-height:26px; font-size:12px; padding-top:60px;">
+						      她在现代靠占卜为生，被人亲切的称为神棍。一朝穿越，她成为相府九小姐，一个因为能探悉别人命运而被从小当妖孽，长大被渣男逼婚而死的可怜娃。再度醒来，她是权倾当朝的朔王宠妃，有霸道父兄.. 
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+	
+		<div style="background-color:#e5e5e5; height: 345px; width:100%;">
+			<div style="width:96px; height:66px; position:absolute; margin-top:-5px; margin-left:-5px; background-image:url(images/huanyipi.png); cursor:pointer;" onclick="getMoreHuanYiPi('73')">
+				
+			</div>
+			<div style="clear: both;" id="huanyipiDIv">
+				
+
+
+
+	<div class="huanyipi">
+		<table width="100%" border="0">
+		  <tr>
+			<td>
+				<div class="recommand_3_css">
+					<div class="title_self_css">妖默</div>
+					<div>——</div>
+					<div>
+						墨囚 著
+					</div> 
+					<div class="book_info">
+						     结束百年孤独时光只因为在那白芷花田中遇见了那个面上刺了“黔”字的人。这个人挡了自己头顶一片艳阳就这样走进了自己的世界。当时，他的过去他不想去过问，也没有想过去过问，只是看到他伤痕累..
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;"  onclick="window.location.href='/azycjd_new/novel/17818.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="205">
+				<img src="/UploadImages/NovelWorks/Big/2014-11-26/cabcff75a2854e759b29aae51025cc2d.jpg" width="205" height="290" onclick="window.location.href='/azycjd_new/novel/17818.jsp'"/>
+			</td>
+		  </tr>
+		</table>
+	</div>
+
+	<div class="huanyipi">
+		<table width="100%" border="0">
+		  <tr>
+			<td>
+				<div class="recommand_3_css">
+					<div class="title_self_css">跋扈傻妃惹君心</div>
+					<div>——</div>
+					<div>
+						奈落 著
+					</div> 
+					<div class="book_info">
+						      前一世，生在豪门世家，不得不满腹心机，步步为营，最终惨死在爱人手下。这一世，同是权贵之女，她只想圈地为王，肆意江湖。却不想，装疯卖傻守着自己的一亩三分地的她，被他看在眼里放在了心..
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;"  onclick="window.location.href='/azycjd_new/novel/17846.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="205">
+				<img src="/images/default_img.jpg" width="205" height="290" onclick="window.location.href='/azycjd_new/novel/17846.jsp'"/>
+			</td>
+		  </tr>
+		</table>
+	</div>
+
+<script language="javascript">
+	$(function(){
+		getHtmlContent("book_info",80);
+	});
+</script>
+			</div>
+		</div>
+		
+		<div class="paixu_div" style="margin-top:40px;">
+			<table width="100%" border="0">
+			  <tr style="line-height:35px;">
+				<td width="70%" style="padding-left:10px;">
+					古代言情
+				</td>
+				<td width="12%">
+					<!-- <input type="checkbox" />只显示已完成 -->
+				</td>
+				<td width="9%">
+					<!-- <input type="checkbox" />VIP作品 -->
+				</td>
+				<td width="9%">
+					<!-- <input type="checkbox" />半价库 -->
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div id="novel_main_div">
+			
+
+ 
+
+
+<div style="clear:both; overflow:auto;overflow-x: hidden;" id="articePageMainDivend5974319646490234leixing">
+	
+		<div class="article_items" id="article_items18043" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="18043novalImg0end5974319646490234leixing18043">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="大荒传奇">
+				大荒传奇
+			</div>
+			<div class="noval_info_css">
+				 “君临之出东方，天狼星鬼王星随之东移，有双现之势，...
+			</div>
+			<div class="noval_author"  title="应萧歌">
+				by 应萧歌<font class="acticle_add_time">2016/04/09 22:24</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">3</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18042" >
+			<div class="noval_img" id="18042novalImg0end5974319646490234leixing18042">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="于">
+				于
+			</div>
+			<div class="noval_info_css">
+				  “君临之出东方，天狼星鬼王星随之东移，有双现之势...
+			</div>
+			<div class="noval_author"  title="南柯涯">
+				by 南柯涯<font class="acticle_add_time">2016/04/09 22:12</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">0</td>
+					<td class="read_num_css" title="点击数">1</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18034" >
+			<div class="noval_img" id="18034novalImg0end5974319646490234leixing18034">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="下一个人间">
+				下一个人间
+			</div>
+			<div class="noval_info_css">
+				  她是锦家半途接回来的大小姐，一家人只盼有日她能冠...
+			</div>
+			<div class="noval_author"  title="沈临谙">
+				by 沈临谙<font class="acticle_add_time">2016/04/08 22:13</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11033</td>
+					<td class="read_num_css" title="点击数">17</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18032" >
+			<div class="noval_img" id="18032novalImg0end5974319646490234leixing18032">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="梦中情缘之钓上冰山将军">
+				梦中情缘之钓上冰山
+			</div>
+			<div class="noval_info_css">
+				她和他相识于梦中。初次相见他是她的救命恩人，第二次相...
+			</div>
+			<div class="noval_author"  title="冷流萤">
+				by 冷流萤<font class="acticle_add_time">2016/04/07 10:02</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11102</td>
+					<td class="read_num_css" title="点击数">16</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18031" >
+			<div class="noval_img" id="18031novalImg0end5974319646490234leixing18031">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="阴差阳错地爱上你">
+				阴差阳错地爱上你
+			</div>
+			<div class="noval_info_css">
+				 他倾国倾城，容貌超过天下第一美女！
+ 他武功盖世...
+			</div>
+			<div class="noval_author"  title="远心">
+				by 远心<font class="acticle_add_time">2016/04/09 16:11</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">13642</td>
+					<td class="read_num_css" title="点击数">20</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18030" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="18030novalImg0end5974319646490234leixing18030">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="重生之草包弃女要逆袭">
+				重生之草包弃女要逆
+			</div>
+			<div class="noval_info_css">
+				她，是杀手界传奇和第一杀手，魅影。
+一朝被好友背叛...
+			</div>
+			<div class="noval_author"  title="孤独月姬">
+				by 孤独月姬<font class="acticle_add_time">2016/04/07 13:55</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">10621</td>
+					<td class="read_num_css" title="点击数">48</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18026" >
+			<div class="noval_img" id="18026novalImg0end5974319646490234leixing18026">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="本宫美貌无双">
+				本宫美貌无双
+			</div>
+			<div class="noval_info_css">
+				美貌无双的皇贵妃娘娘：皇上，求放过。
+白梦溪：呵。...
+			</div>
+			<div class="noval_author"  title="五夏幽然">
+				by 五夏幽然<font class="acticle_add_time">2016/04/04 15:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">199</td>
+					<td class="read_num_css" title="点击数">8</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18024" >
+			<div class="noval_img" id="18024novalImg0end5974319646490234leixing18024">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="一寸相思十年踪迹">
+				一寸相思十年踪迹
+			</div>
+			<div class="noval_info_css">
+				[沈阿温]玲珑骰子安红豆，入骨相思知不知。
+
+...
+			</div>
+			<div class="noval_author"  title="沈阿温">
+				by 沈阿温<font class="acticle_add_time">2016/04/04 07:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">20946</td>
+					<td class="read_num_css" title="点击数">13</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18023" >
+			<div class="noval_img" id="18023novalImg0end5974319646490234leixing18023">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="漠北">
+				漠北
+			</div>
+			<div class="noval_info_css">
+				上古时期，海分三海，地分四漠，州分五洲。上古成仙之人...
+			</div>
+			<div class="noval_author"  title="简一生">
+				by 简一生<font class="acticle_add_time">2016/04/08 19:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">14579</td>
+					<td class="read_num_css" title="点击数">20</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18022" >
+			<div class="noval_img" id="18022novalImg0end5974319646490234leixing18022">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="北冥有鱼">
+				北冥有鱼
+			</div>
+			<div class="noval_info_css">
+				许多年前，他只是一只贝壳，直到遇到那只不可一世的鱼。...
+			</div>
+			<div class="noval_author"  title="非鱼球">
+				by 非鱼球<font class="acticle_add_time">2016/04/02 18:18</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1160</td>
+					<td class="read_num_css" title="点击数">13</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18020" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="18020novalImg0end5974319646490234leixing18020">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="宅院深深">
+				宅院深深
+			</div>
+			<div class="noval_info_css">
+				她，大宅子的千金，却因为家庭“重男轻女”的封建思想而...
+			</div>
+			<div class="noval_author"  title="王聪q">
+				by 王聪q<font class="acticle_add_time">2016/04/10 07:57</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">14473</td>
+					<td class="read_num_css" title="点击数">51</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18019" >
+			<div class="noval_img" id="18019novalImg0end5974319646490234leixing18019">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="特工嫡女求独宠">
+				特工嫡女求独宠
+			</div>
+			<div class="noval_info_css">
+				    特工墨宝一朝穿越成了宴西皇朝相府嫡女墨宝儿，...
+			</div>
+			<div class="noval_author"  title="卿格格">
+				by 卿格格<font class="acticle_add_time">2016/04/07 00:18</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">13450</td>
+					<td class="read_num_css" title="点击数">129</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items18014" >
+			<div class="noval_img" id="18014novalImg0end5974319646490234leixing18014">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="为君再生">
+				为君再生
+			</div>
+			<div class="noval_info_css">
+				君轻雪：“对不起，如果没有臣，殿下一定会活得更好。”...
+			</div>
+			<div class="noval_author"  title="音乐水果">
+				by 音乐水果<font class="acticle_add_time">2016/03/31 17:40</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">7041</td>
+					<td class="read_num_css" title="点击数">19</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17995" >
+			<div class="noval_img" id="17995novalImg0end5974319646490234leixing17995">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="帝妃谋">
+				帝妃谋
+			</div>
+			<div class="noval_info_css">
+				   一个是穿越而来的国公府的嫡小姐，一个是玉亲王府...
+			</div>
+			<div class="noval_author"  title="西风无泪">
+				by 西风无泪<font class="acticle_add_time">2016/04/10 16:33</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">58586</td>
+					<td class="read_num_css" title="点击数">258</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17994" >
+			<div class="noval_img" id="17994novalImg0end5974319646490234leixing17994">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="夕爱">
+				夕爱
+			</div>
+			<div class="noval_info_css">
+				很多时候，爱无声，却可以很炙烈；很多时候，爱无话，却...
+			</div>
+			<div class="noval_author"  title="流年不负卿">
+				by 流年不负<font class="acticle_add_time">2016/04/11 00:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">25912</td>
+					<td class="read_num_css" title="点击数">410</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17993" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17993novalImg0end5974319646490234leixing17993">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="攻略王的男人">
+				攻略王的男人
+			</div>
+			<div class="noval_info_css">
+				谁说入宫的妃嫔都是女人，映雪这回伺候的新主子竟然是美...
+			</div>
+			<div class="noval_author"  title="玖九">
+				by 玖九<font class="acticle_add_time">2016/03/17 22:46</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">3241</td>
+					<td class="read_num_css" title="点击数">20</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17990" >
+			<div class="noval_img" id="17990novalImg0end5974319646490234leixing17990">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="公子万劫不复之嫡女撩人">
+				公子万劫不复之嫡女
+			</div>
+			<div class="noval_info_css">
+				    邵依依，现代女杀手，与老公服务于同一个杀手集...
+			</div>
+			<div class="noval_author"  title="苏易尘">
+				by 苏易尘<font class="acticle_add_time">2016/04/10 09:30</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">77529</td>
+					<td class="read_num_css" title="点击数">420</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17988" >
+			<div class="noval_img" id="17988novalImg0end5974319646490234leixing17988">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="我是痴傻怎么着吧">
+				我是痴傻怎么着吧
+			</div>
+			<div class="noval_info_css">
+				冷魅，二十一世纪最为出色的特工，因为错爱，一朝穿越，...
+			</div>
+			<div class="noval_author"  title="曦木舟">
+				by 曦木舟<font class="acticle_add_time">2016/04/07 15:00</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11601</td>
+					<td class="read_num_css" title="点击数">87</td>
+					<td class="end_article">签约申请中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17982" >
+			<div class="noval_img" id="17982novalImg0end5974319646490234leixing17982">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="宠后倾城">
+				宠后倾城
+			</div>
+			<div class="noval_info_css">
+				    她“怀有身孕”嫁为人妇，新婚之夜被夫君唾弃，...
+			</div>
+			<div class="noval_author"  title="迷生">
+				by 迷生<font class="acticle_add_time">2016/04/10 12:00</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">120148</td>
+					<td class="read_num_css" title="点击数">229</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17978" >
+			<div class="noval_img" id="17978novalImg0end5974319646490234leixing17978">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="玫神落">
+				玫神落
+			</div>
+			<div class="noval_info_css">
+				霍尘掌管所有姻缘，却过不了自己的情结，一切起缘与几百...
+			</div>
+			<div class="noval_author"  title="天下无雨">
+				by 天下无雨<font class="acticle_add_time">2016/03/21 09:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8781</td>
+					<td class="read_num_css" title="点击数">65</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17974" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17974novalImg0end5974319646490234leixing17974">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="天才庶女很倾城">
+				天才庶女很倾城
+			</div>
+			<div class="noval_info_css">
+				她，凤冉大陆阳月云家四小姐，傻子，废物名声在外，懦弱...
+			</div>
+			<div class="noval_author"  title="水墨朝夕">
+				by 水墨朝夕<font class="acticle_add_time">2016/03/04 21:51</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">60</td>
+					<td class="read_num_css" title="点击数">13</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17967" >
+			<div class="noval_img" id="17967novalImg0end5974319646490234leixing17967">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="最后岁月酿成花">
+				最后岁月酿成花
+			</div>
+			<div class="noval_info_css">
+				背叛，欺骗，若命亦如此，便坦然接受，却不容我平静生活...
+			</div>
+			<div class="noval_author"  title="花北城">
+				by 花北城<font class="acticle_add_time">2016/04/09 18:25</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">4919</td>
+					<td class="read_num_css" title="点击数">63</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17962" >
+			<div class="noval_img" id="17962novalImg0end5974319646490234leixing17962">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="男尊女贵之韩忆">
+				男尊女贵之韩忆
+			</div>
+			<div class="noval_info_css">
+				落花人独立 ，微雨燕双飞；
+当时明月在， 曾照彩云...
+			</div>
+			<div class="noval_author"  title="楚青霜">
+				by 楚青霜<font class="acticle_add_time">2016/03/02 11:08</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2334</td>
+					<td class="read_num_css" title="点击数">25</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17960" >
+			<div class="noval_img" id="17960novalImg0end5974319646490234leixing17960">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="十里长亭更短亭">
+				十里长亭更短亭
+			</div>
+			<div class="noval_info_css">
+				为什么问了十七遍仍得不到回应？一个完全陌生的世界，一...
+			</div>
+			<div class="noval_author"  title="断笔且续貂">
+				by 断笔且续<font class="acticle_add_time">2016/03/04 13:06</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">17244</td>
+					<td class="read_num_css" title="点击数">128</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17956" >
+			<div class="noval_img" id="17956novalImg0end5974319646490234leixing17956">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="孟婆来袭之公子请让路">
+				孟婆来袭之公子请让
+			</div>
+			<div class="noval_info_css">
+				孟柒三千年前爱长欢如命，可是长欢断了她情根，让她恨不...
+			</div>
+			<div class="noval_author"  title="宁薄凉">
+				by 宁薄凉<font class="acticle_add_time">2016/03/21 21:19</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">33137</td>
+					<td class="read_num_css" title="点击数">153</td>
+					<td class="end_article">签约申请中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17955" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17955novalImg0end5974319646490234leixing17955">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="火影之混乱的打开方式">
+				火影之混乱的打开方
+			</div>
+			<div class="noval_info_css">
+				世界上有种叫做事与愿违的情况，听说那一般都是神的恶作...
+			</div>
+			<div class="noval_author"  title="纵笔">
+				by 纵笔<font class="acticle_add_time">2016/02/29 22:45</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">35471</td>
+					<td class="read_num_css" title="点击数">27</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17952" >
+			<div class="noval_img" id="17952novalImg0end5974319646490234leixing17952">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="碧海浮花之亡国公主">
+				碧海浮花之亡国公主
+			</div>
+			<div class="noval_info_css">
+				她是碧海浮花，肆意绽放，又悄然等待。...
+			</div>
+			<div class="noval_author"  title="夏里">
+				by 夏里<font class="acticle_add_time">2016/03/09 09:05</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">40091</td>
+					<td class="read_num_css" title="点击数">287</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17949" >
+			<div class="noval_img" id="17949novalImg0end5974319646490234leixing17949">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="重生之扶摇皇后">
+				重生之扶摇皇后
+			</div>
+			<div class="noval_info_css">
+				一道圣旨将她从美好幻想中抽出来！
+他要废后？
+青芜浑...
+			</div>
+			<div class="noval_author"  title="宇熙">
+				by 宇熙<font class="acticle_add_time">2016/03/30 23:02</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">85025</td>
+					<td class="read_num_css" title="点击数">488</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17948" >
+			<div class="noval_img" id="17948novalImg0end5974319646490234leixing17948">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="快穿之一生何求">
+				快穿之一生何求
+			</div>
+			<div class="noval_info_css">
+				一个优秀的时空管理员必然要，，上得厅堂下得厨房能文能...
+			</div>
+			<div class="noval_author"  title="顾沃">
+				by 顾沃<font class="acticle_add_time">2016/02/24 09:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">4048</td>
+					<td class="read_num_css" title="点击数">33</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17947" >
+			<div class="noval_img" id="17947novalImg0end5974319646490234leixing17947">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="传说">
+				传说
+			</div>
+			<div class="noval_info_css">
+				这片大陆经过无尽岁月的战火，终于人类称霸了。一个个帝...
+			</div>
+			<div class="noval_author"  title="奈何">
+				by 奈何<font class="acticle_add_time">2016/03/05 14:42</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">13034</td>
+					<td class="read_num_css" title="点击数">40</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17941" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17941novalImg0end5974319646490234leixing17941">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="欲念卿之拐个帝君种桃花">
+				欲念卿之拐个帝君种
+			</div>
+			<div class="noval_info_css">
+				“帝君，我们刚刚烤的那只兔子去哪了？”三里月蹦蹦跳跳...
+			</div>
+			<div class="noval_author"  title="夏沫微酸">
+				by 夏沫微酸<font class="acticle_add_time">2016/02/23 23:13</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2950</td>
+					<td class="read_num_css" title="点击数">37</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17940" >
+			<div class="noval_img" id="17940novalImg0end5974319646490234leixing17940">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="悍妃驾到之一生一世一双人">
+				悍妃驾到之一生一世
+			</div>
+			<div class="noval_info_css">
+				“小七，这是谁家姑娘，竟如此动作不雅的躺在地上？”墨...
+			</div>
+			<div class="noval_author"  title="夏沫微酸">
+				by 夏沫微酸<font class="acticle_add_time">2016/02/29 09:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8461</td>
+					<td class="read_num_css" title="点击数">40</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17939" >
+			<div class="noval_img" id="17939novalImg0end5974319646490234leixing17939">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="墨后传">
+				墨后传
+			</div>
+			<div class="noval_info_css">
+				她，名门嫡女，阿玛被人害死，额娘被迫出府，自小便看懂...
+			</div>
+			<div class="noval_author"  title="黛葬">
+				by 黛葬<font class="acticle_add_time">2016/03/02 16:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">41322</td>
+					<td class="read_num_css" title="点击数">135</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17938" >
+			<div class="noval_img" id="17938novalImg0end5974319646490234leixing17938">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="扶风志之无盐皇后">
+				扶风志之无盐皇后
+			</div>
+			<div class="noval_info_css">
+				冰寒冷冽绕偏光，荒芜丛生万点霜。
+一道圣旨，一颗私心...
+			</div>
+			<div class="noval_author"  title="眼泪泡饭">
+				by 眼泪泡饭<font class="acticle_add_time">2016/04/10 14:41</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">502881</td>
+					<td class="read_num_css" title="点击数">456</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17936" >
+			<div class="noval_img" id="17936novalImg0end5974319646490234leixing17936">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="最后岁月酿成病">
+				最后岁月酿成病
+			</div>
+			<div class="noval_info_css">
+				《最后岁月酿成花》第二部。谢谢关注。...
+			</div>
+			<div class="noval_author"  title="花北城">
+				by 花北城<font class="acticle_add_time">2016/03/05 11:10</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1041</td>
+					<td class="read_num_css" title="点击数">43</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17935" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17935novalImg0end5974319646490234leixing17935">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="江湖险恶医女求生记">
+				江湖险恶医女求生记
+			</div>
+			<div class="noval_info_css">
+				她是西燕太尉之女，原本应该过着平凡得生活，可是因为一...
+			</div>
+			<div class="noval_author"  title="瓶盖币">
+				by 瓶盖币<font class="acticle_add_time">2016/04/10 13:30</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">365082</td>
+					<td class="read_num_css" title="点击数">208</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17934" >
+			<div class="noval_img" id="17934novalImg0end5974319646490234leixing17934">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="重生帝妃攻略">
+				重生帝妃攻略
+			</div>
+			<div class="noval_info_css">
+				她本是江府养尊处优的嫡孙小姐,一生有享不尽的荣华富贵...
+			</div>
+			<div class="noval_author"  title="贝阿尼">
+				by 贝阿尼<font class="acticle_add_time">2016/04/10 16:42</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">209264</td>
+					<td class="read_num_css" title="点击数">4609</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17932" >
+			<div class="noval_img" id="17932novalImg0end5974319646490234leixing17932">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="妃君不嫁">
+				妃君不嫁
+			</div>
+			<div class="noval_info_css">
+				    一代名将兰陵王的脑残粉郑君如愿以偿穿越到了北...
+			</div>
+			<div class="noval_author"  title="皇小妃">
+				by 皇小妃<font class="acticle_add_time">2016/04/10 09:54</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">257230</td>
+					<td class="read_num_css" title="点击数">1678</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17928" >
+			<div class="noval_img" id="17928novalImg0end5974319646490234leixing17928">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="美人帐下">
+				美人帐下
+			</div>
+			<div class="noval_info_css">
+				三尺青锋，斩得开敌人，却斩不断世俗；一袭铠甲，挡得住...
+			</div>
+			<div class="noval_author"  title="孤月矜心">
+				by 孤月矜心<font class="acticle_add_time">2016/04/05 20:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">21073</td>
+					<td class="read_num_css" title="点击数">416</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17927" >
+			<div class="noval_img" id="17927novalImg0end5974319646490234leixing17927">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="桐花开在正好时">
+				桐花开在正好时
+			</div>
+			<div class="noval_info_css">
+				在中国神话中，白无常名叫谢必安，就是酬谢神明则必安，...
+			</div>
+			<div class="noval_author"  title="花却飞">
+				by 花却飞<font class="acticle_add_time">2016/04/04 22:07</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">26782</td>
+					<td class="read_num_css" title="点击数">60</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17925" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17925novalImg0end5974319646490234leixing17925">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="祸乱天下当系统穿越成玩家">
+				祸乱天下当系统穿越
+			</div>
+			<div class="noval_info_css">
+				
+作为一名无辜的系统/程序猿，叶若邪欢快地虐着游戏...
+			</div>
+			<div class="noval_author"  title="宁木安">
+				by 宁木安<font class="acticle_add_time">2016/02/12 18:27</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1109</td>
+					<td class="read_num_css" title="点击数">21</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17922" >
+			<div class="noval_img" id="17922novalImg0end5974319646490234leixing17922">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="有凤囚凰">
+				有凤囚凰
+			</div>
+			<div class="noval_info_css">
+				
+　　
+　　
+　　
+　　我叫顾九，九九归一的...
+			</div>
+			<div class="noval_author"  title="常埋">
+				by 常埋<font class="acticle_add_time">2016/02/11 00:54</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2777</td>
+					<td class="read_num_css" title="点击数">27</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17921" >
+			<div class="noval_img" id="17921novalImg0end5974319646490234leixing17921">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="重生之相府嫡女">
+				重生之相府嫡女
+			</div>
+			<div class="noval_info_css">
+				      前世，幸福美满的婚姻不过是镜中水月，轻轻...
+			</div>
+			<div class="noval_author"  title="顾曼">
+				by 顾曼<font class="acticle_add_time">2016/02/08 16:53</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2</td>
+					<td class="read_num_css" title="点击数">20</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17914" >
+			<div class="noval_img" id="17914novalImg0end5974319646490234leixing17914">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="断袖王爷追妻记">
+				断袖王爷追妻记
+			</div>
+			<div class="noval_info_css">
+				  她，灵冰，是21世纪一手遮天的大boss。不料，...
+			</div>
+			<div class="noval_author"  title="希姚">
+				by 希姚<font class="acticle_add_time">2016/02/03 13:49</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">40</td>
+					<td class="read_num_css" title="点击数">22</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17912" >
+			<div class="noval_img" id="17912novalImg0end5974319646490234leixing17912">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="妃不可挡请绕行">
+				妃不可挡请绕行
+			</div>
+			<div class="noval_info_css">
+				  姬岑陌只是在现代摔了一跤，摔倒了一个扯淡的架空世...
+			</div>
+			<div class="noval_author"  title="莫烟雨">
+				by 莫烟雨<font class="acticle_add_time">2016/02/06 22:52</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">4631</td>
+					<td class="read_num_css" title="点击数">29</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17911" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17911novalImg0end5974319646490234leixing17911">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="封魔帝女">
+				封魔帝女
+			</div>
+			<div class="noval_info_css">
+				误入一个游戏，来到异世，真相却是“魂归故里”？
+数...
+			</div>
+			<div class="noval_author"  title="零汐然">
+				by 零汐然<font class="acticle_add_time">2016/02/13 17:57</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">7090</td>
+					<td class="read_num_css" title="点击数">90</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17892" >
+			<div class="noval_img" id="17892novalImg0end5974319646490234leixing17892">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="虚度浮生一场梦">
+				虚度浮生一场梦
+			</div>
+			<div class="noval_info_css">
+				    幼年时，他们都有着同样的命运，都同样得到了方...
+			</div>
+			<div class="noval_author"  title="麦宝">
+				by 麦宝<font class="acticle_add_time">2016/02/17 17:28</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">12229</td>
+					<td class="read_num_css" title="点击数">180</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17891" >
+			<div class="noval_img" id="17891novalImg0end5974319646490234leixing17891">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="不负">
+				不负
+			</div>
+			<div class="noval_info_css">
+				不就是在桃花林中多看了你一眼，干嘛对我死缠乱打。苏陌...
+			</div>
+			<div class="noval_author"  title="星月">
+				by 星月<font class="acticle_add_time">2016/04/06 22:06</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">23571</td>
+					<td class="read_num_css" title="点击数">382</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17890" >
+			<div class="noval_img" id="17890novalImg0end5974319646490234leixing17890">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="独宠萌妃">
+				独宠萌妃
+			</div>
+			<div class="noval_info_css">
+				...
+			</div>
+			<div class="noval_author"  title="小羽儿">
+				by 小羽儿<font class="acticle_add_time">2016/01/23 17:19</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2703</td>
+					<td class="read_num_css" title="点击数">26</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17889" >
+			<div class="noval_img" id="17889novalImg0end5974319646490234leixing17889">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="半伤情">
+				半伤情
+			</div>
+			<div class="noval_info_css">
+				半点朱砂半粉颊，
+半闪星眸半叶眉，
+半含笑腼半贝...
+			</div>
+			<div class="noval_author"  title="心癌">
+				by 心癌<font class="acticle_add_time">2016/01/23 13:45</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">1494</td>
+					<td class="read_num_css" title="点击数">17</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17885" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17885novalImg0end5974319646490234leixing17885">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="景木之春">
+				景木之春
+			</div>
+			<div class="noval_info_css">
+				    忆与忘的爱恨云烟，执与妄的三生情缘，换来的不...
+			</div>
+			<div class="noval_author"  title="素昭">
+				by 素昭<font class="acticle_add_time">2015/10/11 22:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">281409</td>
+					<td class="read_num_css" title="点击数">10539</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17884" >
+			<div class="noval_img" id="17884novalImg0end5974319646490234leixing17884">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="茴棠系列之莲花香">
+				茴棠系列之莲花香
+			</div>
+			<div class="noval_info_css">
+				     她，是西复国上一任国主的私生女，却自幼长在...
+			</div>
+			<div class="noval_author"  title="青蓝">
+				by 青蓝<font class="acticle_add_time">2014/08/01 07:58</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">307150</td>
+					<td class="read_num_css" title="点击数">5517</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17882" >
+			<div class="noval_img" id="17882novalImg0end5974319646490234leixing17882">
+				<img src="/UploadImages/NovelWorks/Big/2015-11-03/8c9596a10ae34e88a5dd18e170fcc736.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="天阔雪漫与谁同行">
+				天阔雪漫与谁同行
+			</div>
+			<div class="noval_info_css">
+				   “今日所赐，他日必定百倍、千倍奉还于你。”少年...
+			</div>
+			<div class="noval_author"  title="非鱼">
+				by 非鱼<font class="acticle_add_time">2015/12/06 12:59</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">62926</td>
+					<td class="read_num_css" title="点击数">334</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17881" >
+			<div class="noval_img" id="17881novalImg0end5974319646490234leixing17881">
+				<img src="/UploadImages/NovelWorks/Big/2015-01-10/53b18499b90a4a388bd3f753485d39f9.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="风月潇潇">
+				风月潇潇
+			</div>
+			<div class="noval_info_css">
+				  潇潇，二十一世纪芳邻恰恰也是二十一的大学本科毕业...
+			</div>
+			<div class="noval_author"  title="千汐">
+				by 千汐<font class="acticle_add_time">2015/01/10 21:14</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">24919</td>
+					<td class="read_num_css" title="点击数">186</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17880" >
+			<div class="noval_img" id="17880novalImg0end5974319646490234leixing17880">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="似两世，世世如梦">
+				似两世，世世如梦
+			</div>
+			<div class="noval_info_css">
+				　此世一个人面对所有的回忆不容易     
+　　“上...
+			</div>
+			<div class="noval_author"  title="M满楼andM花枝">
+				by M满楼a<font class="acticle_add_time">2014/06/29 08:44</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">6967</td>
+					<td class="read_num_css" title="点击数">132</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17877" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17877novalImg0end5974319646490234leixing17877">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="倾云离歌">
+				倾云离歌
+			</div>
+			<div class="noval_info_css">
+				                 　重生草原，她是峪...
+			</div>
+			<div class="noval_author"  title="紫苏兰朵">
+				by 紫苏兰朵<font class="acticle_add_time">2015/09/14 21:18</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">16898</td>
+					<td class="read_num_css" title="点击数">741</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17874" >
+			<div class="noval_img" id="17874novalImg0end5974319646490234leixing17874">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="一眼爱恋终不悔">
+				一眼爱恋终不悔
+			</div>
+			<div class="noval_info_css">
+				       一眼他深入她心。夜夜思念少女怀春。默默...
+			</div>
+			<div class="noval_author"  title="紫苏兰朵">
+				by 紫苏兰朵<font class="acticle_add_time">2015/05/15 17:51</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2390</td>
+					<td class="read_num_css" title="点击数">64</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17873" >
+			<div class="noval_img" id="17873novalImg0end5974319646490234leixing17873">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="偷一许时光">
+				偷一许时光
+			</div>
+			<div class="noval_info_css">
+				  她是孤傲的明星，只为了一个男人。
+她是游荡的古人...
+			</div>
+			<div class="noval_author"  title="紫苏兰朵">
+				by 紫苏兰朵<font class="acticle_add_time">2015/01/02 18:07</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">5940</td>
+					<td class="read_num_css" title="点击数">58</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17871" >
+			<div class="noval_img" id="17871novalImg0end5974319646490234leixing17871">
+				<img src="/UploadImages/NovelWorks/Big/2015-05-11/7d23b63edc574f96ac589c883070a16f.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="何处安好">
+				何处安好
+			</div>
+			<div class="noval_info_css">
+				    对同胞弟弟，她没有好脸色"你凭什么质疑我？"...
+			</div>
+			<div class="noval_author"  title="庄生小梦">
+				by 庄生小梦<font class="acticle_add_time">2015/04/12 19:50</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">280966</td>
+					<td class="read_num_css" title="点击数">4984</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17870" >
+			<div class="noval_img" id="17870novalImg0end5974319646490234leixing17870">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="落跑皇妃：妃动天下">
+				落跑皇妃：妃动天下
+			</div>
+			<div class="noval_info_css">
+				一朝穿越，她成了身份尊贵的相府嫡女。倾城之姿，却被一...
+			</div>
+			<div class="noval_author"  title="梧清秋">
+				by 梧清秋<font class="acticle_add_time">2015/02/25 22:43</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">18058</td>
+					<td class="read_num_css" title="点击数">268</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17868" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17868novalImg0end5974319646490234leixing17868">
+				<img src="/UploadImages/NovelWorks/Big/2014-10-31/f86de392d8164a8eb3239f0f66d9f856.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="古煌之国">
+				古煌之国
+			</div>
+			<div class="noval_info_css">
+				  尘封灵魂的苏醒，是践踏命运，还是终归于尘；封印记...
+			</div>
+			<div class="noval_author"  title="洛语">
+				by 洛语<font class="acticle_add_time">2014/12/12 14:58</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">63113</td>
+					<td class="read_num_css" title="点击数">1706</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17866" >
+			<div class="noval_img" id="17866novalImg0end5974319646490234leixing17866">
+				<img src="/UploadImages/NovelWorks/Big/2015-04-03/ce47215214464250ba19b87e2aa49e05.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="倾世罪妃">
+				倾世罪妃
+			</div>
+			<div class="noval_info_css">
+				她是如美玉无瑕的女子玖若，她睿智聪慧，她心狠手辣，她...
+			</div>
+			<div class="noval_author"  title="小姚快跑">
+				by 小姚快跑<font class="acticle_add_time">2015/10/27 23:02</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">49098</td>
+					<td class="read_num_css" title="点击数">768</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17865" >
+			<div class="noval_img" id="17865novalImg0end5974319646490234leixing17865">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="贵妃计">
+				贵妃计
+			</div>
+			<div class="noval_info_css">
+				   贵妃之位我需坐稳如泰山。
+宫中生活左不过一句：...
+			</div>
+			<div class="noval_author"  title="公子风流">
+				by 公子风流<font class="acticle_add_time">2013/07/14 12:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">9607</td>
+					<td class="read_num_css" title="点击数">1260</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17864" >
+			<div class="noval_img" id="17864novalImg0end5974319646490234leixing17864">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="云锦">
+				云锦
+			</div>
+			<div class="noval_info_css">
+				         若谁九十七岁死，奈何桥上等三年。...
+			</div>
+			<div class="noval_author"  title="公子风流">
+				by 公子风流<font class="acticle_add_time">2013/02/26 16:56</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">9808</td>
+					<td class="read_num_css" title="点击数">560</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17862" >
+			<div class="noval_img" id="17862novalImg0end5974319646490234leixing17862">
+				<img src="/UploadImages/NovelWorks/Big/2013-03-27/68da0b953a7147b4830c6f406e60e512.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="绕青梅">
+				绕青梅
+			</div>
+			<div class="noval_info_css">
+				  我以为，我跟季风十八余载的朝夕相处，早已胜过任何...
+			</div>
+			<div class="noval_author"  title="公子风流">
+				by 公子风流<font class="acticle_add_time">2013/02/26 16:33</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8958</td>
+					<td class="read_num_css" title="点击数">261</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17860" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17860novalImg0end5974319646490234leixing17860">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="如见无忧">
+				如见无忧
+			</div>
+			<div class="noval_info_css">
+				 要让柳烟芸来形容见离忧的话，不外乎三点：
+1.长得...
+			</div>
+			<div class="noval_author"  title="公子风流">
+				by 公子风流<font class="acticle_add_time">2013/03/27 20:02</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">29571</td>
+					<td class="read_num_css" title="点击数">1134</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17856" >
+			<div class="noval_img" id="17856novalImg0end5974319646490234leixing17856">
+				<img src="/UploadImages/NovelWorks/Big/2014-12-05/58f66ceb2a6e48e0ab9c335cebae33a9.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="鸳鸯诀">
+				鸳鸯诀
+			</div>
+			<div class="noval_info_css">
+				文艺版：他用相思绘就一张最完美的画皮，用无害的眼神和...
+			</div>
+			<div class="noval_author"  title="千斛明珠">
+				by 千斛明珠<font class="acticle_add_time">2015/05/21 16:07</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">201073</td>
+					<td class="read_num_css" title="点击数">2437</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17855" >
+			<div class="noval_img" id="17855novalImg0end5974319646490234leixing17855">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="青衾薄">
+				青衾薄
+			</div>
+			<div class="noval_info_css">
+				爱情总是一厢情愿，寂寞缠绵着呼吸。四世的悲欢，依旧看...
+			</div>
+			<div class="noval_author"  title="千斛明珠">
+				by 千斛明珠<font class="acticle_add_time">2015/04/16 13:37</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">4995</td>
+					<td class="read_num_css" title="点击数">49</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17854" >
+			<div class="noval_img" id="17854novalImg0end5974319646490234leixing17854">
+				<img src="/UploadImages/NovelWorks/Big/2015-11-08/ac64fc8fd75b4406bed070bc7cfb34ee.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="墨已成碑">
+				墨已成碑
+			</div>
+			<div class="noval_info_css">
+				     荒败尘世，妖鬼纵横。他今生身为捕快，却不知...
+			</div>
+			<div class="noval_author"  title="委骨同归">
+				by 委骨同归<font class="acticle_add_time">2016/03/15 17:25</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">25417</td>
+					<td class="read_num_css" title="点击数">211</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17850" >
+			<div class="noval_img" id="17850novalImg0end5974319646490234leixing17850">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="将后之玉落成双">
+				将后之玉落成双
+			</div>
+			<div class="noval_info_css">
+				因为小时候的一面之缘，苏落对猎场偶遇的驯马少年念念不...
+			</div>
+			<div class="noval_author"  title="盛世欢颜">
+				by 盛世欢颜<font class="acticle_add_time">2015/11/06 07:01</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">10909</td>
+					<td class="read_num_css" title="点击数">88</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17848" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17848novalImg0end5974319646490234leixing17848">
+				<img src="/UploadImages/NovelWorks/Big/2013-06-30/990bba2e50b94614bbf33e5ea45ccac3.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="情途">
+				情途
+			</div>
+			<div class="noval_info_css">
+				           因为一场处心积虑的阴谋，席远死...
+			</div>
+			<div class="noval_author"  title="浮双绿">
+				by 浮双绿<font class="acticle_add_time">2013/09/01 08:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">256151</td>
+					<td class="read_num_css" title="点击数">5989</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17847" >
+			<div class="noval_img" id="17847novalImg0end5974319646490234leixing17847">
+				<img src="/UploadImages/NovelWorks/Big/2015-11-02/c590a737b297488794bc8d45e5b0d875.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="至尊九界">
+				至尊九界
+			</div>
+			<div class="noval_info_css">
+				  意外成为门派英雄，意外成为下一代剑神的候选人，意...
+			</div>
+			<div class="noval_author"  title="何问素">
+				by 何问素<font class="acticle_add_time">2016/01/10 20:04</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">145313</td>
+					<td class="read_num_css" title="点击数">2219</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17846" >
+			<div class="noval_img" id="17846novalImg0end5974319646490234leixing17846">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="跋扈傻妃惹君心">
+				跋扈傻妃惹君心
+			</div>
+			<div class="noval_info_css">
+				      前一世，生在豪门世家，不得不满腹心机，步...
+			</div>
+			<div class="noval_author"  title="奈落">
+				by 奈落<font class="acticle_add_time">2015/10/23 09:15</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">994751</td>
+					<td class="read_num_css" title="点击数">8345</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17843" >
+			<div class="noval_img" id="17843novalImg0end5974319646490234leixing17843">
+				<img src="/UploadImages/NovelWorks/Big/2013-04-20/34a6af3f184a434fa5561c1e5ed5ce7f.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="红药">
+				红药
+			</div>
+			<div class="noval_info_css">
+				    三世的姻缘际遇，才得花开并蒂，一茎两花，花各...
+			</div>
+			<div class="noval_author"  title="摇戈">
+				by 摇戈<font class="acticle_add_time">2013/04/07 11:33</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">21248</td>
+					<td class="read_num_css" title="点击数">460</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17841" >
+			<div class="noval_img" id="17841novalImg0end5974319646490234leixing17841">
+				<img src="/UploadImages/NovelWorks/Big/2013-03-27/5568862deb2745f1b410142e86b77f9e.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="芙蓉低眉子不语">
+				芙蓉低眉子不语
+			</div>
+			<div class="noval_info_css">
+				安浅眉，浅眉弯如远黛，娥首娇若芙蓉，端的是一副倾城之...
+			</div>
+			<div class="noval_author"  title="说书人">
+				by 说书人<font class="acticle_add_time">2013/03/27 21:10</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11219</td>
+					<td class="read_num_css" title="点击数">284</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17833" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17833novalImg0end5974319646490234leixing17833">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="仙灵女帝">
+				仙灵女帝
+			</div>
+			<div class="noval_info_css">
+				    女主灰常自卑，胆小怕事，童年受到的侮辱，让她...
+			</div>
+			<div class="noval_author"  title="灵助zcl">
+				by 灵助zc<font class="acticle_add_time">2015/12/07 10:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">230590</td>
+					<td class="read_num_css" title="点击数">2505</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17824" >
+			<div class="noval_img" id="17824novalImg0end5974319646490234leixing17824">
+				<img src="/UploadImages/NovelWorks/Big/2014-02-19/2438e555e4b34f6c9f96fa1fc27ab939.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="红颜非祸水-爱不悔">
+				红颜非祸水-爱不悔
+			</div>
+			<div class="noval_info_css">
+				          谁曾记得流光里的许诺，隔岸灯火，...
+			</div>
+			<div class="noval_author"  title="吻安">
+				by 吻安<font class="acticle_add_time">2015/07/14 21:23</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">7613</td>
+					<td class="read_num_css" title="点击数">1599</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17823" >
+			<div class="noval_img" id="17823novalImg0end5974319646490234leixing17823">
+				<img src="/UploadImages/NovelWorks/Big/2015-08-30/d78cf9c3ab4b46c2b911c76d6bd1502d.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="年少轻狂：小姐为王">
+				年少轻狂：小姐为王
+			</div>
+			<div class="noval_info_css">
+				  她叫墨清歌，她本是暗夜女王，世界的领导者。却在一...
+			</div>
+			<div class="noval_author"  title="吻安">
+				by 吻安<font class="acticle_add_time">2015/07/14 21:48</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2045</td>
+					<td class="read_num_css" title="点击数">13</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17822" >
+			<div class="noval_img" id="17822novalImg0end5974319646490234leixing17822">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="修灵成仙">
+				修灵成仙
+			</div>
+			<div class="noval_info_css">
+				 且看封尘如何一步步走上成仙之路...
+			</div>
+			<div class="noval_author"  title="无极墨">
+				by 无极墨<font class="acticle_add_time">2015/11/09 20:36</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2012</td>
+					<td class="read_num_css" title="点击数">21</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17821" >
+			<div class="noval_img" id="17821novalImg0end5974319646490234leixing17821">
+				<img src="/UploadImages/NovelWorks/Big/2014-06-05/56e8e04a32b6424e9565e53d13c6e1be.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="暗云">
+				暗云
+			</div>
+			<div class="noval_info_css">
+				    六十年的囚禁折磨让我如何和你谈感情，暗烈？当...
+			</div>
+			<div class="noval_author"  title="墨囚">
+				by 墨囚<font class="acticle_add_time">2014/08/28 09:52</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">146501</td>
+					<td class="read_num_css" title="点击数">155869</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17820" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17820novalImg0end5974319646490234leixing17820">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-27/5de805e0c6714052b5d76d44df812328.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="夜久">
+				夜久
+			</div>
+			<div class="noval_info_css">
+				   尽自己所有的对爱的人好，这是九七一直以来所肯定...
+			</div>
+			<div class="noval_author"  title="墨囚">
+				by 墨囚<font class="acticle_add_time">2014/10/31 16:52</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">220036</td>
+					<td class="read_num_css" title="点击数">234367</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17818" >
+			<div class="noval_img" id="17818novalImg0end5974319646490234leixing17818">
+				<img src="/UploadImages/NovelWorks/Big/2014-11-26/cabcff75a2854e759b29aae51025cc2d.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="妖默">
+				妖默
+			</div>
+			<div class="noval_info_css">
+				     结束百年孤独时光只因为在那白芷花田中遇见了...
+			</div>
+			<div class="noval_author"  title="墨囚">
+				by 墨囚<font class="acticle_add_time">2016/02/01 14:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">217532</td>
+					<td class="read_num_css" title="点击数">236543</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17817" >
+			<div class="noval_img" id="17817novalImg0end5974319646490234leixing17817">
+				<img src="/UploadImages/NovelWorks/Big/2015-11-17/56ce13ea2b634bebac2a7fb20f9d7556.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="黑狱">
+				黑狱
+			</div>
+			<div class="noval_info_css">
+				 赫连，为了时寂放任着，点烟笑看一座城的灭亡，只为给...
+			</div>
+			<div class="noval_author"  title="墨囚">
+				by 墨囚<font class="acticle_add_time">2015/10/23 20:26</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">23498</td>
+					<td class="read_num_css" title="点击数">2962</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17814" >
+			<div class="noval_img" id="17814novalImg0end5974319646490234leixing17814">
+				<img src="/UploadImages/NovelWorks/Big/2015-09-01/6506d3a3380d42289d70e234353a55d8.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="纨绔仙少：萌女御刁神">
+				纨绔仙少：萌女御刁
+			</div>
+			<div class="noval_info_css">
+				仙女也愁嫁？
+帝王家养女夏云娇，因面有刀疤，颜值低嫁...
+			</div>
+			<div class="noval_author"  title="呆菇梅萱">
+				by 呆菇梅萱<font class="acticle_add_time">2015/09/01 14:55</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">9044</td>
+					<td class="read_num_css" title="点击数">82</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17813" >
+			<div class="noval_img" id="17813novalImg0end5974319646490234leixing17813">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="穿越六弦情">
+				穿越六弦情
+			</div>
+			<div class="noval_info_css">
+				一个在帝都打拼初获赏识的年轻女孩，偶然下班看见一名天...
+			</div>
+			<div class="noval_author"  title="二货村村长">
+				by 二货村村<font class="acticle_add_time">2015/08/21 16:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2293</td>
+					<td class="read_num_css" title="点击数">18</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17808" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17808novalImg0end5974319646490234leixing17808">
+				<img src="/UploadImages/NovelWorks/Big/2015-02-01/d4417b73283f4419b22460fdfe1e97ee.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="殿下来袭之腹黑狐狸不好惹">
+				殿下来袭之腹黑狐狸
+			</div>
+			<div class="noval_info_css">
+				          当冷酷异常的东帝的太子殿下池墨轩...
+			</div>
+			<div class="noval_author"  title="蛇人美杜莎">
+				by 蛇人美杜<font class="acticle_add_time">2015/07/16 19:28</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">111958</td>
+					<td class="read_num_css" title="点击数">4721</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17805" >
+			<div class="noval_img" id="17805novalImg0end5974319646490234leixing17805">
+				<img src="/UploadImages/NovelWorks/Big/2014-09-16/abfb1b92de8c493bb3cf15d94847473f.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="江山美人">
+				江山美人
+			</div>
+			<div class="noval_info_css">
+				              “到了！到了！“莫依彤大...
+			</div>
+			<div class="noval_author"  title="司马云">
+				by 司马云<font class="acticle_add_time">2015/04/24 17:04</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">647560</td>
+					<td class="read_num_css" title="点击数">252122</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17797" >
+			<div class="noval_img" id="17797novalImg0end5974319646490234leixing17797">
+				<img src="/UploadImages/NovelWorks/Big/2013-09-30/2f5dfe722f0a471b9cddac5c38ce4398.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="将军的王爷妻">
+				将军的王爷妻
+			</div>
+			<div class="noval_info_css">
+				  庞统与耶律风清的相遇注定是一场黯然的离殇。 他是...
+			</div>
+			<div class="noval_author"  title="四四">
+				by 四四<font class="acticle_add_time">2013/09/30 19:25</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">29653</td>
+					<td class="read_num_css" title="点击数">750</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17796" >
+			<div class="noval_img" id="17796novalImg0end5974319646490234leixing17796">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="梨花落尽梦又醉">
+				梨花落尽梦又醉
+			</div>
+			<div class="noval_info_css">
+				若，人生若只如初见，便是极好的。
+         ...
+			</div>
+			<div class="noval_author"  title="夏梨薇">
+				by 夏梨薇<font class="acticle_add_time">2013/02/28 14:32</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">8242</td>
+					<td class="read_num_css" title="点击数">146</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17791" >
+			<div class="noval_img" id="17791novalImg0end5974319646490234leixing17791">
+				<img src="/UploadImages/NovelWorks/Big/2015-02-08/6ff9d525f44d462ab99081cf881da460.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="呆子，过来">
+				呆子，过来
+			</div>
+			<div class="noval_info_css">
+				      豆花在某次出摊意外的拾得重伤美男子一枚，...
+			</div>
+			<div class="noval_author"  title="天之使然">
+				by 天之使然<font class="acticle_add_time">2015/04/01 14:39</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">59339</td>
+					<td class="read_num_css" title="点击数">1500</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17789" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17789novalImg0end5974319646490234leixing17789">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-19/d0160db156014d2e89fb181dc955b032.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="凤唳江南">
+				凤唳江南
+			</div>
+			<div class="noval_info_css">
+				     朝政黑暗，权臣当道，忠良罹难，小丫环带着她...
+			</div>
+			<div class="noval_author"  title="山谷空灵7">
+				by 山谷空灵<font class="acticle_add_time">2014/08/30 11:08</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">344124</td>
+					<td class="read_num_css" title="点击数">12789</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17787" >
+			<div class="noval_img" id="17787novalImg0end5974319646490234leixing17787">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="大明后妃传">
+				大明后妃传
+			</div>
+			<div class="noval_info_css">
+				   宫斗？别逗了！
+跟皇后相比，那些生于绮罗，长于...
+			</div>
+			<div class="noval_author"  title="山谷空灵7">
+				by 山谷空灵<font class="acticle_add_time">2016/04/07 17:04</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">208774</td>
+					<td class="read_num_css" title="点击数">2877</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17786" >
+			<div class="noval_img" id="17786novalImg0end5974319646490234leixing17786">
+				<img src="/UploadImages/NovelWorks/Big/2014-08-25/d95a27f2a6b94a5a910494b72c926f9c.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="血媚天下">
+				血媚天下
+			</div>
+			<div class="noval_info_css">
+				   她是血山上的万年血株花，也是三界的女尊灵血。
+...
+			</div>
+			<div class="noval_author"  title="慌草凄凄">
+				by 慌草凄凄<font class="acticle_add_time">2014/08/04 17:16</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">48417</td>
+					<td class="read_num_css" title="点击数">284</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17781" >
+			<div class="noval_img" id="17781novalImg0end5974319646490234leixing17781">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="弦音绝">
+				弦音绝
+			</div>
+			<div class="noval_info_css">
+				   　　乱世风烟中，她是一个清新淡雅的女子，令人如...
+			</div>
+			<div class="noval_author"  title="暗尘">
+				by 暗尘<font class="acticle_add_time">2015/02/01 22:31</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">11009</td>
+					<td class="read_num_css" title="点击数">356</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17780" >
+			<div class="noval_img" id="17780novalImg0end5974319646490234leixing17780">
+				<img src="/UploadImages/NovelWorks/Big/2014-07-25/be916faddd1944ca8d59d4e935d0668b.gif" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="『霹雳布袋戏?倦收天魄如霜同人』">
+				『霹雳布袋戏?倦收
+			</div>
+			<div class="noval_info_css">
+				 霹雳布袋戏倦收天与魄如霜同人小短文...
+			</div>
+			<div class="noval_author"  title="暗尘">
+				by 暗尘<font class="acticle_add_time">2014/07/25 14:00</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2279</td>
+					<td class="read_num_css" title="点击数">1522</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17778" style="margin-left: 0px;clear:left;">
+			<div class="noval_img" id="17778novalImg0end5974319646490234leixing17778">
+				<img src="/UploadImages/NovelWorks/Big/2015-02-01/50a213cb8f924110beecb1092ae85ec9.gif" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="路遥归梦远">
+				路遥归梦远
+			</div>
+			<div class="noval_info_css">
+				   一生只此一次擦肩，然一擦肩已过一生，回首处路遥...
+			</div>
+			<div class="noval_author"  title="暗尘">
+				by 暗尘<font class="acticle_add_time">2015/02/04 22:53</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">7515</td>
+					<td class="read_num_css" title="点击数">251</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17775" >
+			<div class="noval_img" id="17775novalImg0end5974319646490234leixing17775">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="重生之倾城邪妃">
+				重生之倾城邪妃
+			</div>
+			<div class="noval_info_css">
+				              她，舞者们仰望的、羡慕的...
+			</div>
+			<div class="noval_author"  title="妖孽">
+				by 妖孽<font class="acticle_add_time">2016/04/05 21:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">218439</td>
+					<td class="read_num_css" title="点击数">1452</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17774" >
+			<div class="noval_img" id="17774novalImg0end5974319646490234leixing17774">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="皇上，本宫是贵族">
+				皇上，本宫是贵族
+			</div>
+			<div class="noval_info_css">
+				 　　现代女强人莫琉璃，是现代的业界女王。他们说她心...
+			</div>
+			<div class="noval_author"  title="钟离萌萌">
+				by 钟离萌萌<font class="acticle_add_time">2014/07/19 17:20</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">2005</td>
+					<td class="read_num_css" title="点击数">132</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17766" >
+			<div class="noval_img" id="17766novalImg0end5974319646490234leixing17766">
+				<img src="/UploadImages/NovelWorks/Big/2013-03-27/b13aa56734de4d6aad07aba2b746d1ed.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="用千年换一世">
+				用千年换一世
+			</div>
+			<div class="noval_info_css">
+				        我们不是因为相遇而相遇，我直到遇见你...
+			</div>
+			<div class="noval_author"  title="阿鲍">
+				by 阿鲍<font class="acticle_add_time">2014/12/03 18:17</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">147368</td>
+					<td class="read_num_css" title="点击数">8243</td>
+					<td class="end_article">已完结</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+	
+		<div class="article_items" id="article_items17762" >
+			<div class="noval_img" id="17762novalImg0end5974319646490234leixing17762">
+				<img src="/images/default_img.jpg" width="177" height="234"/>
+			</div>
+			<div class="noval_title" title="忘川魂渡引三生">
+				忘川魂渡引三生
+			</div>
+			<div class="noval_info_css">
+				 大约几万年前，有位帅哥为她而死，她想了想，觉得定是...
+			</div>
+			<div class="noval_author"  title="郢浅浅">
+				by 郢浅浅<font class="acticle_add_time">2016/04/02 17:51</font>
+			</div>
+			<div class="article_type_css" style="height:25px;">
+				古代言情
+			</div>
+			<div class="article_items_foot">
+				<table width="100%" border="0">
+				  <tr>
+					<td class="zannum_css" title="总字数">18583</td>
+					<td class="read_num_css" title="点击数">102</td>
+					<td class="end_article">连载中</td>
+				  </tr>
+				</table>
+			</div>
+		</div>
+		
+</div>
+<input type="hidden" id="" value="8" />
+<script type="text/javascript">
+	$(function(){
+		$("#articePageMainDivend5974319646490234leixing .noval_img").hover(function(){
+			$("#book_info_css_div").remove();
+			clearInterval(removeBookBaiscTimer);
+			getBookBasicObject=$(this)[0];
+			if($(this).data("novelId")==null){
+				//说明没有加载
+				loadNovelPartInfo(getBookBasicObject);
+			}else{
+				novelImg=$(this).data("novelImg");
+				novelTitle=$(this).data("novelTitle");
+				authorWriter=$(this).data("authorWriter");
+				clickNum=$(this).data("clickNum");
+				readNum=$(this).data("readNum");
+				novelVote=$(this).data("novelVote");
+				novelId=$(this).data("novelId");
+				getBookBasicTimer=setTimeout("getBookBasicInfo()",400);
+			}
+		},function(){
+			clearInterval(getBookBasicTimer);
+			getBookBasicObject=null;
+			novelImg=null;
+			novelTitle=null;
+			authorWriter=null;
+			clickNum=null;
+			readNum=null;
+			novelVote=null;
+			novelId=null;
+			removeBookBaiscTimer=setTimeout("removeBookBasic()",1000);
+		});
+		$("#articePageMainDivend5974319646490234leixing .noval_img").each(function(){
+			var ids=$(this)[0].id;
+			var novleId=ids.substring(0,ids.indexOf("novalImg"));
+			$(this).children("img").click(function(){
+				window.open(path+"/novel/"+novleId+".jsp");
+			});
+		});
+	});
+</script>
+
+		</div>
+		<div id="loadMoreData" class="heng_div_css" onclick="loadMoreDataFn()">
+			点击加载更多小说...
+		</div>
+		<div id="loadingData" class="heng_div_css">
+			正在努力加载中...
+		</div>
+	</div>
+	
+
+
+
+	</div>
+	<div class="foot_css">
+		<div class="foot_1_css">
+			<div>
+				<a href="/azycjd_new/aboutus.jsp"  target="_blank">关于我们</a>|
+				<a href="/azycjd_new/yonghuzhinan.jsp" target="_blank">用户指南</a>|
+				<!-- <a href="zuozhetougao.jsp" target="_blank">作者投稿</a>| -->
+				<a href="/azycjd_new/chengpinyingcai.jsp" target="_blank">诚聘英才</a>|
+				<a href="/azycjd_new/lianxiwomen.jsp" target="_blank">联系我们</a>|
+				<a href="/azycjd_new/admin/webEditorLogin.jsp" target="_blank">网编登录</a>|
+				<a href="http://weibo.com/u/3020942093?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">微博链接</a>|
+				<a href="javascript:loadMobileJsp()" target="_blank">手机网页端</a>
+			</div>
+			<div>
+				Copyright© 2006-2015 www.azycjd.com   All Rights Reserved 版权所有 云南安柔科技有限公司
+				<script src="http://s95.cnzz.com/stat.php?id=1257561986&web_id=1257561986" language="JavaScript"></script>
+			</div>
+			<div>
+				滇ICP备12006807号-1 滇网文许字【2014】1100-002号
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>backRun.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript">
+		/**
+		 * 生成排行榜、优惠书坊
+		 * @param obj
+		 * @param url
+		 * @param htmlName
+		 * @returns
+		 */
+		var needCreateArray=new Array("anzhinovel/leaderboard.do?loadData=yes,paihangbang,排行榜","mobile/m_shuku.do?menu_type=1,mobile_shuku,手机书库","mobile/m_bangdan.do?menu_type=2,mobile_bangdan,手机榜单");
+		var createIndex=0;
+		var runTime=1000*60*5;
+		function createHtmlNovel(){
+			if(createIndex==needCreateArray.length){
+				createIndex=0;
+				$("#paihangbang").html($("#paihangbang").html()+"<br/>"+new Date().toLocaleString()+"运行了一次"); 
+				setTimeout("createHtmlNovel()",runTime);
+				return;
+			}
+			var tmp=needCreateArray[createIndex].split(",");
+			if(createIndex<needCreateArray.length){
+				$.post(tmp[0],null,function(res){
+					$.post("anzhinovel/createHtml.do",{data:res,htmlName:tmp[1]},function(){
+						createIndex++;
+						createHtmlNovel();
+					});
+				});
+			}
+		}
+		$(function(){
+			setTimeout("createHtmlNovel()",runTime);
+		});
+	</script>
+  </head>
+  
+  <body>
+    	<div>排行榜数据持续生成中...</div>
+    	<div id="paihangbang"></div>
+  </body>
+</html>

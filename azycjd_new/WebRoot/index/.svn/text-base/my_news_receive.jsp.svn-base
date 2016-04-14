@@ -1,0 +1,78 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> 
+<jsp:include page="index_head.jsp" flush="false"></jsp:include>
+<style type="text/css">
+		.selectDivCss{margin-left: 552px;}
+		.div_css_test{display: none;}
+</style>
+<script type="text/javascript">
+		function showDivFn(divid,id,obj,messageRead){
+			$("#"+divid).slideDown();
+			if(messageRead==0){
+				if($(obj).data("isupdate")=="true"){
+					return;
+				}
+				obj.style.display="none";
+				$("#weidu"+id).css("color","#0a83b6").html("已读");
+				$.post(path+"/util/updateMessageState.do",{id:id},function(res){
+					obj.style.display="block";
+					$(obj).data("isupdate","true");
+				});
+			}
+		}
+		$(function(){ 
+			$(document).bind("click",function(e){ 
+				var target = $(e.target); 
+				if(target.closest(".div_css_test").length == 0){ 
+					$(".div_css_test").hide(); 
+				} 
+			}); 
+		}); 
+</script>
+		 <div class="divTableCss">
+		 	<form id="AnzhiMessageFormIndex" action="anzhimessage/findAnzhiMessageAll.do?pageName=${param.pageName }&&linenumber=${param.linenumber }&&index=4&&chooseIndex=1" method="post" class="formCss">
+				 <table class="tableCss" width="100%" >
+					<tr class="tableTitleCss">
+					    <td width="8%">序号</td>
+					    <td width="15%">发件人</td>
+						<td width="50%">公告标题</td>
+						<td width="17%">发送时间</td>
+						<td width="10%">操作</td>
+					</tr>
+					<c:forEach items="${anzhimessageList.list}" var="s" varStatus="ind">
+						<tr>
+						    <td onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })">${ind.index+1 }</td>
+						    <td onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })">
+						     	<c:if test="${s.memberIdSend eq 0 }">系统通知</c:if>
+						     	<c:if test="${s.memberIdSend ne 0 }"><a href="<%=request.getContextPath() %>/anzhimember/memberInfo.do?memberId=${s.memberIdSend}" target="_blank">${s.sendMemberNick }</a></c:if>
+						    </td>
+							<td id="messageTitle${s.id }" onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })">
+								${s.messageTitle }[<font id="weidu${s.id }" style="color:${s.messageRead eq 0?'red':'#0a83b6'}">${s.messageRead eq 0?"未读":"已读"}</font>]
+							</td>
+							<td onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })">${s.addTime }</td>
+							<td><a onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })" href="javascript:;">查看</a></td>
+						</tr>
+						<tr>
+							<td colspan="7">
+								<div id="div${s.id }" class="div_css_test" onclick="showDivFn('div${s.id }','${s.id }',this,${s.messageRead })">
+									${s.messageContent }
+									<br/>[<fmt:formatDate value="${s.addTime}" pattern="yyyy-MM-dd HH:mm:ss"/> ]
+								</div>
+							</td>
+						</tr>
+					</c:forEach>
+				 </table>
+				 <jsp:include page="../next_page.jsp" flush="false">
+					<jsp:param value="anzhimessage/findAnzhiMessageAll.do?pageName=index/my_news_receive&&linenumber=${param.linenumber }&&index=4&&chooseIndex=1" name="url"/>
+					<jsp:param value="${anzhimessageList.totalNum }" name="totalNum"/>
+					<jsp:param value="${anzhimessageList.num }" name="num"/>
+					<jsp:param value="AnzhiMessageFormIndex" name="formId"/>
+					<jsp:param value="${anzhimessageList.total }" name="total"/>
+					<jsp:param value="${param.size}" name="size"/>
+				</jsp:include>
+			</form>
+		 </div>
+	</form>
+<jsp:include page="index_foot.jsp" flush="false"></jsp:include>

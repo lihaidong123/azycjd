@@ -1,0 +1,1614 @@
+var paihangbang=new Array("月票榜","点击榜","收藏版","更新榜","推荐榜","订阅榜","新书月票榜","书友打赏榜","新书点击榜","新书推荐榜","新书收藏榜","完结精品榜");
+var novelTypeHtml=new Array("xhqh","wxxx","dsyn","lsjs","yxjj","khly","xdyq","gdyq");
+var pageNum=2;
+$(function(){
+	try{
+		$("#login_div_css").css("left",($(window).width()-620)/2+"px");
+		$("#login_div_css")[0].style.visibility="visible";
+	}catch(e){}
+	
+	$("#showLoginDiv").click(function(){
+		//showLoginWin();
+	});
+	
+	$(".menu_css").click(function(){
+		var menutype=$(this)[0].id;
+		menutype=menutype.substring(menutype.indexOf("menu")+4,menutype.length);
+		window.location.href=path+"/"+novelTypeHtml[parseInt(menutype)]+".html";
+	});
+	
+	/*$(".author_name").click(function(){
+		window.location.href="author_info.jsp";
+	});*/
+	$(".backindex").click(function(){
+		window.location.href="index.html";
+	});
+	
+	resetList();//去掉列表最左边的空隙
+	$(".tree_css div").click(function(){
+		changeTreeItem($(this)[0]);
+		window.location.href=$(this)[0].className;
+		//window.open($(this)[0].className);
+	});
+	
+	$(".pic_ones div").click(function(){
+		pic_ds_index=parseInt($(this).html())-1;
+		clearInterval(pic_ds_timer);
+		chagesRecommd($(this)[0]);
+	});
+	
+	$(".menuPage li").click(function(){
+		window.location.href=$(this)[0].id;
+		//window.open($(this)[0].id);
+	});
+	
+	//改变究竟是点击了哪个菜单
+	setLiColor();
+	
+	$("#tree_css_div").css("left",(($(window).width()-1000)/2+1000)+"px").css("top",(($(window).height()-$("#tree_css_div").height())/2)+"px");
+	
+	//作品详情页面切换底部边框线部分
+	$(".projects_qiehuan div").click(function(){
+		$(this).siblings().css('border-bottom', '#fff').css('border-bottom','#1a9cda');
+	});
+	
+	//注册切换底部边框线部分
+	$(".register_qiehuan div").click(function(){
+		$(this).siblings().css('border-bottom', '#fff').css('border-bottom','#1a9cda');
+	});
+	
+	$(".title_two").click(function(){
+		var p_id=$(this)[0].parentNode.id;
+		if(p_id=="zishu"||p_id=="xiezuo"||p_id=="paixu"||p_id=="shijian"){
+			$($(this)[0].parentNode).children("div").each(function(){
+				if($(this)[0].className!="title_one"){
+					$(this)[0].className="title_two";
+				}
+			});
+			$(this)[0].className="title_two_click";
+			searchNovel();
+		}else{
+			var tp=($(this).parent()[0]).id;
+			$("#typs_div").find(".title_two_click").each(function(){
+				$(this)[0].className="title_two";
+			});
+			if($(this).html()=="不限"){
+				$(this).parent().children(".title_two_click").each(function(){
+					$(this)[0].className="title_two";
+				});
+			}else{//则需要将不限按钮设置为：title_two
+				$(this).parent().children(".title_two_click").each(function(){
+					if($(this).html()=="不限"){
+						$(this)[0].className="title_two";
+					}
+				});
+			}
+			if($(this)[0].className=="title_two"){
+				$(this)[0].className="title_two_click";
+			}else{
+				$(this)[0].className="title_two";
+			}
+			searchNovel();
+		}
+	});
+
+	$(".index_img_1").hover(function(){
+		var info="<div>完美世界</div>";
+		info+="<div>校花的贴身高手</div>";
+		info+="<div>天涯明月刀</div>";
+		info+="<div>盗墓笔记</div>";
+		info+="<div>琅琊榜</div>";
+		info+="<div>斗破苍穹</div>";
+		info+="<div>我欲封天</div>";
+		//$("<div id='index_img_1_hover' class='hover_div_css'></div>").css("margin-top","1px").css("margin-left","1px").html(info).height(545).width(569).insertBefore($($(this).children("div")[0]));
+		$("<div id='index_img_1_hover' class='hover_div_css'></div>").css("margin-top","1px").css("margin-left","1px").html("<div class='paihangbang_index' onclick=\"window.location.href='"+path+"/paihangbang.html'\"></div>").height(545).width(569).appendTo($(this));
+	},function(){
+		$("#index_img_1_hover").remove();
+	});
+	
+	
+	$(".index_img_2").hover(function(){
+		var info="<div class='fuli_index'><div>网站签约福利</div>";
+		info+="<div>原创未发表买断福利</div>";
+		info+="<div>平台签约福利</div>";
+		info+="<div>作家培训</div>";
+		info+="<div>上架福利</div>";
+		info+="<div>新书福利</div></div>";
+		//$("<div id='index_img_2_hover' class='hover_div_css'></div>").css("margin-top","33px").css("margin-left","34px").html(info).height(325).width(400).insertBefore($($(this).children("div")[0]));
+		$("<div id='index_img_2_hover' class='hover_div_css'></div>").css("margin-top","33px").css("margin-left","34px").html("<div class='zuojiafuli_index' onclick=\"window.location.href='"+path+"/zuojiafuli.jsp'\"></div>").height(325).width(400).appendTo($(this));
+	},function(){
+		$("#index_img_2_hover").remove();
+	});
+	
+	$(".huodongzhuanquIndexCss_td").hover(function(){
+		var info="<div class='novel_info'>我若要有，天不可无。我若要无，天不许有！ 这是一个起始于第八山与第九山之间的故事，一个“我命如妖欲封天”的世界！《我欲封天》是起点中文网白金作家耳根的全新力作小说，也是其转型问鼎之作。《我欲封天》讲述的是书生孟浩，步入修真界，一步步追寻人生大愿的封天之路，故事整体不似上一本小说《求魔》那般压抑。</div>";
+		info+="<div style='text-align:center;'>安之米珺  著</div>";
+		info+="<div class='novel_list_index'>";
+		info+="<div>> 绝世唐门</div>";
+		info+="<div>> 斗罗大陆</div>";
+		info+="<div>> 莽荒纪</div>";
+		info+="<div>> 水浒求生记</div>";
+		info+="</div>";
+		$("<div id='huodongzhuanquIndexCss_td_hover' class='hover_div_css'></div>").css("margin-top","-57px").css("margin-left","11px").html(info).height(535).width(330).insertBefore($($(this).children("div")[0]));
+	},function(){
+		$("#huodongzhuanquIndexCss_td_hover").remove();
+	});
+	
+	$(".right_menu_one li").click(function(){
+		loadJsp($(this)[0]);
+	});
+	
+	
+	try{
+		$($(".right_menu_one li")[lineNumber]).css("background-image","url("+path+"/index/images/clickmenu.png)").css("color","#FFFFFF").css("background-repeat","no-repeat");
+		$($(".right_menu_one li")[lineNumber].parentNode).slideDown();
+	}catch(e){}
+	
+	//($(window).scrollTop($(".right_menu_one li")[lineNumber].offsetTop));
+
+	$(".right_menu_two").click(function(){
+		$($(this)[0].parentNode).children("ul").slideToggle();
+	});
+	
+	$(".divTableCss tr:even").each(function(){
+		$(this).css("background-color","#f5f2f2");
+	});
+	
+	//申请签约阅读协议
+	signcontentInit();
+	$("#signcontentBtn").click(function(){
+		if($("#signcontent").css("display")==""||$("#signcontent").css("display")=="none"){
+			$("#signcontent").css("display","block");
+		}else{
+			$("#signcontent").css("display","none");
+		}
+	});
+	//申请签约关闭协议
+	$("#signcontentBtntwo").click(function(){
+		if($("#signcontent").css("display")==""||$("#signcontent").css("display")=="none"){
+			$("#signcontent").css("display","none");
+		}else{
+			$("#signcontent").css("display","none");
+		}
+	});
+	
+	//申请签约弹框打开
+	sqdivInit();
+	$(".sqqy").click(function(){
+		var a=$(this).children(".benefitType").html();
+		$("#suodiandezhi").val(a);
+		var novelnam=$("").val();
+		if($(".sqDiv").css("display")==""||$(".sqDiv").css("display")=="none"){
+			$(".sqDiv").css("display","block");
+		}else{
+			$(".sqDiv").css("display","none");
+		}
+	});
+
+	
+	$(".bar_menu div").click(function(){
+		var ids=$(this)[0].id;
+		//获得当前点击对象的索引
+		var chooseInd=($(this).parent().parent()).find("div").index($(this));
+		var index=$(".bar_menu").index($(this).parent().parent());
+		ids+="#chooseIndex="+chooseInd+"#index="+index;
+		getJspDataByUrl(ids);
+	});
+	//显示横向菜单
+	showBar();
+	
+	$(".my_activity_content_css").hover(function(){
+		var t=$(this).html();
+		var ind=0;
+		$(".my_activity_content_css").each(function(){
+			if(t==$(this).html()){
+				return false;
+			}
+			ind++;
+		});
+		if($($(".my_activity_content_css")[ind]).children("div").length==0){
+			var trendid=$(this).children(".trendid").val();
+			var replyid=$(this).children(".replyid").val();
+			if(replyid==undefined){
+				$("<a id='huifu' class='huifu_css' href='javascript:addHuiFu("+ind+","+trendid+")'>回复</a>").appendTo($(this));
+			}else{
+				$("<a id='huifu' class='huifu_css' href='javascript:addHuiFuhh("+ind+","+trendid+","+replyid+")'>回复</a>").appendTo($(this));
+			}
+				
+			
+		}
+	},function(){
+		$("#huifu").remove();
+	});
+	
+	$(".incomecheckmonth").click(function(){
+		var id=$(this).next(".xiaoshuodeid").val();
+		var name=$(this).nextAll(".xiaoshuodename").val();
+		$.post(path+"/anzhiconsume/findAnzhiConsumeMyComeByMonth.do",{
+			id:id
+		},function(res){
+			$("#incomegaikuang").html(res);
+			$("#xiaoshuodename").html(name);
+		});
+	});
+	
+	$(".sqDiv").hide();
+	$(".textarea_css").bind('propertychange input', function () {  
+        var counter = $(this).val().length;
+        if(counter>2000){
+        	alert("您真是一代文豪，先歇息一会再写好吗?");
+        	$('#remainCharNum').text("还可以输入0字");
+        	var t=$(this).val();
+        	t=t.substring(0,2000);
+        	$(this).val(t);
+        }else{
+        	 $('#remainCharNum').text("还可以输入"+(2000 - counter)+"字");
+        }
+	});
+	
+	$.post(path+"/anzhipicture/loadPicture.do",null,function(res){
+		if(res=="yes"){
+			window.location.reload();
+		}
+	});
+});
+
+function showLoginWin(){
+	if($("#login_css").css("display")==""||$("#login_css").css("display")=="none"){
+		$("#login_css").css("display","block");
+	}else{
+		$("#login_css").css("display","none");
+	}
+}
+
+
+var getBookBasicTimer;
+var getBookBasicObject;
+var removeBookBaiscTimer;
+var novelImg;
+var novelTitle;
+var authorWriter;
+var clickNum;
+var readNum;
+var novelVote;
+var novelId;
+//鼠标移上书的封面显示书的基本信息
+function getBookBasicInfo(obj){
+	if(getBookBasicObject!=null){
+		$.post(path+"/book_basic_info.jsp",{
+			novelImg:novelImg,
+			novelTitle:novelTitle,
+			authorWriter:authorWriter,
+			clickNum:clickNum,
+			readNum:readNum,
+			novelVote:novelVote,
+			novelId:novelId
+		},function(res){
+			var obj=$("<div class='book_info_css' id='book_info_css_div'></div>").html(res);
+			obj.insertBefore($(getBookBasicObject));
+			obj.hover(function(){
+				clearInterval(removeBookBaiscTimer);
+			},function(){
+				removeBookBaiscTimer=setTimeout("removeBookBasic()",1000);
+			});
+			obj.css("margin-top",(obj.height()*(-1)-15)+"px");
+		});
+	}
+}
+
+/**
+ * 设置小说的缩略图的点击效果
+ */
+function novalImgClick(){
+	$(".noval_img").each(function(){
+		var ids=$(this)[0].id;
+		var novleId=ids.substring(0,ids.indexOf("novalImg"));
+		$(this).children("img").click(function(){
+			window.location.href=path+"/novel/"+novleId+".jsp";
+		});
+	});
+}
+
+function removeBookBasic(){
+	$("#book_info_css_div").remove()
+}
+
+//去掉列表最左边的空隙
+function resetList(){
+	var ds=$(".article_items");
+	for(var i=0;i<ds.length;i++){
+		if(i%5==0){
+			//ds[i].style.marginLeft="0px";
+		}
+	}
+}
+
+
+
+//排行榜滚动时树形图标变化
+function changeTreeItem(obj){
+	$(".tree_css div").each(function(){
+		$(this).css("background","url("+path+"/images/smallyuan.png) 4px 5px no-repeat").css("color","#999999").css("font-weight","normal");
+	});
+	$(obj).css("background","url("+path+"/images/lanyua.png) 2px 5px no-repeat").css("color","#000000").css("font-weight","bold");
+}
+//排行榜滚动
+function myscroll(){
+	if(($(window).width()-1000)/2>=120){
+		if(($(window).scrollTop())>1400){
+			$("#tree_css_div").css("display","block");
+			$("#abousus_div").css("display","none");
+			changeTreeItem($(".tree_css div")[0]);
+		}else{
+			$("#tree_css_div").css("display","none");
+			$("#abousus_div").css("display","block");
+		}
+	}
+	var nowposi=($(window).scrollTop());
+	var tmp=null;
+	var total=2630;
+	var av=(($(window).height()-$("#tree_css_div").height())/2);
+	var ds=$(".list_items");
+	for(var i=0;i<ds.length;i++){
+		if(nowposi>(total-av)&&nowposi<(40-av+total+$(ds[i]).height())){
+			changeTreeItem($(".tree_css div")[i+1]);
+			break;
+		}
+		total+=$(ds[i]).height()+40;
+	}
+}
+
+function closeBrowseTip(){
+	$('#browseTips').slideUp();
+}
+
+//作品详情界面内容切换
+function changeContent(obj,contentId){
+	document.getElementById("zuopin").style.display="none";
+	document.getElementById("zuojia").style.display="none";
+
+	obj.style.borderBottomStyle="solid";
+	document.getElementById(contentId).style.display="block";
+}
+
+//注册方式内容切换
+function changeContentreg(obj,contentId){
+	document.getElementById("dianhuazhuce").style.display="none";
+	document.getElementById("youxiangzhuce").style.display="none";
+
+	obj.style.borderBottomStyle="solid";
+	document.getElementById(contentId).style.display="block";
+}
+
+function setLiColor(){
+	var url=window.location.pathname;
+	$(".menuPage li").each(function(){
+		if($(this)[0].id==url){
+			$(this).css("color","#1a9cda");
+			return false;
+		}
+		
+	});
+}
+
+function passwordEqual(obj,objs,objss){//密码一致问题
+	var password1=document.getElementById(""+obj+"").value;
+	var password2=document.getElementById(""+objs+"").value;
+	 if(password1!=password2){
+	     document.getElementById(""+objss+"").innerHTML="  密码不一致，请重新输入！";
+		 return false;
+     }else{
+    	 document.getElementById(""+objss+"").innerHTML="";
+     }
+	 return true;
+}
+
+
+function memberLogin(obj){
+	if($("#uname").val()==""){
+		alert("请输入登录账户");
+		return;
+	}
+	if($("#upass").val()==""){
+		alert("请输入登录密码");
+		return;
+	}
+	obj.style.display="none";
+	$.post(path+"/anzhimember/login.do",{
+		username:$("#uname").val(),
+		userpass:$("#upass").val()
+	},function(res){
+		if(res.indexOf("登录成功")==-1){
+			alert(res);
+			obj.style.display="block";
+		}else{
+			window.location.reload();
+		}
+	});	
+}
+
+//注册用户名唯一性验证
+function checkOnly(obj){
+	var name=$(obj).val();
+	if(name==""){
+		 $(obj).next(".memberNo").html("请输入有效的用户名");
+		 return;
+	}else{
+	$.post("anzhimember/findAnzhiMemberByNo.do",{name:name},function(res){
+		if(res==0){
+			$(obj).next(".memberNo").html("");
+		}else if(res==1){
+			 $(obj).next(".memberNo").html("用户名已存在");
+		}
+	});
+	}
+} 
+
+//注册昵称唯一性验证
+function checkOnlyNick(obj){
+	var name=$(obj).val();
+	if(name==""){
+		 $(obj).next(".memberNick").html("请输入有效的昵称");
+		 return;
+	}else{
+	$.post("anzhimember/findAnzhiMemberByNick.do",{name:name},function(res){
+		if(res==0){
+			$(obj).next(".memberNick").html("");
+		}else if(res==1){
+			 $(obj).next(".memberNick").html("昵称已存在");
+		}
+	});
+	}
+} 
+
+//申请作者笔名唯一性验证
+function checkwritename(obj){
+	var name=$(obj).val();
+	if(name==""){
+		 $(obj).next(".authorWriterName").html("请输入有效的笔名");
+		 return;
+	}else{
+	$.post("anzhiauthor/findAnzhiAuthorByName.do",{name:name},function(res){
+		if(res==0){
+			$(obj).next(".authorWriterName").html("");
+		}else if(res==1){
+			 $(obj).next(".authorWriterName").html("该笔名已存在");
+		}
+	});
+	}
+} 
+
+//推荐小说编号查找小说
+function checkFindNovelById(obj){
+	var novelId=$(obj).val();
+	if(novelId==""){
+		 $(obj).next(".novelId").html("请输入有效的小说编号");
+		 return;
+	}else{
+	$.post("anzhinovel/findAnzhiNovelByIdTuijian.do",{
+			novelId:novelId,
+			type:1
+		},function(res){
+		if(res==0){
+			$(obj).next(".novelId").html("该小说不存在");
+		}else{
+			var a=res.split(";");
+			$("#novelTitle").val(a[1]);
+			$("#authorId").val(a[2]);
+			 $(obj).next(".novelId").html("");
+		}
+	});
+	}
+}
+
+
+function loadJspDirec(t){
+	var obj=$(".project_manager_css")[t];
+	loadJsp(obj);
+}
+
+function loadJsp(obj){
+	/*右边菜单单击事件*/
+	var ids=obj.id;
+	getJspDataByUrl(ids);
+}
+
+function addHuiFu(ind,trendid){
+	if($($(".my_activity_content_css")[ind]).children("div").length==0){
+		var t=//"<form id='addhuifu"+trendid+"' method='post' action=\"anzhitrendreply/addAnzhiTrendReply.do?trendid="+trendid+"\">"+
+			"<div class='divItemsCss' style='text-align: center;'>" +
+			"<textarea style='height:90px; width:100%;' id='replyContent"+trendid+"'></textarea></div>" +
+			"<div class='divItemsCss' style='text-align:right; padding-right:10px;'>" +
+			"<input type='button' value='发表' class='saveBtnCss' onclick=\"activityReply('"+trendid+"',this)\"></div>";
+		$("<div></div>").html(t).appendTo($(".my_activity_content_css")[ind]);
+		$("#huifu").remove();
+	}
+}
+
+function addHuiFuhh(ind,trendid,replyid){
+	if($($(".my_activity_content_css")[ind]).children("div").length==0){
+		var t=//"<form id='addhuifu"+trendid+"' method='post' action=\"anzhitrendreply/addAnzhiTrendReply.do?trendid="+trendid+"\">"+
+			"<div class='divItemsCss' style='text-align: center;'>" +
+			"<textarea style='height:90px; width:100%;' id='replyContent"+trendid+"'></textarea></div>" +
+			"<div class='divItemsCss' style='text-align:right; padding-right:10px;'>" +
+			"<input type='button' value='发表' class='saveBtnCss' onclick=\"activityReplyhh('"+trendid+"',this,"+replyid+")\"></div>";
+		$("<div></div>").html(t).appendTo($(".my_activity_content_css")[ind]);
+		$("#huifu").remove();
+	}
+}
+
+function activityReply(trendid,obj){
+	var replyContent=document.getElementById("replyContent"+trendid).value;
+	obj.style.display="none";
+	$.post(path+"/anzhitrendreply/addAnzhiTrendReply.do",{
+		trendid:trendid,
+		replyContent:replyContent
+	},function(res){
+		$("#mainContent").html(res);
+	});
+}
+
+function activityReplyhh(trendid,obj,replyid){
+	var replyContent=document.getElementById("replyContent"+trendid).value;
+	obj.style.display="none";
+	$.post(path+"/anzhitrendreply/addAnzhiTrendReply.do",{
+		trendid:trendid,
+		replyContent:replyContent,
+		replyid:replyid
+	},function(res){
+		$("#mainContent").html(res);
+	});
+}
+
+function showBar(){
+	try{
+		if(barIndex!=''){
+			$(".bar_menu")[parseInt(barIndex)].style.display="block";
+			if(chooseIndex!=''){
+				$(($($(".bar_menu")[parseInt(barIndex)]).find("div"))[parseInt(chooseIndex)]).css("color","#ffffff").css("background-color","#1ea9eb");
+			}else{
+				$(($($(".bar_menu")[parseInt(barIndex)]).find("div"))[0]).css("border-bottom","#19adfa 3px solid");
+			}
+		}
+	}catch(e){
+		
+	}
+	
+}
+
+function getParam(url) {  
+    if(url.indexOf("?")==-1){
+    	return "";
+    }else{
+    	var t1=url.split("?");
+    	return t1;
+    }
+}  
+
+function signcontentInit(){
+	try{
+		$("#signcontent").css("left",($(window).width()-620)/2+"px");
+		$("#signcontent")[0].style.visibility="visible";
+	}catch(ex){}
+}
+
+function sqdivInit(){
+	try{
+		
+		$(".sqDiv").css("left",($(window).width()-620)/2+"px");
+		$(".sqDiv")[0].style.visibility="visible";
+	}catch(ex){}
+}
+
+function loadIntroduceJsp(url,title){
+	$.jBox("iframe:"+path+"/"+url, {
+		title: "<div style='font-size:14px;'>"+title+"</div>",
+		width: 860,
+		height: 400,
+		top:90,
+		persistent: false,
+		buttons: { '关闭': true },
+		closed:function(){
+			$("#body_index").css("background","url("+path+"/index/images/bg.png) repeat-x #f0f0f0").css("padding","0px").css("margin","0px");
+		}
+	});	
+}
+
+/*function showSign(i){
+	$("#sqContent"+i).slideDown("slow");
+	
+}*/
+
+function closeSign(j){
+	$("#sqContent"+j).slideUp();
+}
+
+var novel_big_type=new Array("玄幻奇幻","武侠仙侠","都市异能","历史军事","游戏竞技","科幻灵异","现代言情","古代言情");
+var novel_small_type=new Array("异界大陆;异界争霸;远古神话;东方玄幻;西方奇幻;领主贵族;魔法校园;异类兽族","古典武侠;现代武侠;异界武侠;古典仙侠;现代修真;洪荒修神;幻想修真","都市商战;都市生活;都市重生;官场沉浮;娱乐明星;乡土传记;恩怨情仇;现实百态;青春校园;异术超能;国术武技;合租情缘","外国历史;历史传记;架空历史;上古先秦;秦汉三国;两晋隋唐;五代十国;两宋元明;清史民国;战争幻想;谍战特工;军旅生涯;抗战烽火;军事战争","游戏生涯;电子竞技;虚拟网游;游戏异界;体育竞技;奕林春秋;篮球竞技;足球竞技","星际战争;机械时代;数字生命;时空穿梭;未来世界;古武机甲;超级科技;进化变异;末世危机;推理侦探;恐怖惊悚;悬疑探险;灵异奇谈","豪门总裁;青春都市;军婚高干;娱乐明星;商战职场;异术超能;官场沉浮;婚恋情感","穿越架空;仙侠魔幻;女尊天下;宫斗宅斗;种田养成;民国旧影;江湖情仇;架空玄幻;异族恋情;远古神话");
+//输出小说类型-创建作品界面
+function writeNovelType(divId){
+	var inf="";
+	for(var i=0;i<novel_big_type.length;i++){
+		inf+="<div class='novel_type'><table width='100%'><tr><td class='bigTypeTd' valign='top'>";
+		inf+="<div><input type='radio' name='anzhiNovelType' class='bigType' value='"+novel_big_type[i]+"' name='bigType' id='type"+i+"' onclick='noChooseSmallType()'>"+novel_big_type[i]+"</div>";
+		inf+="</td><td class='smallTypeTd' valign='top'>";
+		var t=novel_small_type[i].split(";");
+		for(var k=0;k<t.length;k++){
+			inf+="<div><input type='checkbox' class='smallType' value='"+t[k]+"' name='smallType' id='type"+i+"@"+k+"'>"+t[k]+"</div>";
+		}
+		inf+="</td></tr></table></div>";
+	}
+	$("#"+divId).html(inf);
+	$(".smallType").click(function(){
+		var nums=0;
+		$(this).parent().parent().find(".smallType").each(function(){
+			if($(this)[0].checked==true){
+				nums++;
+			}
+		});
+		if(nums>3){
+			alert("小分类下可以选3个");
+			$(this)[0].checked=false;
+		}
+		var ids=$(this)[0].id.split("@");
+		$("#"+ids[0])[0].checked=true;
+	});
+}
+
+function noChooseSmallType(){
+	$(".smallType").each(function(){
+		$(this)[0].checked=false;
+	});
+}
+
+//根据传入的url进行跳转
+function getJspData(obj){
+	getJspDataByUrl(obj.id);
+}
+
+function getJspDataByUrl(url){
+	if(url!=undefined&&url!=""){
+		try{
+			$("#azycjd_form").remove();
+		}catch(ex){}
+		var arr=url.split("#");
+		var forms=document.createElement("form");
+		forms.id="azycjd_form";
+		forms.action=path+"/"+arr[0];
+		forms.method="POST";
+		for(var i=1;i<arr.length;i++){
+			if(arr[i]!=null&&arr[i]!=""){
+				var tmp=arr[i].split("=");
+				var inputs=document.createElement("input");
+				inputs.type="text";
+				inputs.name=tmp[0];
+				inputs.value=tmp[1];
+				forms.appendChild(inputs);
+			}
+		}
+		try{
+			$.jBox.tip("请等待，数据加载中...", 'loading');
+		}catch(e){}
+		var html=$("html")[0];
+		html.appendChild(forms);
+		forms.submit();
+	}
+}
+
+
+function goPageNum(textId,methodAction,formId){
+	if(!(/^\d{1,5}$/).test($("#"+textId).val())){
+		alert("页码输入错误！");
+		return;
+	}
+	direcNum(methodAction,formId,parseInt($("#"+textId).val()));
+}
+
+//页面跳转
+var nowPage=1;
+var beishu=1;
+var needSubmitForm=new Array("AnzhiCommentFormManage","AnzhiNovelFormSearch","AnzhiNewsFormIndex","accountconsumeform","accountrechargeform","cavebookmarksform","cavecollectionform","commentpriseform","commentreplyform","incomedetailform","incomegaikuangform","cashmanageform","mycommentform","paiHangBangForm","replyForm","AnzhiFenJuanFormIndex","AnzhiNovelFormIndex","AnzhiNewsFormIndex","AnzhiMessageFormIndex");
+function direcNum(methodAction,formId,pageNum){
+	if(pageNum>nowPage){
+		beishu=2;
+	}else{
+		beishu=-2;
+	}
+	nowPage=pageNum;
+	var form=document.getElementById(formId);
+	form.action=path+"/"+methodAction;
+	var form=document.getElementById(formId);
+	//添加请求页码
+	if(pageNum!=undefined&&pageNum!=""){
+		try{
+			$("#pageNum").remove();//先移除
+		}catch(e){}
+		var pageNumInput=document.createElement("input");
+		pageNumInput.name="pageNum";
+		pageNumInput.value=pageNum;
+		pageNumInput.type="hidden";
+		pageNumInput.id="pageNum";
+		form.appendChild(pageNumInput);
+	}
+	//如果是submit请求，需要重新设置
+	if(checkSubmitForm(formId)){
+		var t=form.action.split("?");
+		form.action=t[0];//重新设置Action
+		if(t.length>1){
+			var arr=t[1].split("&&");//ep:wrw=1234
+			for(var i=0;i<arr.length;i++){
+				var tmp=arr[i].split("=");
+				var input=document.createElement("input");
+				input.name=tmp[0];
+				input.value=tmp[1];
+				input.type="hidden";
+				form.appendChild(input);
+			}
+		}
+		$.jBox.tip("请等待，数据加载中...", 'loading');
+		form.submit();
+	}else{
+		ajaxSubmit(formId);
+	}
+}
+
+function checkSubmitForm(formId){
+	for(var i=0;i<needSubmitForm.length;i++){
+		if(needSubmitForm[i]==formId){
+			return true;
+		}
+	}
+	return false;
+}
+
+function ajaxFormSubmit(id,obj) {
+	isSubmit=true;
+	if(id=="day_registration_form"){
+		var novelTypes="";
+		var mess="请选择小说类型";
+		$(".novel_type").each(function(){
+			if(($(this).find(".bigType"))[0].checked==true){
+				novelTypes+=($(this).find(".bigType"))[0].value+"@";
+				var tmp="";
+				$(this).find(".smallType").each(function(){
+					if($(this)[0].checked==true){
+						tmp+=$(this)[0].value+";";
+					}
+				});
+				if(tmp==""){
+					mess=($(this).find(".bigType"))[0].value+"还没有选择小类型呢！";
+					novelTypes="";
+					return false;
+				}
+				novelTypes+=tmp;
+				novelTypes+="/";
+			}
+		});
+		if(novelTypes==""){
+			alert(mess);
+			return;
+		}
+		$("#novelType").val(novelTypes);
+	}
+	if(id=="day_chapter_form"){
+		if($("#fenJuanId").val()==undefined||$("#fenJuanId").val()==""){
+			alert("请选择所属分卷!");
+			return;
+		}
+	}
+	
+	if(id=="youxiangzhuceform"){
+		if($("#zhucexieyiyouxiang")[0].checked==false){
+			alert("您还没有同意[安之原创基地用户注册协议]呢");
+			return;
+		}
+		if($("#yonghuxieyiyouxiang")[0].checked==false){
+			alert("您还没有同意[安之原创基地付费用户协议]呢");
+			return;
+		}
+	}
+	
+	if(id=="dianhuazhuceform"){
+		if($("#zhucexieyidianhua")[0].checked==false){
+			alert("您还没有同意[安之原创基地用户注册协议]呢");
+			return;
+		}
+		if($("#yonghuxieyidianhua")[0].checked==false){
+			alert("您还没有同意[安之原创基地付费用户协议]呢");
+			return;
+		}
+	}
+	if(id=="myinfoform"){
+		$("#memberAddress").val($("#anzhi_provice").val()+"@#"+$("#anzhi_city").val()+"@#"+$("#anzhi_qu").val()+"@#"+$("#memberAddressDetail").val());
+	}
+	if(id=="infoupdateform"){
+		$("#authorAddress").val($("#anzhi_provice").val()+"@#"+$("#anzhi_city").val()+"@#"+$("#anzhi_qu").val()+"@#"+$("#memberAddressDetail").val());
+	}
+	var form=document.getElementById(id);
+    var dataPara = getFormJson(form);
+    if(isSubmit){
+    	var t=form.action.split("?");
+		form.action=t[0];//重新设置Action
+		if(t.length>1){
+			var arr=t[1].split("&&");//ep:wrw=1234
+			for(var i=0;i<arr.length;i++){
+				var tmp=arr[i].split("=");
+				var input=document.createElement("input");
+				input.name=tmp[0];
+				input.value=tmp[1];
+				input.type="hidden";
+				form.appendChild(input);
+			}
+		}
+		$.jBox.tip("请等待，数据加载中...", 'loading');
+		form.submit();
+    }
+}
+
+var isSubmit=true;
+function ajaxSubmit(id,obj) {
+	var frm=document.getElementById(id);
+	if(id=="updpassform"){
+		if($("#newPass1").val()!=$("#newPass").val()){
+			alert("两次输入密码不一致！");
+			return;
+		}
+	}
+	if(id=="my_news_message"||id=="myactivityform"){
+		if(!/^\d{4}$/.test($("#randCode").val())){
+			alert("验证码输入错误！");
+			return;
+		}
+		if(!(/^.{5,120}$/).test($($(frm).find(".textarea_css")[0]).val())){
+			alert("发送内容长度必须在4-120之间！");
+			return;
+		}
+	}
+	if(id=="AnzhiRecommendFormAction"||id=="AnzhiDiscountedFormAction"||id=="AnzhiWebEditorAuthorFormAction"){
+		if($("#novelId").val()==""){
+			alert("您还没有选择一本小说呢");
+			return;
+		}
+	}
+	isSubmit=true;
+    var dataPara = getFormJson(frm);
+    if(isSubmit){
+    	$.jBox.tip("请等待，操作中...", 'loading');
+    	try{
+    		obj.style.display="none";
+    	}catch(e){}
+    	$.ajax({
+            url: frm.action,
+            type: frm.method,
+            data: dataPara,
+            success:function(res){
+            	if(id=="AnzhiFenJuanFormActionIndex"){
+            		$("#addFenJuanDiv").slideUp();
+            		window.location.reload();
+            	}else if(id=="updpassform"){
+            		alert(res);
+            	}else if(id=="updateAnzhiWebEditorFormAction"){
+            		alert(res);
+            	}else if(id=="AnzhiWebEditorWorkFormAction"){
+            		alert("作业提交成功！");
+            	}else if(id=="AnzhiWebEditorTuijianFormAction"){
+            		alert("推文报备成功！");
+            	}else if(id=="AnzhiWebEditorFuliApplyFormAction"){
+            		alert("福利申请提交成功！");
+            	}else if(id=="AnzhiRecommendFormAction"||id=="AnzhiDiscountedFormAction"||id=="AnzhiWebEditorAuthorFormAction"){
+            		$("#searchNovelData").html("");
+        			$("#novelId").val("");
+        			$("#novelSearchTitle").val("");
+        			$("#novelSearchTitle")[0].focus();
+        			obj.style.display="block";
+            	}else if(id=="my_news_message"){
+            		if(res=="yes"){
+            			alert("消息发送成功！");
+            			$("#messageTitle").val("");
+            			$("#messageContent").val("");
+            			$("#jieshouren").val("");
+            		}else{
+            			alert(res);
+            			try{
+            	    		obj.style.display="block";
+            	    	}catch(e){}
+            		}
+            	}else{
+            		$("#mainContent").html(res);
+            	}
+            	$.jBox.closeTip();
+            }
+        });
+    }
+}
+
+//将form中的值转换为键值对。
+function getFormJson(frm) {
+    var o = {};  
+    var a = $(frm).serializeArray();
+    $.each(a, function () {
+    	try{
+    		var t=$("#"+this.name)[0];
+        	if(t.alt&&t.alt!=""){
+        		var ts=t.alt.split(";");
+        		reg=new RegExp("^"+ts[0]+"$");
+        		if(!reg.test(t.value)){
+        			try{
+        				alert(ts[1]);
+        				isSubmit=false;
+        				return false;
+        			}catch(e){
+        				
+        			}
+        		}
+        	}
+            if (o[this.name] !== undefined) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                if(this.value!=""){
+                	o[this.name]+=","+this.value;
+                }
+                //o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+    	}catch(e){
+    		return false;
+    	}
+    });
+    return o;
+}
+
+
+//弹出框
+function alertYndf(info){
+	alert(info);
+	return;
+	info="<div style='padding:10px;font-size:14px;'>"+info+"</div>";
+	$.jBox(info,{
+		title:"<div style='font-size:13px;'>友情提示</div>",
+		height:150,
+		closed:function(){
+			$("#bodyObject").css("padding","0px").css("margin","0px");
+		}
+	});
+}
+
+function allLoadPage(url){
+	$.jBox.tip("请等待，数据加载中...", 'loading');
+	$.post(url,null,function(res){
+		$("#mainContent").html(res);
+		$.jBox.closeTip();
+	});
+}
+
+function loadPageData(actions){
+	allLoadPage(actions);
+}
+
+function loadUpdatePageData(url,obj,domid,width,height){
+	loadPageData(url);
+}
+
+function del(p){
+	if(confirm("您确定删除该条记录吗？")){
+		allLoadPage(path+"/"+p);
+	}
+}
+
+function resetpass(p,obj){
+	if(confirm("您确定重置该作者密码吗？")){
+		obj.style.display="none";
+		$.post(path+"/"+p,null,function(res){
+			alert(res);
+		});
+	}
+}
+
+
+//打印
+function doPrint(printid) {
+	bdhtml=window.document.body.innerHTML;
+	bdhtml=$("#printView").html();
+	if(printid!=undefined){
+		bdhtml=$("#"+printid).html();
+	}
+	sprnstr="<!--startprint-->";
+	eprnstr="<!--endprint-->";
+	prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);
+	prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));
+	window.document.body.innerHTML=bdhtml;
+	window.print();
+}
+
+//异步加载小说数据
+function loadNovelDeTail(novelId){
+	$.post(path+"/anzhinovel/loadNovelDeTail.do",{novelId:novelId},function(res){
+		var json=res; 
+		$("#zhoudianji").html(json.zhoudianji);
+		$("#zhoutuijian").html(json.zhoutuijian);
+		$("#yuedianji").html(json.yuedianji);
+		$("#yuetuijian").html(json.yuetuijian);
+		$("#zongdianji").html(json.zongdianji);
+		$("#zongzishu").html(json.zongzishu);
+		$("#gengxinshijian").html(json.gengxinshijian);
+		//是否点赞、收藏、推荐本书
+		if(json.yetSouCang=="yes"){
+			$("#shoucangbenshu").html("已收藏");
+		}
+		if(json.yetTuiJianNovel=="yes"){
+			$("#tuijianbenshu").html("已推荐");
+		}
+		$("#shoucangbenshu").slideDown();
+		$("#tuijianbenshu").slideDown();
+
+		for(var i=0;i<json.newsdata.length;i++){
+			var t=json.newsdata[i];
+			newsdata[newsdata.length]="<a href='news_html/anzhi_news_"+t.id+".jsp' target='_blank'>"+t.newsTitle+"</a>";
+		}
+		
+		try{
+			//去掉已经点赞的评论
+			var commentPraiseArr=json.praise.split(",");
+			for(var i=0;i<commentPraiseArr.length;i++){
+				if(commentPraiseArr[i]!=""){
+					try{
+						var tsss=$("#dianZanComment"+commentPraiseArr[i]);
+						var v=tsss.html();
+						v=v.replace("点赞","已点赞");
+						tsss.html(v);
+						tsss[0].onclick=function(){
+							return;
+						};
+					}catch(e){}
+				}
+			}
+		}catch(ex){}
+		
+		if(json.zhizhushangjia=="yes"){
+			$("#zhizhushangjia").slideDown();
+		}
+
+		//显示优惠信息
+		if(json.youhuiInfo=="yes"){
+			$("#youhui_info").html("本书有["+json.discountedType+"]优惠，截止:"+json.discountedEndDate+"。<span class='discountedRebate_class'>"+json.discountedRebate+"</span>");
+		}
+		moves();
+	});
+}
+
+//评论回复
+function commentReply(commentId,novelId,memberId){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	/*getJspDataByUrl("anzhicomment/commentAction.do#commentId="+commentId+"#novelId="+novelId);*/
+	if($("#reply"+commentId).length==0){
+		$("<div class='reply_div_css' id='reply"+commentId+"'></div>").html("<input placeholder='回复一下你的看法...' class='reply_text_css' id='reply_content"+commentId+"' type='text'/><input type='button' class='reply_btn_css' value='回复' onclick=\"saveReplyComment(this,'"+novelId+"','"+commentId+"',0)\"/>").insertAfter($("#comment_time"+commentId));
+	}
+}
+
+//评论点赞
+function commentPraise(obj,memberId,novelId,commentId,chapterId){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	obj.style.visibility="hidden";
+	$.post(path+"/anzhicommentpraise/addAnzhiCommentPraise.do",{
+		novelId:novelId,
+		commentId:commentId,
+		chapterId:chapterId
+	},function(res){
+		if(res!="yes"){
+			alert(res);
+		}else{
+			//alert("点赞成功！");
+			window.location.reload();
+		}
+	});
+}
+
+//选择表情
+function chooseBiaoQing(obj,biaoQingId){
+	$("#"+biaoQingId).text($("#"+biaoQingId).text()+obj.className);
+	$("#"+biaoQingId+"BiaoQing").slideUp();
+}
+
+//验证码
+function loadimage(){ 
+	document.getElementById("randImage").src = "image.jsp?"+Math.random(); 
+} 
+//保存评论
+function saveComment(obj,novelId,memberId,commentFatherid,commentType){
+	if(!/^\d{4}$/.test($("#randCode").val())){
+		alert("验证码输入错误！");
+		return;
+	}
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	if(commentFatherid==undefined){
+		alert("参数请求错误！");
+		return;
+	}
+	if(confirm('您确定提交书评吗?')){
+		obj.style.display="none";
+		var state=0;
+		if($("#state").val()!=undefined){
+			state=$("#state").val();
+		}
+		$.post(path+"/anzhicomment/addAnzhiComment.do",{
+			commentFatherid:commentFatherid,
+			commentType:commentType,
+			commentContent:$("#commentContent").val(),
+			tableId:novelId,
+			commentTitle:$("#comment_title").val(),
+			state:state,
+			randCode:$("#randCode").val()
+		},function(res){
+			$.post(path+"/anzhinovel/createHtml.do",{htmlName:"novel/"+novelId,data:res},function(){
+				window.location.reload();
+			});
+		});
+	}
+}
+
+//保存评论回复
+function saveReplyComment(obj,novelId,commentFatherid,commentType){
+	if(loginMemberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	if($("#reply_content"+commentFatherid).val()==null||$("#reply_content"+commentFatherid).val()==""){
+		alert("您还没有写您的看法呢！");
+		return;
+	}
+	if(commentFatherid==undefined||commentFatherid==0){
+		alert("参数请求错误！");
+		return;
+	}
+	obj.style.display="none";
+	var state=0;
+	if($("#state").val()!=undefined){
+		state=$("#state").val();
+	}
+	$.post(path+"/anzhicomment/addAnzhiComment.do",{
+		commentFatherid:commentFatherid,
+		commentType:commentType,
+		commentContent:$("#reply_content"+commentFatherid).val(),
+		tableId:novelId,
+		commentTitle:'',
+		state:0
+	},function(res){
+		$.post(path+"/anzhinovel/createHtml.do",{htmlName:"novel/"+novelId,data:res},function(){
+			window.location.reload();
+		});
+	});
+}
+
+//推荐作品、收藏小说
+function multifunction(obj,memberId,novelId,actionType,novelTitle){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	if(confirm("确定收藏《"+novelTitle+"》吗?")){
+		$(obj).slideUp();
+		$.post(path+"/anzhinovelmultifunction/saveAnzhiNovelMultifunction.do",{novelId:novelId,actionType:actionType},function(res){
+			if(res!="yes"){
+				$(obj).slideUp();
+				alert(res);
+			}else{
+				alert("《"+novelTitle+"》作品收藏成功");
+			}
+		});
+	}
+}
+
+/**
+ * 打赏作品
+ */
+function daShangNovel(divIndex,memberId,novelId,novelTitle,con){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	if(con==undefined){
+		con="no";
+	}
+	$.jBox("iframe:"+path+"/anzhinovel/loadDaShangJsp.do?novelId="+novelId+"&&divIndex="+divIndex+"&&con="+con, {
+		title: "<div style='font-size:14px;'>"+novelTitle+"---互动区</div>",
+		width: 850,
+		height: 500,
+		top:90,
+		persistent: false,
+		buttons: { '关闭': true },
+		closed:function(){
+			try{
+				$("#top_banner").css("background","url("+path+"/images/top_t.png)  center 0px no-repeat #f0f0f0").css("padding","0px").css("margin","0px");
+			}catch(ex){}
+			try{
+				$("#body_index").css("background-color","#f0f0f0").css("padding","0px").css("margin","0px");
+			}catch(ex){}
+			
+		}
+	});	
+} 
+
+/**
+ * 购买单章节、或购买本书、或订阅界面跳转
+ */
+function buyChapter(chapterId,chapterIndex){
+	$.jBox("iframe:"+path+"/anzhichapter/loadBuyChapter.do?chapterId="+chapterId+"&&chapterIndex="+chapterIndex, {
+		title: "<div style='font-size:14px;'>章节购买</div>",
+		width: 850,
+		height: 500,
+		top:90,
+		persistent: false,
+		buttons: { '关闭': true },
+		closed:function(){
+			$("#top_banner").css("background","url("+path+"/images/top_t.png)  center 0px no-repeat #f0f0f0").css("padding","0px").css("margin","0px");
+		}
+	});
+}
+
+function buyChapterAction(){
+	
+}
+
+/**
+ * 添加好友
+ */
+function addFriend(friendId,memberId,obj){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	if(confirm("您确定将该用户添加为好友吗?")){
+		obj.style.display="none";
+		$.post(path+"/anzhifriend/addAnzhiFriend.do",{friendMemberId:friendId},function(res){
+			if(res!="yes"){
+				obj.style.display="block";
+				alert(res);
+			}else{
+				alert("添加成功");
+			}
+		});
+	}
+}
+
+
+/**
+ * 购买分卷
+ */
+function buyFenJuan(fenJuanId,totalChapterNum,totalCharNum,fenJuanTotalChapterNum){
+	if(memberId==''){
+		alert("您还没有登录呢！");
+		return;
+	}
+	var vipChapter=0;
+	var vipCharNum=0;
+	$("#chapter_div"+fenJuanId).children(".vip_chapter").each(function(){
+		var tmp=($(this).children("a"))[0].id.split("@");
+		vipChapter++;
+		vipCharNum+=parseInt(tmp[0]);
+	});
+	if(vipChapter==0){
+		alert("该分卷您已经购买了！");
+		return;
+	}
+	if(parseInt(youhuiType)==0||parseInt(youhuiType)==1){//如果是本周免费、限时免费，则不能购买
+		alert("该小说目前有["+discountedTypeName+"]优惠，暂不提供购买！您可以直接阅读！");
+		return;
+	}
+	var needAnzhiMoney=getAnZhiBi(vipCharNum);
+	var youhuiInfo="";
+	if(parseInt(youhuiType)==2||parseInt(youhuiType)==3){
+		needAnzhiMoney=parseInt(needAnzhiMoney*(parseFloat(discountedRebate)/10));
+		youhuiInfo="本书目前有["+discountedTypeName+"]优惠,购买折扣为:"+discountedRebate+"。现在购买需要"+needAnzhiMoney+"安之币。";
+	}
+	if(confirm("您账户上还有["+memberMoney+"]安之币。该分卷总共包含"+totalChapterNum+"章，其中没有购买的VIP章节有"+vipChapter+"章，共计"+vipCharNum+"字，需要"+getAnZhiBi(vipCharNum)+"安之币,"+youhuiInfo+"您确定购买吗？")){
+		if(memberMoney<needAnzhiMoney){
+			alert("您账户上剩余安之币不足，请先充值！");
+			return;
+		}
+		$(".buyFenJuan").each(function(){
+			$(this)[0].style.visibility="hidden";
+		});
+		$.post(path+"/anzhichaptersubscribe/fenJuanDingYue.do",{fenJuanId:fenJuanId},function(res){
+			if(res!="yes"){
+				$(".buyFenJuan").each(function(){
+					$(this)[0].style.visibility="visible";
+				});
+				alert(res);
+			}else{
+				alert("购买成功");
+				window.location.reload(true);
+			}
+		});
+	}
+}
+
+/*
+ * 签到
+ */
+function qiandao(obj){
+	if(confirm("是否确认签到?")){
+		obj.style.display="none";
+		$.post(path+"/anzhiexperiencerecord/addAnzhiExperienceRecord.do",{experienceType:0},function(res){
+			if(res!="yes"){
+				obj.style.display="block";
+				alert(res);
+			}else{
+				$("#qiandaohaole").html("已签到");
+				alert("签到成功");
+			}
+		});
+	}
+}
+
+/**
+ * 阅读小说
+ */
+function readNovel(chapterId,obj,charNum,chapterIndex){
+	if(($(obj).parent())[0].className=="vip_chapter"){
+		if(memberId==""){
+			alert("您还没有登录呢！");
+			return;
+		}
+		if(autoBuy==0){//说明没有自动订阅，则需要提示购买
+			if(parseInt(youhuiType)==0||parseInt(youhuiType)==1){//如果是本周免费、限时免费，则不需要验证
+				window.open(path+"/anzhichapter/read.do?chapterId="+chapterId);
+			}else{
+				var youhuiInfo="";
+				if(parseInt(youhuiType)==2||parseInt(youhuiType)==3){
+					youhuiInfo="本书目前有["+discountedTypeName+"]优惠,购买折扣为:"+discountedRebate+"。";
+				}
+				if(("该章节是VIP章节，您还没有购买。"+youhuiInfo+"是否需要购买?")){
+					buyChapter(chapterId,chapterIndex);
+				}
+				return;
+			}
+		}else{
+			//自动购买、阅读
+			window.open(path+"/anzhichapter/read.do?chapterId="+chapterId);
+			return;
+		}
+	}
+	window.open(path+"/anzhichapter/read.do?chapterId="+chapterId);
+}
+
+/**
+ * 根据小说文字计算需要的安之币
+ * @param charNum
+ * @returns {Number}
+ */
+function getAnZhiBi(charNum){
+	return parseInt(charNum/1000)*4;
+}
+
+/**
+ * 取消订阅
+ * @param novelId
+ * @param obj
+ */
+function delautoBuy(novelId,obj){
+	if(memberId==""){
+		alert("您还没有登录呢");
+		return;
+	}
+	if(confirm("您确定取消自动订阅吗?")){
+		obj.style.display="none";
+		$.post(path+"/anzhichaptersubscribe/delautoBuy.do",{novelId:novelId},function(res){
+			if(res=="yes"){
+				autoBuy=0;
+				alert("取消成功");
+				window.location.reload();
+			}else{
+				alert(res);
+				obj.style.display="block";
+			}
+		});
+	}
+}
+
+/**
+ * 章节加入书签
+ * @param id
+ */
+function shuqian(chapterId,novelId,obj){
+	if(memberId==""){
+		alert("您还没有登录呢");
+		return;
+	}
+	obj.style.display="none";
+	$.post(path+"/anzhibookmark/addAnzhiBookmark.do",{chapterId:chapterId,novelId:novelId,readAddress:$(document).scrollTop()},function(res){
+		if(res=="yes"){
+			autoBuy=0;
+			$.jBox.tip("成功加入书签！");
+		}else{
+			alert(res);
+		}
+		obj.style.display="block";
+	});
+	
+}
+
+function SetCookie(name,value)//两个参数，一个是cookie的名子，一个是值
+{
+	var Days = 30; //此 cookie 将被保存 30 天
+	var exp  = new Date();    //new Date("December 31, 9998");
+	exp.setTime(exp.getTime() + Days*24*60*60*1000);
+	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}
+function getCookie(name)//取cookies函数        
+{
+	var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+	 if(arr != null) return unescape(arr[2]); return null;
+
+}
+function delCookie(name)//删除cookie
+{
+	var exp = new Date();
+	exp.setTime(exp.getTime() - 1);
+	var cval=getCookie(name);
+	if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+}
+
+function changecashmoney(obj){
+	var anzhimoney=$(obj).val();
+	var cashMoney=$("#cashMoney");
+	if(anzhimoney>0){
+		cashMoney.val(anzhimoney/100);
+	}else{
+		cashMoney.val("");
+	}
+}
+
+function loadLoginInfo(){
+	$.post(path+"/model/now_login_info.jsp",null,function(res){
+		$($("#login_div_css .top_1")[0]).html(res);
+	});
+}
+
+function commentTypeClick(con,obj){
+	obj.className="comment_type_css_click";
+	if(con){
+		$('#pinglunDiv')[0].style.display='none';
+		$('#liuyanpinglunDiv')[0].style.display='block';
+		
+		$('#commentShupinTotalNum')[0].style.display='none';
+		$('#commentLiuYanTotalNum')[0].style.display='block';
+		$("#c_t_2")[0].className="comment_type_css";
+	}else{
+		$('#pinglunDiv')[0].style.display='block';
+		$('#liuyanpinglunDiv')[0].style.display='none';
+		$('#commentShupinTotalNum')[0].style.display='block';
+		$('#commentLiuYanTotalNum')[0].style.display='none';
+		$("#c_t_1")[0].className="comment_type_css";
+	}
+}
+
+function delTable(obj,tableId,tabNameIndex,actionType,stateValue,actionurl,t){
+	if(confirm("您确定执行吗?")){
+		$("#actiondiv"+tableId).slideToggle();
+		$.post(path+"/util/delRecord.do",{
+			tableId:tableId,
+			tabNameIndex:tabNameIndex,
+			actionType:actionType,
+			stateValue:stateValue,
+			vote:$("#vote").val()
+		},function(res){
+			if(res=="yes"){
+				alert("操作成功");
+				if(tableId!=''){
+					actionurl+="?novelId="+t;
+				}
+				getJspDataByUrl(actionurl);
+			}else{
+				alert(res);
+				$("#actiondiv"+tableId).slideToggle();
+			}
+		});
+	}
+}
+
+function getMoreHuanYiPi(menutype){
+	$.post(path+"/anzhinovel/findAnzhiNovelchangeyipi.do",{
+		menutype:menutype,
+		pageNum:pageNum++
+	},function(res){
+		$("#huanyipiDIv").html(res);
+	});
+}
+
+function getHtmlContent(className,len){
+	$("."+className).each(function(){
+		var t=$(this)[0].innerText;
+		t=t.substring(0,len);
+		$(this).html(t);
+	});
+}
+
+//初始化省份数据
+function initAnzhiProvice(oldAddress){
+	var anzhi_provice=document.getElementById("anzhi_provice");
+	for(var i=0;i<provinceArray.length;i++){
+		anzhi_provice.add(new Option(provinceArray[i],provinceArray[i]));
+	}
+	getCityData(anzhi_provice.value);
+	setDefaultValue(oldAddress);
+}
+
+function getCityData(v){
+	var anzhi_city=document.getElementById("anzhi_city");
+	anzhi_city.options.length=0;
+	for(var i=0;i<cityArray.length;i++){
+		var tmp=cityArray[i].split(",");
+		if(tmp[1]==v){
+			anzhi_city.add(new Option(tmp[0],tmp[0]));
+		}
+	}
+	getQuData(anzhi_city.value);
+	getShengShiquHtml();
+}
+
+function getQuData(v){
+	var anzhi_qu=document.getElementById("anzhi_qu");
+	anzhi_qu.options.length=0;	
+	for(var i=0;i<districtArray.length;i++){
+		var tmp=districtArray[i].split(",");
+		if(tmp[0]==v){
+			anzhi_qu.add(new Option(tmp[1],tmp[1]));
+		}
+	}
+	getShengShiquHtml()
+}
+
+function setDefaultValue(oldAddress){
+	if(oldAddress==undefined||oldAddress==''){
+		return;
+	}
+	var arr=oldAddress.split("@#");
+	if(arr.length!=4){
+		return;
+	}
+	var p=arr[0];	
+	var c=arr[1];
+	var q=arr[2];
+	document.getElementById("anzhi_provice").value=p;
+	getCityData(p);
+	document.getElementById("anzhi_city").value=c;
+	getQuData(c);
+	document.getElementById("anzhi_qu").value=q;
+	document.getElementById("memberAddressDetail").value=arr[3];
+	getShengShiquHtml();
+}
+
+function getShengShiquHtml(){
+	$("#shengshiquHtml").html($("#anzhi_provice").val()+$("#anzhi_city").val()+$("#anzhi_qu").val());
+}
+
+function getLoginData(){
+	if(QC.Login.check()){
+		QC.Login.getMe(function(openId, accessToken){
+			var op=openId;
+			alert(openId);
+		});
+		cbLoginFun(oInfo, oOpts);
+	}
+}
+var cbLoginFun = function(oInfo, oOpts){
+	$("#figureurl_qq_1")[0].src=oInfo.figureurl_qq_1;
+};
+
+
+function delRecordBack(url){
+	if(confirm("您确定删除该记录吗?")){
+		getJspDataByUrl(url);
+	}
+}

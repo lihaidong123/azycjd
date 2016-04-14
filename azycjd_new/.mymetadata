@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="azycjd_new"
+  id="myeclipse.1438840481613"
+  context-root="/azycjd_new"
+  j2ee-spec="5.0"
+  archive="azycjd_new.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	<!-- 主键扫描  扫描Controller -->
+	<context:component-scan base-package="com.anzhi.web.controller"></context:component-scan>
+	<!-- 主键扫描  扫描serviceImpl -->
+	<context:component-scan base-package="com.anzhi.web.serviceImpl"></context:component-scan>
+	<!-- 主键扫描  扫描daoImpl -->
+	<context:component-scan base-package="com.anzhi.web.daoImpl"></context:component-scan>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="password" value="azycjd"></property>
+		<property name="maxActive" value="1000"></property>
+		<property name="maxIdle" value="10"></property>
+		<property name="maxWait" value="5000"></property>
+		<property name="username" value="azycjd"></property>  
+		<property name="url" value="jdbc:sqlserver://112.117.223.21:1433;databaseName=azycjd"></property>
+	</bean>
+	   
+	<!-- <bean id="db" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="password" value="azycjd"></property>
+		<property name="maxActive" value="1000"></property>
+		<property name="maxIdle" value="10"></property>
+		<property name="maxWait" value="5000"></property>
+		<property name="username" value="azycjd"></property>
+		<property name="url" value="jdbc:sqlserver://112.117.223.21:1433;databaseName=AzycjdTest2"></property>
+	</bean>
+	
+	<bean id="dbUser" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>
+		<property name="password" value="azycjd"></property>
+		<property name="maxActive" value="1000"></property>
+		<property name="maxIdle" value="10"></property>
+		<property name="maxWait" value="5000"></property>
+		<property name="username" value="azycjd"></property>
+		<property name="url" value="jdbc:sqlserver://112.117.223.21:1433;databaseName=AzycjdUser"></property>
+	</bean> -->
+	<!-- <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">  
+          用户名  
+          <property name="user" value="anzhi"/>  
+          用户密码  
+          <property name="password" value="anzhi"/>  
+          <property name="driverClass" value="com.mysql.jdbc.Driver"/>  
+          <property name="jdbcUrl" value="jdbc:mysql://211.149.145.60:3306/anzhi?characterEncoding=utf-8"/>  
+  
+           连接池中保留的最大连接数。默认值: 15   
+          <property name="maxPoolSize" value="20"/>  
+          连接池中保留的最小连接数，默认为：3  
+          <property name="minPoolSize" value="3"/>  
+          初始化连接池中的连接数，取值应在minPoolSize与maxPoolSize之间，默认为3  
+          <property name="initialPoolSize" value="15"/>  
+  
+          最大空闲时间，60秒内未使用则连接被丢弃。若为0则永不丢弃。默认值: 0   
+          <property name="maxIdleTime" value="6000"></property>  
+            
+          当连接池连接耗尽时，客户端调用getConnection()后等待获取新连接的时间，超时后将抛出SQLException，如设为0则无限期等待。单位毫秒。默认: 0   
+          <property name="checkoutTimeout" value="3000"/>  
+            
+          当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。默认值: 3   
+          <property name="acquireIncrement" value="3"/>  
+  
+         定义在从数据库获取新连接失败后重复尝试的次数。默认值: 30 ；小于等于0表示无限次   
+          <property name="acquireRetryAttempts" value="0"/>  
+  
+          重新尝试的时间间隔，默认为：1000毫秒   
+          <property name="acquireRetryDelay" value="1000" />  
+  
+          关闭连接时，是否提交未提交的事务，默认为false，即关闭连接，回滚未提交的事务   
+          <property name="autoCommitOnClose" value="false" />  
+
+          如果为false，则获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常，但是数据源仍有效保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试获取连接失败后该数据源将申明已断开并永久关闭。默认: false   
+          <property name="breakAfterAcquireFailure" value="false"></property>  
+  
+          每60秒检查所有连接池中的空闲连接。默认值: 0，不检查   
+          <property name="idleConnectionTestPeriod" value="0"></property>  
+          c3p0全局的PreparedStatements缓存的大小。如果maxStatements与maxStatementsPerConnection均为0，则缓存不生效，只要有一个不为0，则语句的缓存就能生效。如果默认值: 0   
+          <property name="maxStatements" value="0"></property>  
+          maxStatementsPerConnection定义了连接池内单个连接所拥有的最大缓存statements数。默认值: 0   
+          <property name="maxStatementsPerConnection" value="0"></property>  
+     </bean> --> 
+
+	<!-- <bean id="template" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="db"></property>
+	</bean>
+	
+	<bean id="templateUser" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dbUser"></property>
+	</bean> -->
+	
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- 事务配置 -->
+	<bean id="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource"></ref>
+		</property>
+	</bean>
+	
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="importData*" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="cash*" propagation="REQUIRED" isolation="SERIALIZABLE" />
+			<tx:method name="*" propagation="SUPPORTS" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut expression="execution(* com.anzhi.web.serviceImpl.*.*(..))" id="Application" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="Application" />
+	</aop:config>
+
+
+	<!-- 前置通知 -->
+	<bean id="beforeAop" class="com.anzhi.web.aop.BeforeAop"></bean>
+	<!-- 后置通知 -->
+	<bean id="afterAop" class="com.anzhi.web.aop.AfterAop"></bean>
+	<aop:config>
+		<aop:pointcut expression="execution(* com.anzhi.web.controller.*.*(..))" id="beforeAopCut" />
+		<aop:advisor advice-ref="beforeAop" pointcut-ref="beforeAopCut" />
+	</aop:config>
+	<aop:config>
+		<aop:pointcut expression="execution(* com.anzhi.web.controller.*.*(..))" id="afterCut" />
+		<aop:advisor advice-ref="afterAop" pointcut-ref="afterCut" />
+	</aop:config>
+	
+	<!-- 视图解析 -->
+	<bean id="urlBasedViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+</beans>

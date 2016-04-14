@@ -1,0 +1,39 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<div id="${param.textAreaId }BiaoQing" class="biao_qing_css">
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_1]"><img src="images/biaoqing/1.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_2]"><img src="images/biaoqing/2.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_3]"><img src="images/biaoqing/3.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_4]"><img src="images/biaoqing/4.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_5]"><img src="images/biaoqing/5.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_6]"><img src="images/biaoqing/6.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_7]"><img src="images/biaoqing/7.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_8]"><img src="images/biaoqing/8.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_9]"><img src="images/biaoqing/9.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_10]"><img src="images/biaoqing/10.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_11]"><img src="images/biaoqing/11.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_12]"><img src="images/biaoqing/12.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_13]"><img src="images/biaoqing/13.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_14]"><img src="images/biaoqing/14.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_15]"><img src="images/biaoqing/15.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_16]"><img src="images/biaoqing/16.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_17]"><img src="images/biaoqing/17.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_18]"><img src="images/biaoqing/18.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_19]"><img src="images/biaoqing/19.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_20]"><img src="images/biaoqing/20.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_21]"><img src="images/biaoqing/21.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_22]"><img src="images/biaoqing/22.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_23]"><img src="images/biaoqing/23.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_24]"><img src="images/biaoqing/24.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_25]"><img src="images/biaoqing/25.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_26]"><img src="images/biaoqing/26.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_27]"><img src="images/biaoqing/27.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_28]"><img src="images/biaoqing/28.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_29]"><img src="images/biaoqing/29.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_30]"><img src="images/biaoqing/30.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_31]"><img src="images/biaoqing/31.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_32]"><img src="images/biaoqing/32.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_33]"><img src="images/biaoqing/33.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_34]"><img src="images/biaoqing/34.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_35]"><img src="images/biaoqing/35.gif"/></div>
+	<div onclick="chooseBiaoQing(this,'${param.textAreaId }')" class="[azycjd_36]"><img src="images/biaoqing/36.gif"/></div>
+</div>
