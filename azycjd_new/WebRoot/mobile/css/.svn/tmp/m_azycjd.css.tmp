@@ -1,0 +1,115 @@
+.menu_css{ height:50px; padding-top:3px;  background-color:#FFFFFF;}
+.menu_css td{ width:25%; background:url(../images/slash.png) no-repeat right center; font-family:"黑体"; font-weight:bold; letter-spacing:1px; font-size:16px;}
+.menu_css div{ width:52px;border-bottom:#fff 3px solid; padding-bottom:4px; height:40px; line-height:40px; text-align:center; margin:0 auto; cursor:pointer;}
+.footer{ max-width:700px; position:fixed; height:54px; padding-bottom:5px; bottom:0; background-color:#dbdbdb; border-top:#aeaeae 1px solid;}
+.footer div{ background-position:center;text-align:center; margin:0 auto; cursor:pointer; margin-top:6px; background-repeat:no-repeat; height:40px;}
+.footer img{ width:30px;}
+.bianjiatuijian{ float:left; width:46%; margin-left:10px; margin-top:10px;}
+.bianjiatuijian img{width:60px;}
+.novel_title_css{ font-weight:bold; cursor:pointer;}
+.index_css_title{padding-top:10px;}
+.index_css_title_one{padding-left:10px;  margin-top:3px; width:10px; height:15px; background-color:#0099FF;}
+.index_css_title_two{padding-left:20px;font-weight:bold; }
+.index_css_title_three{padding-left:20px; color:#999999;font-size:12px;}
+.novel_author_css{ color:#726c6c; font-size:12px;}
+.novel_info_css{ color:#999595; font-size:12px;}
+.novel_char_num{color:#696363; font-size:8px; font-weight:bold; line-height:16px; text-align:center;}
+
+.benzhouyouhui{float:left;width:32%; margin-left:3px; margin-top:10px;}
+.benzhouyouhui img{width:35px;}
+.benzhouyouhui .novel_title_css{ font-size:12px;}
+.yuohui_type{ color:#0099CC; font-size:12px;}
+
+.div_float_css{border-bottom:#d8d5d5 1px solid; overflow:auto; padding-bottom:10px;}
+.wanjiejingxun{ background-color:#FFFFFF; padding:4px; margin-top:10px;}
+.wanjiejingxun img{ width:100px;}
+.wanjiejingxun .novel_author_css{ color:#333333;}
+.novel_num_info span{ font-size:12px; color:#999999; margin-left:7px;}
+.novel_updatetime_info{font-size:12px; color:#999999;}
+.bangdan_css{ background-color:#ededed;}
+.bangdan_css div{ height:50px; cursor:pointer; line-height:50px; font-size:12px; font-family:"黑体";border-bottom:#dedede 1px solid; text-align:center;}
+.paihangbang{ border-bottom:#d8d5d5 1px solid; overflow:auto; padding-bottom:10px; margin-top:10px;}
+.paihangbang img{ width:100px;}
+.novel_types_info img{ vertical-align:middle; height:15px; width:45px;}
+.paihangbang .novel_author_css{ color:#333333;}
+.novel_num_info span{ font-size:12px; color:#999999; margin-left:7px;}
+.paihangbang .novel_items{ padding-left:6px;}
+
+.head_user_cent div{ line-height:26px;}
+.user_div_xss{border-bottom:#e8e8e8 1px solid; background-color:#FFFFFF;}
+.user_div_xss table{ height:55px;}
+.titls_info_td{ font-family:"黑体"; font-size:14px; font-weight:bold; padding-left:15px; color:#726e6e;}
+.user_span_css{ font-size:12px; color:#999999;}
+
+.table_css_mobile table{ border-collapse:collapse;}
+.table_css_mobile tr{ line-height:35px; background-color:#FFFFFF;border-bottom:#e8e8e8 1px solid;}
+.table_css_mobile td{ font-size:12px;color:#999999; padding-left:7px;}
+a{ text-decoration:none; color:#0099FF;}
+a:hover{ text-decoration:underline; color:#CC3300;}
+.fixedcss{width:100%;}
+
+	
+/*faxian page*/
+.found_two{height:80px;background-color: #fff;margin-bottom:10px;}
+.found_two div{float:left}
+.found_twoone{width:20px;height:100%;background-color: #1a9cda;}
+.found_twosec{line-height:80px;font-family: "黑体";font-size: 18px;padding-left:20px;}
+.found_three{width:6%;line-height:80px;padding-top:25px;padding-left:10px;}
+.found_twothird{color:#aaa;line-height:80px;font-family: "黑体";font-size: 18px;text-align: right;padding-right:10px;}
+
+
+/*zhifufangshi page*/
+.paytype_one{height:70px;background-color: #000;color:#fff;line-height:70px;padding-left:10px;}
+.paytype_two{height:70px;line-height:70px;padding-left:10px;color:#aaa;}
+.paytype_three{height:70px;line-height:70px;padding-left:10px;background-color: #fff;}
+.paytype_three a{width:60%;float: right;}
+.paytype_type{height:62px;background-color: #fff;margin-top:10px;padding-top:18px;padding-left:10px;}
+
+/*chongzhi page*/
+.paycharge_one div{float:left;line-height:60px;padding-left:10px;}
+.paycharge_one{height:60px;background-color: #fff;margin-top:5px;}
+.paycharge_shuru{padding-left:3px;height:60px;line-height:60px;font-size: 16px;}
+.paycharge_shuru div{float:left;}
+.pgshurutxt{border-bottom: 1px solid #000;height:50px;line-height:50px;}
+.paycharge_shuru a{color:#aaa;padding-left:15px;}
+.paycharge_shuru input{width:60px;}
+.payanniu{height:60px;line-height:60px;padding-top: 20px;text-align: center;}
+.anniucss{background-color: #1a9cda;width:330px;height: 30px;border: none;color:#fff;}
+
+/*pinglun page*/
+.pinglun_one{background-color: #fff;min-height: 80px;margin-top:10px;overflow: auto;}
+.pl_info{padding-top:5px;height:30px;}
+.pl_infotx{float:left;padding-left:5px;}
+.pl_infomz{height:30px;line-height:30px;color:#1a9cda;margin-left:10px;float: left;}
+.pl_infosj{height:30px;line-height:30px;color:#aaa;text-align: right;width:50%;float: right;padding-right:5px;}
+.pl_content{min-height:30px;overflow: auto;margin-top:5px;}
+.pl_huifu{height:30px;float:right;}
+.pl_huifu div{float:left;padding-right:5px;}
+.pinglun_two{height:70px;margin-top:8px;}
+.pl_hftp{height: 30px;}
+.pl_hftp div{float:left;margin-left:20px;}
+.pinglunbtn{background-color: #1a9cda;width:60px;height: 30px;border-radius:5px 5px 5px 5px;border: none;color:#fff;}
+
+/*shujia page*/
+.shujia_one{height:55px;background-color: #1a9cda;padding-left:10px;padding-top:15px;color: #fff;}
+.shujia_one div{float:left;}
+.shujialist{min-height:200px;overflow:auto;}
+.shujialist div{float:left;}
+.shujiabookinfo{background-color:#fff; height: 200px;width:110px;margin-left:3px;margin-top:10px;}
+.sjimg{padding-left:5px;padding-top:3px;}
+.sj_name{line-height:22px;height:22px;font-size:12px;text-align:center !important;padding-left:3px;}
+.sj_zuozhe{line-height:22px;height:22px;padding-left:3px;font-size: 12px;margin-bottom: 5px;}
+.fangdajingimg{width: 23px;height: 23px;}
+
+/*sousuo page*/
+.shuliebiao{min-height:120px;font-size: 10px;overflow: auto;margin-top: 10px;background-color: #fff;}
+.shuliebiaoimg{	height:110px;width:80px;margin-top:5px;margin-left:5px;}
+.shuliebiao div{float:left;}
+.shuliebiaoinfo{width: 73%;margin-left:5px;}
+.shuliebiaoinfo div{clear: both;}
+.slshubiaoti{margin-left:10px;float: left;}
+.shudianzan{float: left;}
+.slbiaoqian div{float:left;}
+
+
+

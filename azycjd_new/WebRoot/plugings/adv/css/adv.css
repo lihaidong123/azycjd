@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* CSS Document */
+#advDivBigSmall div{ background-color:#ade0f8; float:left; width:25px; height:17px; text-align:center; font-size:12px; margin-left:3px; font-weight:bold; border:#85c5e3 1px solid; padding-top:3px; color:#663300;}
+
+#advDivBigSmall{ margin-top: -50px; margin-right: 20px;}
+#advDivBigSmall div:hover{cursor:pointer;}
+#advDivBig{cursor: pointer;}
+#advDivBig div{ float:left; margin:0; padding:0;background:center;}

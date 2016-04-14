@@ -1,0 +1,866 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml,http://open.weibo.com/wb" >
+  <head>
+    <base href="http://localhost:8080/azycjd_new/"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>安之原创|安之原创基地</title>
+	<meta http-equiv="pragma" content="no-cache"/>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="expires" content="0"/>    
+	<meta name="keywords" content="安之原创基地、安之原创、小说、小说排行榜、言情小说、玄幻都市、免费小说" />
+	<meta name="description" content="安之原创|安之原创基地|小说|小说排行榜|言情小说|玄幻都市|免费小说" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<meta property="qc:admins" content="2315067207612132463757" />
+	<meta property="wb:webmaster" content="3a36f523124c3619" />
+	<link rel="stylesheet" type="text/css" href="css/azycjs.css"/>
+	<script language="javascript">var path='/azycjd_new';</script>
+	<script language="javascript">var loginSession='41342';</script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2050043132" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101296266" data-redirecturi="http://www.azycjd.com/qq_back.jsp" charset="utf-8"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.min.js"></script>
+	<script language="javascript" src="/azycjd_new/js/jquery.color.js"></script>
+	<script language="javascript" src="/azycjd_new/js/azycjd.js"></script>
+	
+	<!--jbox-->
+	<link id="skin" rel="stylesheet" href="/azycjd_new/js/jBox/Skins/Blue/jbox.css" />
+	<script type="text/javascript" src="/azycjd_new/js/jBox/jquery.jBox-2.3.min.js"></script>
+	<script type="text/javascript" src="/azycjd_new/js/jBox/i18n/jquery.jBox-zh-CN.js"></script>
+	<script language="javascript">
+		$(function(){
+			$("#searchText").focus(function(){
+				if($(this).val()=="请输入搜素内容"){
+					$(this).val("");
+				}
+			});
+			$("#searchText").blur(function(){
+				if($(this).val()==""){
+					$(this).val("请输入搜素内容");
+				}
+			});
+		});
+	</script>
+	<!--[if lte IE 7]>
+		<div id="browseTips" style="width:830px;background-color:#FFFFFF; margin:0 auto; margin-top:40px;margin-bottom:20px;line-height:23px;">
+			我们发现您使用的IE浏览器版本距离现在已经很遥远了。为了更好的体验本系统，我们建议您升级浏览器。您可以选择：<br />
+ 			<a target="_blank" href="http://rj.baidu.com/soft/detail/14917.html?ald">IE10</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/11843.html?ald">火狐浏览器</a>|<a target="_blank" href="http://rj.baidu.com/soft/detail/14744.html?ald">谷歌浏览器</a>|<a href="javascript:closeBrowseTip()">关闭</a>
+		</div>
+ 		
+	<![endif]-->
+  </head>
+  
+  <body id="top_banner" style="padding:0px; margin:0px; background:url(/attached/image/20160325/20160325102821_878.png)  center 0px no-repeat #f0f0f0;">
+  	<div style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; left:50px; top:45%; z-index: 100;" onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div id="abousus_div" style="width:16px; height:153px; background:url(images/activities.png); cursor:pointer; position:fixed; right:50px; top:45%;z-index: 100;"  onclick="window.open('/azycjd_new/activity.jsp')"></div>
+	<div class="login_div_css" id="login_div_css">
+		<div class="top_1">
+			<!-- <div title="首页" style="background:url(images/home.png) 1px 3px no-repeat;width:40px;" onclick="window.location.href='index.html'">首页</div> -->
+			
+			
+				<div style="background:url(images/star.png) 1px 3px no-repeat;width:150px;"><a href="javascript:;" onclick="window.location.href='/azycjd_new/indexMenu.jsp?indexMenuType=duzhe'">admin</a><span class="outSystemcss"><a href="javascript:outAnZhiSystem()">[退出]</a></span></div>
+			
+			<div>
+				<a class="search_a_css" href="/azycjd_new/search.jsp">搜索书籍</a>
+			</div>
+		</div>
+		<div class="login_css" id="login_css">
+			<div class="login_close_css" title="关闭" onclick="$('#login_css').css('position','static').css('display','none')">X</div>
+			<div style="height:1px;"></div>
+			<table width="100%" border="0">
+			   <tr>
+				<td colspan="2" style="font-weight: bold; text-align: center; font-size: 16px;">用户登录</td>
+			  </tr>
+			  <tr>
+				<td width="29%"><div align="right" style="padding-right: 10px;">用户名</div></td>
+				<td width="71%"><input type="text" id="uname" name="uname" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td><div align="right" style="padding-right: 10px;">密&nbsp;&nbsp;&nbsp;码</div></td>
+				<td><input type="password" id="upass" name="upass" class="login_txt_css" /></td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="top_2">
+						<div class="login_btn" onclick="memberLogin(this)">登录</div>
+						<div><a href="register.jsp">注册</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/azycjd_new/findPassword.jsp">忘记密码?</a></div>
+					</div>				
+				</td>
+			  </tr>
+			  <tr>
+				<td></td>
+				<td>
+					<div class="other_css">
+						
+<table>
+  <tr>
+    <td><span id="qqLoginBtn"></span></td>
+    <td style="padding-left: 20px;"><span id="wb_connect_btn"></span></td>
+  </tr>
+</table>
+<script type="text/javascript">
+    QC.Login({
+       btnId:"qqLoginBtn"    //插入按钮的节点id
+});
+</script>
+
+<script type="text/javascript">
+	WB2.anyWhere(function (W) {
+	    W.widget.connectButton({
+	        id: "wb_connect_btn",
+	        type: '3,2',
+	        callback: {
+	            login: function (o) { //登录后的回调函数
+	                weiboLogin(o);
+	            },
+	            logout: function () { //退出后的回调函数
+	                
+	            }
+	        }
+	    });
+	});
+</script>
+
+					</div>				
+				</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+	
+    <div class="top">
+		<div class="menu_css" id="menu0">
+			<div class="menu_pic"><img src="images/xuanhuan.png" /></div>
+			<div>玄幻·奇幻</div>
+		</div>
+		<div class="menu_css" id="menu1">
+			<div class="menu_pic"><img src="images/wuxia1.png" /></div>
+			<div>武侠·仙侠</div>
+		</div>
+		<div class="menu_css" id="menu2">
+			<div class="menu_pic"><img src="images/dushih.png" /></div>
+			<div>都市·异能</div>
+		</div>
+		<div class="menu_css" id="menu3">
+			<div class="menu_pic"><img src="images/junshi.png" /></div>
+			<div>历史·军事</div>
+		</div>
+		<div class="menu_css" id="menu4">
+			<div class="menu_pic"><img src="images/youxi.png" /></div>
+			<div>游戏·竞技</div>
+		</div>
+		<div class="menu_css" id="menu5">
+			<div class="menu_pic"><img src="images/kehuan.png" /></div>
+			<div>科幻·灵异</div>
+		</div>
+		<div class="menu_css" id="menu6">
+			<div class="menu_pic"><img src="images/xiandaiyanqing.png" /></div>
+			<div>现代言情</div>
+		</div>
+		<div class="menu_css" id="menu7">
+			<div class="menu_pic"><img src="images/gudaiyanqing.png" /></div>
+			<div>古代言情</div>
+		</div>
+	</div>
+	
+	<div class="main_css">
+		<div style="background:url(images/title.png) bottom no-repeat; font-weight:bold; text-align:center;height:45px; margin-bottom: 70px;">
+			<ul class="menuPage">
+				<li id="/azycjd_new/index.html">首页</li>
+				<li id="/azycjd_new/all_type_list.jsp">书库</li>
+				<li id="/azycjd_new/paihangbang.html">排行榜</li>
+				<li id="/azycjd_new/yhsf.html">优惠书坊</li>
+				<li id="/azycjd_new/zuojiafuli.jsp">作家福利</li>
+				<li id="/azycjd_new/anzhinews/news.do">安之公告</li>
+				<li id="/azycjd_new/chongzhi.jsp">充值</li>
+				<li id="/azycjd_new/index.html" style="border: none;">论坛</li>
+			</ul>
+		</div>
+		
+
+ 
+
+
+<script type="text/javascript">
+	var t=43400;
+	function getEndTime(){
+		var day=parseInt(t/(24*60*60));
+		var hour=parseInt((t-day*(24*60*60))/(60*60));
+		var minute=parseInt((t-day*(24*60*60)-hour*(60*60))/60);
+		var sec=t-day*(24*60*60)-hour*(60*60)-minute*60;
+		$("#end_time").html(parseInt(day)+"天"+parseInt(hour)+"小时"+parseInt(minute)+"分"+parseInt(sec)+"秒");
+		t--;
+		//setTimeout("getEndTime()",1000);
+	}
+	$(function(){
+		setTimeout("getEndTime()",1000);
+		loadLoginInfo();
+		getHtmlContent("book_info",130);
+	});
+</script>
+<style type="text/css">
+	#end_time{margin-left: 7px; font: 13px/160% Tahoma, Verdana,snas-serif;}
+</style>
+<div class="main_2_div">
+	<div style="position:absolute;background-color:#e5e5e5; height: 670px; width:950px; z-index:-1; top:778px; margin-left:10px;">
+	</div>
+	<div class="title_div_css">
+		优惠书坊&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+	</div>
+	<div class="week_free">
+		本周免费
+	</div>
+	<div>
+		<table width="100%" border="0">
+		  <tr>
+			<td width="310">
+				<div class="recommand_3_css" style="padding-left:20px;">
+					<div class="title_self_css">国安七号</div>
+					<div>——</div>
+					<div>
+						我发誓我就这么活着 著
+					</div> 
+					<div class="book_info" style="height:165px;">
+						        和平年代的秦城暗涌丛生，在一个个没有硝烟的战场上，惊心的侦破大片正时刻上演着...
+谁的记忆里没有一个白衣飘飘，跳槽而至的国安七号新丁的处子之战，竟鬼使神差地放跑了当年女神...
+记忆中的古城像一朵放肆盛开的罂粟，有关黑蜥蜴犯罪集团的调查，
+居然牵动了多位华夏国高层的神经...
+					</div>
+					<div class="book_info">
+						免费截止：2016/04/11 10:00:00
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/17672/index.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="200">
+				<img src="/images/default_img.jpg" width="205" height="290" style="cursor: pointer;" onclick="window.location.href='/azycjd_new/novel/17672/index.jsp'" />
+			</td>
+			<td>
+				<div class="recommand_3_css" style="padding-left:20px;">
+					<div class="title_self_css">煞星王妃</div>
+					<div>——</div>
+					<div>
+						遇见海 著
+					</div> 
+					<div class="book_info" style="height:165px;">
+						    她是X战队优秀特工，因意外身亡，灵魂穿越成为御史大夫家身背煞星孤命的三小姐。
+他是京都令人谈之色变的孤命王爷，娶了七任王妃，没有一人活过洞房花烛之夜。
+说我是天煞孤星，那么我偏要将这煞字坐实了。果然，每一个见到她的人无一不倒霉透顶。
+以命克命，以煞制煞！那么你就成为王爷的第八任王妃吧！
+这一次，究竟是王爷倒霉，还是她也活不过洞房花烛之夜？
+					</div>
+					<div class="book_info">
+						免费截止：2016/04/11 10:00:00
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/17662/index.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td>
+				<img src="/images/default_img.jpg" width="205" height="290" style="cursor: pointer;" onclick="window.location.href='/azycjd_new/novel/17662/index.jsp'" />
+			</td>
+		  </tr>
+		</table>
+	</div>
+	<div style="margin-top:15px;">
+		<table width="100%" border="0">
+		  <tr>
+			<td width="310">
+				<div class="recommand_3_css" style="padding-left:20px;">
+					<div class="title_self_css">太古帝尊</div>
+					<div>——</div>
+					<div>
+						遥望来天 著
+					</div> 
+					<div class="book_info" style="height:165px;">
+						掌中夺天地，心中摄日月，看顶尖大少怎样杀出一条帝尊大道！                
+那一年他邀战苍穹，向天地大吼，我为帝尊！
+
+					</div>
+					<div class="book_info">
+						免费截止：2016/04/11 10:00:00
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/17467/index.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td width="200">
+				<img src="/images/default_img.jpg" width="205" height="290"  style="cursor: pointer;" onclick="window.location.href='/azycjd_new/novel/17467/index.jsp'" />
+			</td>
+			<td>
+				<div class="recommand_3_css" style="padding-left:20px;">
+					<div class="title_self_css">王妃是神棍</div>
+					<div>——</div>
+					<div>
+						路听音 著
+					</div> 
+					<div class="book_info" style="height:165px;">
+						      她在现代靠占卜为生，被人亲切的称为神棍。一朝穿越，她成为相府九小姐，一个因为能探悉别人命运而被从小当妖孽，长大被渣男逼婚而死的可怜娃。再度醒来，她是权倾当朝的朔王宠妃，有霸道父兄护短，在这个不知名的王朝，活出妖孽般的人生！
+
+					</div>
+					<div class="book_info">
+						免费截止：2016/04/11 10:00:00
+					</div>
+					<div>
+						<div class="self_btn" style="margin-left:0px;" onclick="window.location.href='/azycjd_new/novel/15802/index.jsp'">立刻阅读</div>
+					</div>
+				</div>
+			</td>
+			<td>
+				<img src="/images/default_img.jpg" width="205" height="290"  style="cursor: pointer;" onclick="window.location.href='/azycjd_new/novel/15802/index.jsp'" />
+			</td>
+		  </tr>
+		</table>
+	</div>
+	
+	<div class="list_items" style=" margin-top:80px;clear: both;">
+		<a name="yi"></a>
+		<div>
+			<table class="list_table" width="100%" border="0">
+			  <tr>
+				<td class="list_title" width="90%" style="background:url(images/clock.png) 5px 10px no-repeat; font-weight:bold; padding-left:30px;">限时免费</td>
+				<td>
+					<div class="more_record">
+						<!-- 更多 -->
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div style="clear:both; overflow:auto;" id="articePageMainDiv2">
+			
+				<div class="article_items" id="article_items0217990" style="margin-left: 0px;clear:left;">
+					<div class="noval_img" id="17990novalImg0end801544361897191leixing2">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="公子万劫不复之嫡女撩人">
+						公子万劫不复之嫡女
+					</div>
+					<div class="noval_info_css">
+						    邵依依，现代女杀手，与老公服务于同一个杀手集...
+					</div>
+					<div class="noval_author"  title="苏易尘">
+						by 苏易尘<font class="acticle_add_time">2016/04/10 09:30</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">限时免费</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0217982" >
+					<div class="noval_img" id="17982novalImg1end801544361897191leixing2">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="宠后倾城">
+						宠后倾城
+					</div>
+					<div class="noval_info_css">
+						    她“怀有身孕”嫁为人妇，新婚之夜被夫君唾弃，...
+					</div>
+					<div class="noval_author"  title="迷生">
+						by 迷生<font class="acticle_add_time">2016/04/10 12:00</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">限时免费</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0217970" >
+					<div class="noval_img" id="17970novalImg2end801544361897191leixing2">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="脸盲小编你过来">
+						脸盲小编你过来
+					</div>
+					<div class="noval_info_css">
+						第一面，就给人留下了陌生的、花痴的、已婚的、有娃儿的...
+					</div>
+					<div class="noval_author"  title="魍魉姬蓝雪">
+						by 魍魉姬蓝<font class="acticle_add_time">2016/04/10 17:00</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						现代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">限时免费</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0217935" >
+					<div class="noval_img" id="17935novalImg3end801544361897191leixing2">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="江湖险恶医女求生记">
+						江湖险恶医女求生记
+					</div>
+					<div class="noval_info_css">
+						她是西燕太尉之女，原本应该过着平凡得生活，可是因为一...
+					</div>
+					<div class="noval_author"  title="瓶盖币">
+						by 瓶盖币<font class="acticle_add_time">2016/04/10 13:30</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">限时免费</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0217854" >
+					<div class="noval_img" id="17854novalImg4end801544361897191leixing2">
+						<img src="/UploadImages/NovelWorks/Big/2015-11-08/ac64fc8fd75b4406bed070bc7cfb34ee.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="墨已成碑">
+						墨已成碑
+					</div>
+					<div class="noval_info_css">
+						     荒败尘世，妖鬼纵横。他今生身为捕快，却不知...
+					</div>
+					<div class="noval_author"  title="委骨同归">
+						by 委骨同归<font class="acticle_add_time">2016/03/15 17:25</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">限时免费</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+	
+	<div class="list_items">
+		<a name="yi"></a>
+		<div>
+			<table class="list_table" width="100%" border="0">
+			  <tr>
+				<td class="list_title" width="90%" style="background:url(images/wanbenyouhui.png) 5px 10px no-repeat; font-weight:bold; padding-left:30px;">完本优惠</td>
+				<td>
+					<div class="more_record">
+						<!-- 更多 -->
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div style="clear:both; overflow:auto;" id="articePageMainDiv3">
+			
+				<div class="article_items" id="article_items0317846" style="margin-left: 0px;clear:left;">
+					<div class="noval_img" id="17846novalImg0end801544361897191leixing3">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="跋扈傻妃惹君心">
+						跋扈傻妃惹君心
+					</div>
+					<div class="noval_info_css">
+						      前一世，生在豪门世家，不得不满腹心机，步...
+					</div>
+					<div class="noval_author"  title="奈落">
+						by 奈落<font class="acticle_add_time">2015/10/23 09:15</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0317804" >
+					<div class="noval_img" id="17804novalImg1end801544361897191leixing3">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="御气之神">
+						御气之神
+					</div>
+					<div class="noval_info_css">
+						      Z国秦州市，排名亚洲第一的地下赌场的16...
+					</div>
+					<div class="noval_author"  title="司马云">
+						by 司马云<font class="acticle_add_time">2014/09/09 17:04</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						都市异能
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0317642" >
+					<div class="noval_img" id="17642novalImg2end801544361897191leixing3">
+						<img src="/UploadImages/NovelWorks/Big/2015-05-11/3203152521a54880834a99cb9a0959cb.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="云淡风轻泪飘零">
+						云淡风轻泪飘零
+					</div>
+					<div class="noval_info_css">
+						           他是上古之仙嫡，身份尊贵法力高...
+					</div>
+					<div class="noval_author"  title="眼泪泡饭">
+						by 眼泪泡饭<font class="acticle_add_time">2015/06/05 21:38</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0317455" >
+					<div class="noval_img" id="17455novalImg3end801544361897191leixing3">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="末日青铜">
+						末日青铜
+					</div>
+					<div class="noval_info_css">
+						    希腊神话中的青铜人类被毁灭后留下了遗种，寄居...
+					</div>
+					<div class="noval_author"  title="冷角落">
+						by 冷角落<font class="acticle_add_time">2015/11/30 09:08</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						科幻灵异
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0317139" >
+					<div class="noval_img" id="17139novalImg4end801544361897191leixing3">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="覆明">
+						覆明
+					</div>
+					<div class="noval_info_css">
+						      小日本侵华，可以，代价就是天皇给我牵马，...
+					</div>
+					<div class="noval_author"  title="深海迷途">
+						by 深海迷途<font class="acticle_add_time">2015/10/19 15:38</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						历史军事
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+	
+	<div class="list_items">
+		<a name="yi"></a>
+		<div>
+			<table class="list_table" width="100%" border="0">
+			  <tr>
+				<td class="list_title" width="90%" style="background:url(images/wenbenzhekou.png) 5px 10px no-repeat; font-weight:bold; padding-left:30px;">红文折扣区</td>
+				<td>
+					<div class="more_record">
+						<!-- 更多 -->
+					</div>
+				</td>
+			  </tr>
+			</table>
+		</div>
+		<div style="clear:both; overflow:auto;" id="articePageMainDiv4">
+			
+				<div class="article_items" id="article_items0417548" style="margin-left: 0px;clear:left;">
+					<div class="noval_img" id="17548novalImg0end801544361897191leixing4">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="三天魔尊">
+						三天魔尊
+					</div>
+					<div class="noval_info_css">
+						纵横大陆的天选之子？轮回千年不灭的老怪物？道破天机的...
+					</div>
+					<div class="noval_author"  title="南皖先生">
+						by 南皖先生<font class="acticle_add_time">2016/04/08 15:25</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						玄幻奇幻
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>								
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0417387" >
+					<div class="noval_img" id="17387novalImg1end801544361897191leixing4">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="豪门盛婚，恶魔的娇宠小甜心">
+						豪门盛婚，恶魔的娇
+					</div>
+					<div class="noval_info_css">
+						   莫名其妙地失去了自己宝贵的第一次，浑身酸痛地醒...
+					</div>
+					<div class="noval_author"  title="林纤雪">
+						by 林纤雪<font class="acticle_add_time">2015/12/12 00:23</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						现代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>								
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0417211" >
+					<div class="noval_img" id="17211novalImg2end801544361897191leixing4">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="将后">
+						将后
+					</div>
+					<div class="noval_info_css">
+						            穿上亡兄的那副铠甲，齐国女将...
+					</div>
+					<div class="noval_author"  title="白决">
+						by 白决<font class="acticle_add_time">2015/04/30 19:30</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						古代言情
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>								
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0416524" >
+					<div class="noval_img" id="16524novalImg3end801544361897191leixing4">
+						<img src="/images/default_img.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="婧女奇缘">
+						婧女奇缘
+					</div>
+					<div class="noval_info_css">
+						      以东晋十六国时期为背景——那是一个一人一...
+					</div>
+					<div class="noval_author"  title="雨卧山">
+						by 雨卧山<font class="acticle_add_time">2015/11/30 21:43</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						武侠仙侠
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>								
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+			
+				<div class="article_items" id="article_items0416001" >
+					<div class="noval_img" id="16001novalImg4end801544361897191leixing4">
+						<img src="/UploadImages/NovelWorks/Big/2015-05-11/29d25e2e9d734c90ab2637bec773cc3f.jpg" width="177" height="234"/>
+					</div>
+					<div class="noval_title" title="血狱灵龙">
+						血狱灵龙
+					</div>
+					<div class="noval_info_css">
+						    一条龙，龙帝之子。出生时龙帝因血脉低下，被抛...
+					</div>
+					<div class="noval_author"  title="刹那间的永恒">
+						by 刹那间的<font class="acticle_add_time">2016/01/23 23:20</font>
+					</div>
+					<div class="article_type_css" style="height:25px;">
+						玄幻奇幻
+					</div>
+					<div class="article_items_foot">
+						<table width="100%" border="0">
+						  <tr>
+							<td class="endDate_css">
+								<div>截止时间:2016/04/11 10:00</div>
+								<div><span class="discountedRebate_class">折扣:8.0折</span></div>								
+							</td>
+						  </tr>
+						</table>
+					</div>
+				</div>
+				
+		</div>
+	</div>
+</div>
+<script language="javascript">
+	$(function(){
+		$(".noval_img").hover(function(){
+			$("#book_info_css_div").remove();
+			clearInterval(removeBookBaiscTimer);
+			getBookBasicObject=$(this)[0];
+			if($(this).data("novelId")==null){
+				//说明没有加载
+				loadNovelPartInfo(getBookBasicObject);
+			}else{
+				novelImg=$(this).data("novelImg");
+				novelTitle=$(this).data("novelTitle");
+				authorWriter=$(this).data("authorWriter");
+				clickNum=$(this).data("clickNum");
+				readNum=$(this).data("readNum");
+				novelVote=$(this).data("novelVote");
+				novelId=$(this).data("novelId");
+				getBookBasicTimer=setTimeout("getBookBasicInfo()",400);
+			}
+		},function(){
+			clearInterval(getBookBasicTimer);
+			getBookBasicObject=null;
+			novelImg=null;
+			novelTitle=null;
+			authorWriter=null;
+			clickNum=null;
+			readNum=null;
+			novelVote=null;
+			novelId=null;
+			removeBookBaiscTimer=setTimeout("removeBookBasic()",1000);
+			try{
+				$("#paimingshuzi").remove();
+			}catch(e){}
+		});
+		novalImgClick();
+	});
+</script>
+
+
+
+	</div>
+	<div class="foot_css">
+		<div class="foot_1_css">
+			<div>
+				<a href="/azycjd_new/aboutus.jsp"  target="_blank">关于我们</a>|
+				<a href="/azycjd_new/yonghuzhinan.jsp" target="_blank">用户指南</a>|
+				<!-- <a href="zuozhetougao.jsp" target="_blank">作者投稿</a>| -->
+				<a href="/azycjd_new/chengpinyingcai.jsp" target="_blank">诚聘英才</a>|
+				<a href="/azycjd_new/lianxiwomen.jsp" target="_blank">联系我们</a>|
+				<a href="/azycjd_new/admin/webEditorLogin.jsp" target="_blank">网编登录</a>|
+				<a href="http://weibo.com/u/3020942093?topnav=1&wvr=6&topsug=1&is_hot=1" target="_blank">微博链接</a>|
+				<a href="javascript:loadMobileJsp()" target="_blank">手机网页端</a>
+			</div>
+			<div>
+				Copyright© 2006-2015 www.azycjd.com   All Rights Reserved 版权所有 云南安柔科技有限公司
+				<script src="http://s95.cnzz.com/stat.php?id=1257561986&web_id=1257561986" language="JavaScript"></script>
+			</div>
+			<div>
+				滇ICP备12006807号-1 滇网文许字【2014】1100-002号
+			</div>
+		</div>
+	</div>
+  </body>
+</html>
