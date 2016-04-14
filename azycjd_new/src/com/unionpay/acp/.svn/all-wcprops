@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/wuyuehu/!svn/ver/701/azycjd_new/src/com/unionpay/acp
+END
+DemoBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/wuyuehu/!svn/ver/701/azycjd_new/src/com/unionpay/acp/DemoBase.java
+END
+GateWayPayment.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/701/azycjd_new/src/com/unionpay/acp/GateWayPayment.java
+END
+FrontRcvResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/701/azycjd_new/src/com/unionpay/acp/FrontRcvResponse.java
+END
+BackRcvResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/701/azycjd_new/src/com/unionpay/acp/BackRcvResponse.java
+END

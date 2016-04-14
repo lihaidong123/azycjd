@@ -1,0 +1,244 @@
+package com.anzhi.web.controller;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.anzhi.web.pojo.AnzhiAuthor;
+import com.anzhi.web.pojo.AnzhiMember;
+import com.anzhi.web.pojo.AnzhiWebEditor;
+import com.anzhi.web.pojo.AnzhiWebEditorSign;
+import com.anzhi.web.service.IAnzhiWebEditorService;
+import com.anzhi.web.service.IAnzhiWebEditorSignService;
+import com.anzhi.web.util.GetCondition;
+import com.anzhi.web.util.QueryList;
+@Controller
+public class AnzhiWebEditorController extends GetCondition {
+	@Autowired
+	private IAnzhiWebEditorService anzhiwebeditorService;
+	@Autowired
+	private IAnzhiWebEditorSignService anzhiwebeditorsignService;
+	@RequestMapping(value="/anzhiwebeditor/addAnzhiWebEditor")
+	public void addAnzhiWebEditor(HttpServletRequest request,HttpServletResponse response,AnzhiWebEditor anzhiwebeditor){
+		if(request.getSession().getAttribute("addAnzhiWebEditorSession")==null){
+			try{
+				request.getSession().setAttribute("addAnzhiWebEditorSession","true");
+				anzhiwebeditor.setAddTime(getTimestamp());
+				if(anzhiwebeditor.getEditorScore()==null){
+					anzhiwebeditor.setEditorScore(0.0);
+				}
+				if(anzhiwebeditor.getId()==null||anzhiwebeditor.getId()==0){
+					anzhiwebeditor.setEditorPassword(this.getMD5Str(anzhiwebeditor.getEditorPassword()));
+					anzhiwebeditorService.addAnzhiWebEditor(anzhiwebeditor);
+				}else{
+					String oldPass=this.getStringBySql("select editor_password from anzhi_web_editor where id="+anzhiwebeditor.getId());
+					if(!oldPass.equals(anzhiwebeditor.getEditorPassword())){
+						anzhiwebeditor.setEditorPassword(this.getMD5Str(anzhiwebeditor.getEditorPassword()));
+					}
+					anzhiwebeditorService.updateAnzhiWebEditor(anzhiwebeditor);
+				}
+				response.sendRedirect(request.getContextPath()+"/anzhiwebeditor/findAnzhiWebEditorAll.do");
+			}catch (Exception e) {
+			}finally{
+				request.getSession().removeAttribute("addAnzhiWebEditorSession");
+			}
+		}
+		request.getSession().setAttribute("directPageName", "");
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/addBatchAnzhiWebEditor")
+	public String addBatchAnzhiWebEditor(HttpServletRequest request,HttpServletResponse response){
+		List<AnzhiWebEditor> list=new ArrayList<AnzhiWebEditor>();
+		anzhiwebeditorService.addBatchAnzhiWebEditor(list);
+		request.getSession().setAttribute("directPageName", "");
+		request.getSession().setAttribute("directPageName", "");
+		return "redirect:";
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/delAnzhiWebEditor")
+	public void delAnzhiWebEditor(HttpServletRequest request,HttpServletResponse response){
+		if(request.getSession().getAttribute("delAnzhiWebEditorSession")==null){
+			try{
+				request.getSession().setAttribute("delAnzhiWebEditorSession","true");
+				int id=request.getParameter("anzhiwebeditorId")==null?0:Integer.parseInt(request.getParameter("anzhiwebeditorId"));
+				anzhiwebeditorService.delAnzhiWebEditor(id);
+				response.sendRedirect(request.getContextPath()+"/anzhiwebeditor/findAnzhiWebEditorAll.do?pageNum="+request.getParameter("pageNum"));
+			}catch (Exception e) {
+			}finally{
+				request.getSession().removeAttribute("delAnzhiWebEditorSession");
+			}
+		}
+		request.getSession().setAttribute("directPageName", "");
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/delBatchAnzhiWebEditor")
+	public String delBatchAnzhiWebEditor(HttpServletRequest request,HttpServletResponse response){
+		String ids=request.getParameter("anzhiwebeditorIds");
+		anzhiwebeditorService.delBatchAnzhiWebEditor(ids);
+		request.getSession().setAttribute("directPageName", "");
+		return "redirect:";
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/updateAnzhiWebEditor")
+	public String updateAnzhiWebEditor(HttpServletRequest request,HttpServletResponse response,AnzhiWebEditor anzhiwebeditor){
+		if(request.getSession().getAttribute("updateAnzhiWebEditorSession")==null){
+			try{
+				request.getSession().setAttribute("updateAnzhiWebEditorSession","true");
+				anzhiwebeditorService.updateAnzhiWebEditor(anzhiwebeditor);
+			}catch (Exception e) {
+			}finally{
+				request.getSession().removeAttribute("updateAnzhiWebEditorSession");
+			}
+		}
+		request.getSession().setAttribute("directPageName", "");
+		return "redirect:";
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/findAnzhiWebEditorAll")
+	public String findAnzhiWebEditorAll(HttpServletRequest request,HttpServletResponse response){
+		int size=request.getParameter("size")!=null&&request.getParameter("size")!=""?Integer.parseInt(request.getParameter("size")):10;
+		int pageNum=this.getPageNum(request);
+		String condition=this.getCondition(anzhiwebeditorConditionArr, request, response);
+		QueryList<AnzhiWebEditor> list = anzhiwebeditorService.findAnzhiWebEditorAll(size, pageNum, condition);
+		request.setAttribute("anzhiwebeditorList", list);
+		return this.getPageName(request, "admin/AnzhiWebEditorManager");
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/findAnzhiWebEditorById")
+	public String findAnzhiWebEditorById(HttpServletRequest request,HttpServletResponse response){
+		QueryList<AnzhiWebEditor> list = anzhiwebeditorService.findAnzhiWebEditorAll(10, 1, " and id="+Integer.parseInt(request.getParameter("anzhiwebeditorId")));
+		request.setAttribute("pojo", list.getList().size()!=1?null:list.getList().get(0));
+		
+		int size=request.getParameter("size")!=null&&request.getParameter("size")!=""?Integer.parseInt(request.getParameter("size")):10;
+		int pageNum=this.getPageNum(request);
+		String condition=this.getCondition(anzhiwebeditorsignConditionArr, request, response);
+		condition=this.getWebEditorCondition(request, condition);
+		QueryList<AnzhiWebEditorSign> ls = anzhiwebeditorsignService.findAnzhiWebEditorSignAll(size, pageNum, condition);
+		request.setAttribute("anzhiwebeditorsignList", ls);
+		request.getSession().setAttribute("webEditorInfoAction", "webEditorInfoAction");
+		return this.getPageName(request, "admin/index");
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/anzhiwebeditorAction")
+	public String anzhiwebeditorAction(HttpServletRequest request,HttpServletResponse response){
+		return this.getPageName(request, "admin/AnzhiWebEditorAction");
+	}
+
+	@RequestMapping(value="/anzhiwebeditor/login",method=RequestMethod.POST)
+	public void login(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		response.setContentType("text/html;charset=utf-8");
+		String uname=request.getParameter("username");
+		String upass=request.getParameter("userpass");
+		QueryList<AnzhiWebEditor> list = anzhiwebeditorService.findAnzhiWebEditorAll(10, 1, " and editor_no='"+uname.trim()+"'");
+		if(list.getList().size()==0){
+			response.getWriter().write("用户名不存在!");
+		}else{
+			AnzhiWebEditor t=list.getList().get(0);
+			if(t.getEditorPassword().trim().equals(this.getMD5Str(upass.trim()))){
+				this.remove(request, response);
+				request.getSession().setAttribute("loginWebEditorUser", t);
+				int num=this.getIntBySql("select count(*) from anzhi_web_editor_sign where editor_id="+t.getId()+" and add_time between '"+this.getDateType(0)+"' and '"+this.getDateType(1)+"'");
+				if(num==0){
+					request.getSession().setAttribute("nosign", t);
+				}
+				//查询该用户本月的签到
+				QueryList<AnzhiWebEditorSign> ls=anzhiwebeditorsignService.findAnzhiWebEditorSignAll(500, 1, " and editor_id="+t.getId()+" and add_time between '"+this.getDateType(4)+"' and '"+this.getDateType(5)+"'");
+				String dateInfo="";
+				for(AnzhiWebEditorSign aw:ls.getList()){
+					dateInfo+="'"+new SimpleDateFormat("yyyy-MM-dd").format(aw.getAddTime())+"',";
+				}
+				dateInfo=dateInfo.equals("")?"":dateInfo.substring(0,dateInfo.length()-1);
+				request.getSession().setAttribute("signDay", dateInfo);
+				response.getWriter().write("登录成功!");
+			}else{
+				response.getWriter().write("密码错误!");
+			}
+		}
+	}
+	
+	public void remove(HttpServletRequest request,HttpServletResponse response){
+		request.getSession().removeAttribute("loginUsers");
+		request.getSession().removeAttribute("loginWebEditorUser");
+		request.getSession().removeAttribute("logintime");
+	}
+	
+	
+	@RequestMapping(value="/anzhiwebeditor/updateAnzhiWebEditorMyInfo")
+	public void updateAnzhiWebEditorMyInfo(HttpServletRequest request,HttpServletResponse response,AnzhiWebEditor anzhiwebeditor){
+		if(request.getSession().getAttribute("addAnzhiWebEditorSession")==null){
+			try{
+				request.getSession().setAttribute("addAnzhiWebEditorSession","true");
+				response.setCharacterEncoding("utf-8");
+				if(request.getSession().getAttribute("loginWebEditorUser")!=null){
+					if(this.checkParam(request, "editorShifu")&&!anzhiwebeditor.getEditorShifu().equals("")){
+						QueryList<AnzhiWebEditor> ls=anzhiwebeditorService.findAnzhiWebEditorAll(1, 1, " and editor_name='"+anzhiwebeditor.getEditorShifu()+"'");
+						if(ls.getList().size()==0){
+							response.getWriter().write("师傅昵称不存在！");
+							return;
+						}
+					}
+					AnzhiWebEditor t=(AnzhiWebEditor)request.getSession().getAttribute("loginWebEditorUser");
+					t.setEditorJiebie(anzhiwebeditor.getEditorJiebie());
+					t.setEditorName(anzhiwebeditor.getEditorName());
+					t.setEditorCode(anzhiwebeditor.getEditorCode());
+					t.setEditorAddress(anzhiwebeditor.getEditorAddress());
+					t.setEditorTel(anzhiwebeditor.getEditorTel());
+					t.setEditorQq(anzhiwebeditor.getEditorQq());
+					t.setEditorShifu(anzhiwebeditor.getEditorShifu());
+					t.setEditorHeadImg(anzhiwebeditor.getEditorHeadImg());
+					t.setEditorVote(anzhiwebeditor.getEditorVote());
+					anzhiwebeditorService.updateAnzhiWebEditor(t);
+					request.getSession().setAttribute("loginWebEditorUser",t);
+					response.getWriter().write("信息修改成功！");
+				}else{
+					response.getWriter().write("您还没有登录呢！");
+				}
+			}catch (Exception e) {
+			}finally{
+				request.getSession().removeAttribute("addAnzhiWebEditorSession");
+			}
+		}
+		request.getSession().setAttribute("directPageName", "");
+	}
+	
+	@RequestMapping(value="/anzhiwebeditor/updatePass",method=RequestMethod.POST)
+	public void updatePass(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		response.setContentType("text/html;charset=utf-8");
+		String oldPass=request.getParameter("oldPass");
+		AnzhiWebEditor us=this.getLoginWebEditor(request);
+		if(us==null){
+			response.sendRedirect(request.getContextPath()+"/index");
+		}else{
+			if(us.getEditorPassword().trim().equals(this.getMD5Str(oldPass.trim()))){
+				us.setEditorPassword(this.getMD5Str(request.getParameter("newPass")));
+				anzhiwebeditorService.updateAnzhiWebEditor(us);
+				request.getSession().setAttribute("loginWebEditorUser", us);
+				response.getWriter().write("密码修改成功!");
+			}else{
+				response.getWriter().write("原密码输入错误!");
+			}
+		}
+		
+	}
+
+	
+	@RequestMapping(value="/anzhiwebeditor/webEditorTableInfo")
+	public String webEditorTableInfo(HttpServletRequest request,HttpServletResponse response){
+		if(this.getLoginWebEditor(request)!=null){
+			AnzhiWebEditor aw=this.getLoginWebEditor(request);
+			QueryList<AnzhiWebEditor> ls=anzhiwebeditorService.findAnzhiWebEditorAll(500, 1, " and editor_shifu='"+aw.getEditorName()+"'");
+			request.setAttribute("tudiList", ls.getList());
+		}
+		return this.getPageName(request, "admin/webEditorTableInfo");
+	}
+
+}

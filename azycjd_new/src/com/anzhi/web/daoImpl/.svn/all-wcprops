@@ -1,0 +1,335 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/wuyuehu/!svn/ver/937/azycjd_new/src/com/anzhi/web/daoImpl
+END
+AnzhiThirdRecommandDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/931/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiThirdRecommandDaoImpl.java
+END
+AnzhiCommentDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiCommentDaoImpl.java
+END
+AnzhiThirdLoginDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/898/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiThirdLoginDaoImpl.java
+END
+AnzhiWebEditorSignDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorSignDaoImpl.java
+END
+AnzhiRegistrationDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiRegistrationDaoImpl.java
+END
+AnzhiBookreviewDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiBookreviewDaoImpl.java
+END
+AnzhiBenefitDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/930/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiBenefitDaoImpl.java
+END
+AnzhiOtherContentDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiOtherContentDaoImpl.java
+END
+AnzhiDiscountedJoinDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiDiscountedJoinDaoImpl.java
+END
+UtilDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/225/azycjd_new/src/com/anzhi/web/daoImpl/UtilDaoImpl.java
+END
+AnzhiNovelLabelDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelLabelDaoImpl.java
+END
+AnzhiSystemDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiSystemDaoImpl.java
+END
+AnzhiMessageDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiMessageDaoImpl.java
+END
+AnzhiNovelTypeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelTypeDaoImpl.java
+END
+AnzhiNovelReadMoneyRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelReadMoneyRecordDaoImpl.java
+END
+AnzhiWebEditorGoodsChangeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorGoodsChangeDaoImpl.java
+END
+AnzhiExperienceRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiExperienceRecordDaoImpl.java
+END
+AnzhiChapterDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiChapterDaoImpl.java
+END
+AnzhiFenJuanDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiFenJuanDaoImpl.java
+END
+AnzhiChapterSubscribeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiChapterSubscribeDaoImpl.java
+END
+AnzhiChapterUpdateRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiChapterUpdateRecordDaoImpl.java
+END
+AnzhiWebEditorApplyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorApplyDaoImpl.java
+END
+AnzhiDiscountedDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiDiscountedDaoImpl.java
+END
+AnzhiAuthorDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiAuthorDaoImpl.java
+END
+AnzhiNovelMultifunctionDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelMultifunctionDaoImpl.java
+END
+AnzhiBookmarkDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wuyuehu/!svn/ver/823/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiBookmarkDaoImpl.java
+END
+AnzhiNovelReadMoneyBuyRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelReadMoneyBuyRecordDaoImpl.java
+END
+AnzhiCommentPraiseDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiCommentPraiseDaoImpl.java
+END
+AnzhiIllegalCharDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiIllegalCharDaoImpl.java
+END
+AnzhiMemberDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/937/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiMemberDaoImpl.java
+END
+AnzhiFriendDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiFriendDaoImpl.java
+END
+AnzhiWebEditorAuthorDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorAuthorDaoImpl.java
+END
+AnzhiWebEditorTuijianDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorTuijianDaoImpl.java
+END
+AnzhiConsumeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiConsumeDaoImpl.java
+END
+AnzhiRecommendDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/656/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiRecommendDaoImpl.java
+END
+AnzhiHeadImgUseRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiHeadImgUseRecordDaoImpl.java
+END
+AnzhiWebEditorFuliApplyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorFuliApplyDaoImpl.java
+END
+AnzhiPictureDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiPictureDaoImpl.java
+END
+AnzhiReportDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiReportDaoImpl.java
+END
+AnzhiNewsDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNewsDaoImpl.java
+END
+AnzhiTrendDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiTrendDaoImpl.java
+END
+AnzhiInteractiveDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/892/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiInteractiveDaoImpl.java
+END
+AnzhiCashDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiCashDaoImpl.java
+END
+AnzhiRechargeDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wuyuehu/!svn/ver/869/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiRechargeDaoImpl.java
+END
+AnzhiWebEditorGoodsDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorGoodsDaoImpl.java
+END
+AnzhiCooperationDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiCooperationDaoImpl.java
+END
+AnzhiNovelDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelDaoImpl.java
+END
+AnzhiWebEditorDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/715/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorDaoImpl.java
+END
+AnzhiWebEditorWorkDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorWorkDaoImpl.java
+END
+AnzhiTrendReplyDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiTrendReplyDaoImpl.java
+END
+AnzhiNovelRewardDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiNovelRewardDaoImpl.java
+END
+AnzhiWebEditorChapterCheckDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorChapterCheckDaoImpl.java
+END
+AnzhiWebEditorMessageDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiWebEditorMessageDaoImpl.java
+END
+AnzhiHandleDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiHandleDaoImpl.java
+END
+AnzhiMoneyApplyRecordDaoImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/794/azycjd_new/src/com/anzhi/web/daoImpl/AnzhiMoneyApplyRecordDaoImpl.java
+END

@@ -1,0 +1,359 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/serviceImpl
+END
+AnzhiCommentServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/737/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiCommentServiceImpl.java
+END
+AnzhiThirdLoginServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/898/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiThirdLoginServiceImpl.java
+END
+AnzhiWebEditorSignServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/wuyuehu/!svn/ver/524/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorSignServiceImpl.java
+END
+XmlServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/serviceImpl/XmlServiceImpl.java
+END
+AnzhiRegistrationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiRegistrationServiceImpl.java
+END
+AnzhiBookreviewServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiBookreviewServiceImpl.java
+END
+AnzhiBenefitServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/804/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiBenefitServiceImpl.java
+END
+AnzhiOtherContentServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/wuyuehu/!svn/ver/502/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiOtherContentServiceImpl.java
+END
+AnzhiDiscountedJoinServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiDiscountedJoinServiceImpl.java
+END
+UtilServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/wuyuehu/!svn/ver/815/azycjd_new/src/com/anzhi/web/serviceImpl/UtilServiceImpl.java
+END
+AnzhiNovelLabelServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/591/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelLabelServiceImpl.java
+END
+AnzhiSystemServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiSystemServiceImpl.java
+END
+AnzhiMessageServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/846/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiMessageServiceImpl.java
+END
+AnzhiNovelTypeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wuyuehu/!svn/ver/200/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelTypeServiceImpl.java
+END
+AnzhiFenJuanServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/882/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiFenJuanServiceImpl.java
+END
+AnzhiChapterServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/921/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiChapterServiceImpl.java
+END
+AnzhiExperienceRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/339/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiExperienceRecordServiceImpl.java
+END
+AnzhiNovelReadMoneyRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wuyuehu/!svn/ver/689/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelReadMoneyRecordServiceImpl.java
+END
+AnzhiWebEditorGoodsChangeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/wuyuehu/!svn/ver/523/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorGoodsChangeServiceImpl.java
+END
+AnzhiChapterUpdateRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiChapterUpdateRecordServiceImpl.java
+END
+AnzhiChapterSubscribeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/889/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiChapterSubscribeServiceImpl.java
+END
+AnzhiWebEditorApplyServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wuyuehu/!svn/ver/544/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorApplyServiceImpl.java
+END
+AnzhiDiscountedServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/454/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiDiscountedServiceImpl.java
+END
+AnzhiAuthorServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/930/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiAuthorServiceImpl.java
+END
+AnzhiNovelMultifunctionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/wuyuehu/!svn/ver/560/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelMultifunctionServiceImpl.java
+END
+AnzhiBookmarkServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/823/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiBookmarkServiceImpl.java
+END
+TimerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/serviceImpl/TimerImpl.java
+END
+AnzhiNovelReadMoneyBuyRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelReadMoneyBuyRecordServiceImpl.java
+END
+AnzhiCommentPraiseServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/wuyuehu/!svn/ver/415/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiCommentPraiseServiceImpl.java
+END
+AnzhiMemberServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/908/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiMemberServiceImpl.java
+END
+AnzhiFriendServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/326/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiFriendServiceImpl.java
+END
+AnzhiIllegalCharServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wuyuehu/!svn/ver/378/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiIllegalCharServiceImpl.java
+END
+AnzhiWebEditorAuthorServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/wuyuehu/!svn/ver/715/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorAuthorServiceImpl.java
+END
+ImportDataServieImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wuyuehu/!svn/ver/693/azycjd_new/src/com/anzhi/web/serviceImpl/ImportDataServieImpl.java
+END
+AnzhiWebEditorTuijianServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/715/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorTuijianServiceImpl.java
+END
+AnzhiConsumeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/694/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiConsumeServiceImpl.java
+END
+AnzhiRecommendServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wuyuehu/!svn/ver/656/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiRecommendServiceImpl.java
+END
+AnzhiHeadImgUseRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiHeadImgUseRecordServiceImpl.java
+END
+AnzhiWebEditorFuliApplyServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorFuliApplyServiceImpl.java
+END
+AnzhiReportServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/359/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiReportServiceImpl.java
+END
+AnzhiPictureServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/wuyuehu/!svn/ver/510/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiPictureServiceImpl.java
+END
+AnzhiNewsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wuyuehu/!svn/ver/463/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNewsServiceImpl.java
+END
+AnzhiTrendServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/339/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiTrendServiceImpl.java
+END
+MobileServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/922/azycjd_new/src/com/anzhi/web/serviceImpl/MobileServiceImpl.java
+END
+AnzhiInteractiveServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wuyuehu/!svn/ver/888/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiInteractiveServiceImpl.java
+END
+AnzhiCashServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/wuyuehu/!svn/ver/429/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiCashServiceImpl.java
+END
+AnzhiRechargeServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiRechargeServiceImpl.java
+END
+AnzhiWebEditorGoodsServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorGoodsServiceImpl.java
+END
+AnzhiCooperationServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiCooperationServiceImpl.java
+END
+AnzhiNovelServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelServiceImpl.java
+END
+AnzhiWebEditorServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorServiceImpl.java
+END
+AnzhiWebEditorWorkServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorWorkServiceImpl.java
+END
+AnzhiTrendReplyServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiTrendReplyServiceImpl.java
+END
+AnzhiNovelRewardServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/wuyuehu/!svn/ver/681/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiNovelRewardServiceImpl.java
+END
+AnzhiWebEditorChapterCheckServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorChapterCheckServiceImpl.java
+END
+AnzhiWebEditorMessageServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/544/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiWebEditorMessageServiceImpl.java
+END
+AnzhiHandleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/wuyuehu/!svn/ver/804/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiHandleServiceImpl.java
+END
+AnzhiMoneyApplyRecordServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/wuyuehu/!svn/ver/794/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiMoneyApplyRecordServiceImpl.java
+END
+AnzhiThirdRecommandServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/wuyuehu/!svn/ver/933/azycjd_new/src/com/anzhi/web/serviceImpl/AnzhiThirdRecommandServiceImpl.java
+END

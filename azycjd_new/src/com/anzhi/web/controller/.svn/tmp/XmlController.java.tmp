@@ -1,0 +1,194 @@
+package com.anzhi.web.controller;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
+import org.dom4j.io.XMLWriter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.anzhi.web.pojo.AnzhiChapter;
+import com.anzhi.web.pojo.AnzhiFenJuan;
+import com.anzhi.web.pojo.AnzhiNovel;
+import com.anzhi.web.service.IAnzhiChapterService;
+import com.anzhi.web.service.IAnzhiFenJuanService;
+import com.anzhi.web.service.IAnzhiNovelService;
+import com.anzhi.web.util.GetCondition;
+import com.anzhi.web.util.QueryList;
+
+@Controller
+public class XmlController extends GetCondition{
+	@Autowired
+	private IAnzhiNovelService anzhinovelService;
+	@Autowired
+	private IAnzhiFenJuanService anzhifenjuanService;
+	@Autowired
+	private IAnzhiChapterService anzhichapterService;
+	String[] novelType=new String[]{"玄幻奇幻","武侠仙侠","都市异能","历史军事","游戏竞技","科幻灵异","现代言情","古代言情"};
+	//合作方的列表
+	String[] opertion=new String[]{"uc","changdu","sanliuling","ersansiwu","aishuke","aiyuedu","dangdang","douding","shuxing","","","","","","",""};
+	/**
+	 * addElement(String name,Object obj,boolean isCadta) 方法的重写
+	 * @param name
+	 * @param obj
+	 * @return
+	 */
+	public Element addElement(String name,Object obj){
+		return this.addElement(name, obj, true);
+	}
+	
+	/**
+	 * 创建一个节点
+	 * @param name 节点名称
+	 * @param obj 节点的object值
+	 * @param isCadta 是否是cdata
+	 * @return
+	 */
+	public Element addElement(String name,Object obj,boolean isCadta){
+		Element e=DocumentHelper.createElement(name);
+		if(obj!=null){
+			if(isCadta){
+				e.addCDATA(obj.toString());
+			}else{
+				e.setText(obj.toString());
+			}
+		}
+		return e;
+	}
+	/**
+	 * 页面跳转
+	 * @param request
+	 * @param response
+	 * @param con 是否生成xml成功 
+	 * @param fileName 生成的xml文件名
+	 */
+	public void redirect(HttpServletRequest request,HttpServletResponse response,boolean con,String fileName){
+		if(con){
+			try {
+				response.sendRedirect(request.getContextPath()+"/xml/"+fileName+".xml");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}else{
+			try {
+				response.sendRedirect(request.getContextPath()+"/xmlError.jsp");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	/**
+	 * 生成一个xml文件
+	 * @param request
+	 * @param fileName 生成的xml文件名
+	 * @param root 根节点
+	 * @return
+	 */
+	public boolean createXml(HttpServletRequest request,String fileName,Element root){
+		Document document=DocumentHelper.createDocument();
+		document.add(root);
+		XMLWriter output=null;
+		OutputFormat format=OutputFormat.createPrettyPrint();
+		format.setIndent("\t");
+		format.setEncoding("utf-8");
+		try {
+			output=new XMLWriter(new FileOutputStream(new File(request.getRealPath("//")+"/xml/"+fileName+".xml")),format);
+			output.write(document);
+			output.close();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		request.getSession().setAttribute("errorInfo", "xml数据生成失败！");
+		return false;
+	}
+	
+	/**
+	 * 查询小说
+	 * @param request
+	 * @param response
+	 * @param myCondition 自定义条件
+	 * @return
+	 */
+	public QueryList<AnzhiNovel> getNovelList(int size,int pageNum,String condition){
+		QueryList<AnzhiNovel> list = anzhinovelService.findAnzhiNovelAll(size, pageNum, condition,"id");
+		list=this.novelTypeChange(list);
+		return list;
+	}
+	
+	/**
+	 * 查询单个小说
+	 * @param request
+	 * @param response
+	 * @param myCondition 自定义条件
+	 * @return
+	 */
+	public AnzhiNovel getNovelById(String condition){
+		QueryList<AnzhiNovel> list = anzhinovelService.findAnzhiNovelAll(1, 1, condition,"id");
+		list=this.novelTypeChange(list);
+		return list.getList().size()==0?null:list.getList().get(0);
+	}
+	
+	/**
+	 * 查询分卷
+	 * @param request
+	 * @param response
+	 * @param myCondition 自定义条件
+	 * @return
+	 */
+	public QueryList<AnzhiFenJuan> getFenJUan(HttpServletRequest request,int size,int pageNum,String condition){
+		QueryList<AnzhiFenJuan> list = anzhifenjuanService.findAnzhiFenJuanAll(size, pageNum, condition,request);
+		return list;
+	}
+	
+	/**
+	 * 查询具体章节内容
+	 * @param request
+	 * @param response
+	 * @param myCondition 自定义条件
+	 * @return
+	 */
+	public AnzhiChapter getChapterById(String condition){
+		QueryList<AnzhiChapter> ls=anzhichapterService.findAnzhiChapterAll(1, 1, condition);
+		return ls.getList().size()==0?null:ls.getList().get(0);
+	}
+	
+	public boolean checkXmlDataUrl(HttpServletRequest request){
+		if(this.checkParam(request, "pid")&&this.checkParam(request, "apikey")){
+<<<<<<< .mine
+			//合作方的列表
+			String[] opertion=new String[]{"uc","360","zhangyue"};
+=======
+>>>>>>> .r871
+			//请求的apikey
+			String apikey=request.getParameter("apikey").trim();
+			String opertionName="";
+			try {
+				opertionName=opertion[this.getInt(request, "pid")-1000];
+			} catch (Exception e) {
+			}
+			//生成的apikey
+			String cn=this.getMD5Str("az_@_2016_"+opertionName);
+			if(apikey.equals(cn)){
+				return true;
+			}else{
+				request.getSession().setAttribute("errorInfo", "请求参数pn或apikey错误！");
+				return false;
+			}
+		}else{
+			request.getSession().setAttribute("errorInfo", "请求参数错误！");
+			return false;
+		}
+	}
+
+}

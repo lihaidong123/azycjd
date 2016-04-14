@@ -1,0 +1,419 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/wuyuehu/!svn/ver/931/azycjd_new/src/com/anzhi/web/pojo
+END
+AnzhiFriend.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiFriend.java
+END
+AnzhiMember.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/908/azycjd_new/src/com/anzhi/web/pojo/AnzhiMember.java
+END
+AnzhiConsume.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/869/azycjd_new/src/com/anzhi/web/pojo/AnzhiConsume.java
+END
+AnzhiRecommend.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/456/azycjd_new/src/com/anzhi/web/pojo/AnzhiRecommend.java
+END
+AnzhiOtherContent.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/pojo/AnzhiOtherContent.java
+END
+AnzhiInteractive.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wuyuehu/!svn/ver/892/azycjd_new/src/com/anzhi/web/pojo/AnzhiInteractive.java
+END
+ChapterSubscribeNum.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/589/azycjd_new/src/com/anzhi/web/pojo/ChapterSubscribeNum.java
+END
+AnzhiNovel.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wuyuehu/!svn/ver/802/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovel.java
+END
+AnzhiFenJuan.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/216/azycjd_new/src/com/anzhi/web/pojo/AnzhiFenJuan.java
+END
+AnzhiExperienceRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/445/azycjd_new/src/com/anzhi/web/pojo/AnzhiExperienceRecord.java
+END
+AnzhiHandle.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/443/azycjd_new/src/com/anzhi/web/pojo/AnzhiHandle.java
+END
+AnzhiNovelMultifunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wuyuehu/!svn/ver/725/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelMultifunction.java
+END
+AnzhiWebEditorSign.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorSign.java
+END
+AnzhiCommentPraise.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/307/azycjd_new/src/com/anzhi/web/pojo/AnzhiCommentPraise.java
+END
+AnzhiHeadImgUseRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiHeadImgUseRecord.java
+END
+AnzhiTrend.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/wuyuehu/!svn/ver/326/azycjd_new/src/com/anzhi/web/pojo/AnzhiTrend.java
+END
+AnzhiNews.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wuyuehu/!svn/ver/253/azycjd_new/src/com/anzhi/web/pojo/AnzhiNews.java
+END
+AnzhiCash.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wuyuehu/!svn/ver/402/azycjd_new/src/com/anzhi/web/pojo/AnzhiCash.java
+END
+AnzhiDiscountedJoin.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiDiscountedJoin.java
+END
+ChapterDingYue.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/pojo/ChapterDingYue.java
+END
+AnzhiNovelMultiJoinNovel.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/442/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelMultiJoinNovel.java
+END
+AnzhiNovelLabel.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/591/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelLabel.java
+END
+WebEditorFather.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/WebEditorFather.java
+END
+AnzhiWebEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditor.java
+END
+AnzhiNovelMultiJoinChapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/421/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelMultiJoinChapter.java
+END
+AnzhiNovelType.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/wuyuehu/!svn/ver/200/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelType.java
+END
+AnzhiNovelPartInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/650/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelPartInfo.java
+END
+AnzhiMoneyApplyRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/794/azycjd_new/src/com/anzhi/web/pojo/AnzhiMoneyApplyRecord.java
+END
+AnzhiBookmark.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/823/azycjd_new/src/com/anzhi/web/pojo/AnzhiBookmark.java
+END
+AnzhiWebEditorAuthor.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/wuyuehu/!svn/ver/725/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorAuthor.java
+END
+AnzhiIllegalChar.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wuyuehu/!svn/ver/378/azycjd_new/src/com/anzhi/web/pojo/AnzhiIllegalChar.java
+END
+AnzhiRegistration.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiRegistration.java
+END
+AnZhiIncome.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/889/azycjd_new/src/com/anzhi/web/pojo/AnZhiIncome.java
+END
+AnzhiReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/421/azycjd_new/src/com/anzhi/web/pojo/AnzhiReport.java
+END
+AnzhiPicture.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/510/azycjd_new/src/com/anzhi/web/pojo/AnzhiPicture.java
+END
+AnzhiBookreview.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiBookreview.java
+END
+AnzhiBenefit.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/930/azycjd_new/src/com/anzhi/web/pojo/AnzhiBenefit.java
+END
+AnzhiMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/312/azycjd_new/src/com/anzhi/web/pojo/AnzhiMessage.java
+END
+AnzhiSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiSystem.java
+END
+AnzhiChapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/606/azycjd_new/src/com/anzhi/web/pojo/AnzhiChapter.java
+END
+AnzhiWebEditorGoodsChange.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorGoodsChange.java
+END
+AnzhiNovelReadMoneyRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelReadMoneyRecord.java
+END
+AnzhiWebEditorWork.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorWork.java
+END
+AnzhiChapterSubscribe.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiChapterSubscribe.java
+END
+AnzhiChapterUpdateRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiChapterUpdateRecord.java
+END
+AnzhiWebEditorChapterCheck.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorChapterCheck.java
+END
+AnzhiWebEditorMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/544/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorMessage.java
+END
+AnzhiWebEditorApply.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/544/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorApply.java
+END
+NovelFansList.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/334/azycjd_new/src/com/anzhi/web/pojo/NovelFansList.java
+END
+AnZhiFuLi.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wuyuehu/!svn/ver/863/azycjd_new/src/com/anzhi/web/pojo/AnZhiFuLi.java
+END
+DaojuPojo.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/wuyuehu/!svn/ver/411/azycjd_new/src/com/anzhi/web/pojo/DaojuPojo.java
+END
+AnzhiNovelMultiJoinAuthor.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/wuyuehu/!svn/ver/445/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelMultiJoinAuthor.java
+END
+AnzhiAuthor.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/wuyuehu/!svn/ver/725/azycjd_new/src/com/anzhi/web/pojo/AnzhiAuthor.java
+END
+AnzhiThirdLogin.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/898/azycjd_new/src/com/anzhi/web/pojo/AnzhiThirdLogin.java
+END
+AuthorNovelConsume.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/352/azycjd_new/src/com/anzhi/web/pojo/AuthorNovelConsume.java
+END
+AnzhiNovelReadMoneyBuyRecord.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/wuyuehu/!svn/ver/657/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelReadMoneyBuyRecord.java
+END
+NeedDoTaskNum.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/614/azycjd_new/src/com/anzhi/web/pojo/NeedDoTaskNum.java
+END
+AnzhiWebEditorTuijian.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorTuijian.java
+END
+AnzhiWebEditorFuliApply.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/wuyuehu/!svn/ver/521/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorFuliApply.java
+END
+CommentPraise.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/908/azycjd_new/src/com/anzhi/web/pojo/CommentPraise.java
+END
+AnzhiRecharge.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/wuyuehu/!svn/ver/869/azycjd_new/src/com/anzhi/web/pojo/AnzhiRecharge.java
+END
+AnzhiWebEditorGoods.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/519/azycjd_new/src/com/anzhi/web/pojo/AnzhiWebEditorGoods.java
+END
+AnzhiCooperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wuyuehu/!svn/ver/194/azycjd_new/src/com/anzhi/web/pojo/AnzhiCooperation.java
+END
+AnzhiTrendReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/326/azycjd_new/src/com/anzhi/web/pojo/AnzhiTrendReply.java
+END
+AnzhiNovelReward.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/wuyuehu/!svn/ver/908/azycjd_new/src/com/anzhi/web/pojo/AnzhiNovelReward.java
+END
+AnzhiThirdRecommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/wuyuehu/!svn/ver/931/azycjd_new/src/com/anzhi/web/pojo/AnzhiThirdRecommand.java
+END
+AnzhiDiscounted.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/wuyuehu/!svn/ver/456/azycjd_new/src/com/anzhi/web/pojo/AnzhiDiscounted.java
+END
+AnzhiComment.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/wuyuehu/!svn/ver/908/azycjd_new/src/com/anzhi/web/pojo/AnzhiComment.java
+END
+AnZhiMemberVipInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/wuyuehu/!svn/ver/804/azycjd_new/src/com/anzhi/web/pojo/AnZhiMemberVipInfo.java
+END
